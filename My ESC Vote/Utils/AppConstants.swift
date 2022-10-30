@@ -31,9 +31,7 @@ struct Constants {
 		struct Image {
 			
 			struct Icon {
-				
 				static let User = "person"
-				
 			}
 			
 		}
@@ -49,6 +47,22 @@ struct Constants {
 	}
 	
 	struct API {
+		
+		struct Firestore {
+			
+			struct Collections {
+				
+				struct Users {
+					static let TableName = "users"
+					
+					struct Fields {
+						static let Name = "name"
+						static let Email = "email"
+					}
+				}
+			}
+			
+		}
 		
 	}
 	

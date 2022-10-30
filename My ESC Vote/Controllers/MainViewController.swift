@@ -12,11 +12,11 @@ class MainViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		navigationItem.rightBarButtonItem = UIBarButtonItem(
-			image: UIImage(systemName: Constants.Design.Image.Icon.User),
-			style: .plain,
-			target: self,
-			action: #selector(userBarButtonPressed))
+//		navigationItem.rightBarButtonItem = UIBarButtonItem(
+//			image: UIImage(systemName: Constants.Design.Image.Icon.User),
+//			style: .plain,
+//			target: self,
+//			action: #selector(userBarButtonPressed))
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

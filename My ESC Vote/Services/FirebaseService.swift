@@ -42,7 +42,7 @@ struct FirebaseService {
 		
 	}
 	
-	static func register(email: String, password: String, confirmPassword: String) -> Bool {
+	static func register(name: String, email: String, password: String, confirmPassword: String) -> Bool {
 		
 		guard password == confirmPassword,
 			  ValidationHelper.validateEmail(email),
@@ -62,6 +62,20 @@ struct FirebaseService {
 			}
 		}
 		
-		return isSuccessful
+		if !isSuccessful { return false }
+		
+		FirestoreService.setUserName(name, for: email) { isSuccessful in
+			
+		}
+		
+		return true
+	}
+	
+	static func isLoggedIn() -> Bool {
+		return Auth.auth().currentUser != nil
+	}
+	
+	static func currentUserEmail() -> String? {
+		return Auth.auth().currentUser?.email
 	}
 }

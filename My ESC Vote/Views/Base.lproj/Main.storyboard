@@ -26,7 +26,9 @@
                         <viewLayoutGuide key="safeArea" id="9DG-IH-lrn"/>
                         <color key="backgroundColor" name="Navy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="R2P-2m-sBN"/>
+                    <navigationItem key="navigationItem" id="R2P-2m-sBN">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person" catalog="system" id="GY4-bD-KdD"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0f-gE-OXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,6 +54,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
         <namedColor name="Blue">
             <color red="0.37647058823529411" green="0.49411764705882355" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
