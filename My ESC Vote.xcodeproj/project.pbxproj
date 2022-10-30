@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		432B03C0685FE508254BF449 /* Pods_My_ESC_Vote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */; };
+		523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7339290ECA7C0070E12A /* AppDelegate.swift */; };
+		523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B733B290ECA7C0070E12A /* SceneDelegate.swift */; };
+		523B7341290ECA7C0070E12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523B733F290ECA7C0070E12A /* Main.storyboard */; };
+		523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523B7342290ECA7D0070E12A /* Assets.xcassets */; };
+		523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */; };
+		523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 523B734D290ECBCE0070E12A /* GoogleService-Info.plist */; };
+		523B7354290ECEE40070E12A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7353290ECEE40070E12A /* MainViewController.swift */; };
+		523B7357290ED04F0070E12A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7356290ED04F0070E12A /* AppConstants.swift */; };
+		523B735A290EDEF60070E12A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 523B7359290EDEF60070E12A /* FirebaseAuth */; };
+		523B735C290EDEF60070E12A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 523B735B290EDEF60070E12A /* FirebaseFirestore */; };
+		523B735E290EE1110070E12A /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735D290EE1110070E12A /* FirestoreService.swift */; };
+		523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735F290EE9B00070E12A /* FirebaseService.swift */; };
+		523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7361290EEA5A0070E12A /* ValidationHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		523B7336290ECA7C0070E12A /* My ESC Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My ESC Vote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B7339290ECA7C0070E12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		523B733B290ECA7C0070E12A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		523B7340290ECA7C0070E12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		523B7342290ECA7D0070E12A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		523B7345290ECA7D0070E12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		523B7347290ECA7D0070E12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		523B734D290ECBCE0070E12A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		523B7353290ECEE40070E12A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/MainViewController.swift"; sourceTree = "<group>"; };
+		523B7356290ED04F0070E12A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppConstants.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/AppConstants.swift"; sourceTree = "<group>"; };
+		523B735D290EE1110070E12A /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirestoreService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirestoreService.swift"; sourceTree = "<group>"; };
+		523B735F290EE9B00070E12A /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirebaseService.swift"; sourceTree = "<group>"; };
+		523B7361290EEA5A0070E12A /* ValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidationHelper.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/ValidationHelper.swift"; sourceTree = "<group>"; };
+		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
+		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		523B7333290ECA7C0070E12A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				432B03C0685FE508254BF449 /* Pods_My_ESC_Vote.framework in Frameworks */,
+				523B735A290EDEF60070E12A /* FirebaseAuth in Frameworks */,
+				523B735C290EDEF60070E12A /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		486A8C6BF5502B36C2E396D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */,
+				E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		523B732D290ECA7C0070E12A = {
+			isa = PBXGroup;
+			children = (
+				523B7338290ECA7C0070E12A /* My ESC Vote */,
+				523B7337290ECA7C0070E12A /* Products */,
+				486A8C6BF5502B36C2E396D4 /* Pods */,
+				6A7505C57BD0EC8E5BEEBC9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		523B7337290ECA7C0070E12A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				523B7336290ECA7C0070E12A /* My ESC Vote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		523B7338290ECA7C0070E12A /* My ESC Vote */ = {
+			isa = PBXGroup;
+			children = (
+				523B7355290ED0470070E12A /* Utils */,
+				523B7352290ECE000070E12A /* Services */,
+				523B7351290ECDFB0070E12A /* Models */,
+				523B7350290ECDF30070E12A /* Views */,
+				523B734F290ECDEC0070E12A /* Controllers */,
+				523B7339290ECA7C0070E12A /* AppDelegate.swift */,
+				523B733B290ECA7C0070E12A /* SceneDelegate.swift */,
+				523B7342290ECA7D0070E12A /* Assets.xcassets */,
+				523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */,
+				523B734D290ECBCE0070E12A /* GoogleService-Info.plist */,
+				523B7347290ECA7D0070E12A /* Info.plist */,
+			);
+			path = "My ESC Vote";
+			sourceTree = "<group>";
+		};
+		523B734F290ECDEC0070E12A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				523B7353290ECEE40070E12A /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		523B7350290ECDF30070E12A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				523B733F290ECA7C0070E12A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		523B7351290ECDFB0070E12A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		523B7352290ECE000070E12A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				523B735D290EE1110070E12A /* FirestoreService.swift */,
+				523B735F290EE9B00070E12A /* FirebaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		523B7355290ED0470070E12A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				523B7356290ED04F0070E12A /* AppConstants.swift */,
+				523B7361290EEA5A0070E12A /* ValidationHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6A7505C57BD0EC8E5BEEBC9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		523B7335290ECA7C0070E12A /* My ESC Vote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523B734A290ECA7D0070E12A /* Build configuration list for PBXNativeTarget "My ESC Vote" */;
+			buildPhases = (
+				5C58EEABEFE8E7D89D242868 /* [CP] Check Pods Manifest.lock */,
+				523B7332290ECA7C0070E12A /* Sources */,
+				523B7333290ECA7C0070E12A /* Frameworks */,
+				523B7334290ECA7C0070E12A /* Resources */,
+				97ADC38793658BECFB9CE62C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My ESC Vote";
+			packageProductDependencies = (
+				523B7359290EDEF60070E12A /* FirebaseAuth */,
+				523B735B290EDEF60070E12A /* FirebaseFirestore */,
+			);
+			productName = "My ESC Vote";
+			productReference = 523B7336290ECA7C0070E12A /* My ESC Vote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		523B732E290ECA7C0070E12A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					523B7335290ECA7C0070E12A = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 523B7331290ECA7C0070E12A /* Build configuration list for PBXProject "My ESC Vote" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 523B732D290ECA7C0070E12A;
+			packageReferences = (
+				523B7358290EDEF60070E12A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 523B7337290ECA7C0070E12A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				523B7335290ECA7C0070E12A /* My ESC Vote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		523B7334290ECA7C0070E12A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
+				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
+				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
+				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C58EEABEFE8E7D89D242868 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My ESC Vote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97ADC38793658BECFB9CE62C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		523B7332290ECA7C0070E12A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
+				523B735E290EE1110070E12A /* FirestoreService.swift in Sources */,
+				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
+				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
+				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
+				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
+				523B7357290ED04F0070E12A /* AppConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		523B733F290ECA7C0070E12A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				523B7340290ECA7C0070E12A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				523B7345290ECA7D0070E12A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		523B7348290ECA7D0070E12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		523B7349290ECA7D0070E12A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		523B734B290ECA7D0070E12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8PQ9DZ93U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "My ESC Vote/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "My ESC Vote";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejpiechota92.My-ESC-Vote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		523B734C290ECA7D0070E12A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8PQ9DZ93U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "My ESC Vote/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "My ESC Vote";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejpiechota92.My-ESC-Vote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		523B7331290ECA7C0070E12A /* Build configuration list for PBXProject "My ESC Vote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B7348290ECA7D0070E12A /* Debug */,
+				523B7349290ECA7D0070E12A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523B734A290ECA7D0070E12A /* Build configuration list for PBXNativeTarget "My ESC Vote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B734B290ECA7D0070E12A /* Debug */,
+				523B734C290ECA7D0070E12A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		523B7358290EDEF60070E12A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		523B7359290EDEF60070E12A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 523B7358290EDEF60070E12A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		523B735B290EDEF60070E12A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 523B7358290EDEF60070E12A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 523B732E290ECA7C0070E12A /* Project object */;
+}

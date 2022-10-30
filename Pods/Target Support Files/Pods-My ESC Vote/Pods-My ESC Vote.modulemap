@@ -1,0 +1,6 @@
+framework module Pods_My_ESC_Vote {
+  umbrella header "Pods-My ESC Vote-umbrella.h"
+
+  export *
+  module * { export * }
+}
