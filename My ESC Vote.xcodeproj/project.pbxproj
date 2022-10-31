@@ -18,9 +18,15 @@
 		523B7357290ED04F0070E12A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7356290ED04F0070E12A /* AppConstants.swift */; };
 		523B735A290EDEF60070E12A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 523B7359290EDEF60070E12A /* FirebaseAuth */; };
 		523B735C290EDEF60070E12A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 523B735B290EDEF60070E12A /* FirebaseFirestore */; };
-		523B735E290EE1110070E12A /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735D290EE1110070E12A /* FirestoreService.swift */; };
+		523B735E290EE1110070E12A /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735D290EE1110070E12A /* DatabaseService.swift */; };
 		523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735F290EE9B00070E12A /* FirebaseService.swift */; };
 		523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7361290EEA5A0070E12A /* ValidationHelper.swift */; };
+		523B7365291027BF0070E12A /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7364291027BF0070E12A /* DesignConstants.swift */; };
+		523B7367291027ED0070E12A /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7366291027ED0070E12A /* APIConstants.swift */; };
+		523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7368291028330070E12A /* ViewControllerConstants.swift */; };
+		523B736B291028A30070E12A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736A291028A30070E12A /* AuthenticationService.swift */; };
+		523B736D2910293A0070E12A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736C2910293A0070E12A /* APIManager.swift */; };
+		523B736F291072350070E12A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736E291072350070E12A /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +39,16 @@
 		523B7347290ECA7D0070E12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523B734D290ECBCE0070E12A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		523B7353290ECEE40070E12A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/MainViewController.swift"; sourceTree = "<group>"; };
-		523B7356290ED04F0070E12A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppConstants.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/AppConstants.swift"; sourceTree = "<group>"; };
-		523B735D290EE1110070E12A /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirestoreService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirestoreService.swift"; sourceTree = "<group>"; };
+		523B7356290ED04F0070E12A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		523B735D290EE1110070E12A /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/DatabaseService.swift"; sourceTree = "<group>"; };
 		523B735F290EE9B00070E12A /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirebaseService.swift"; sourceTree = "<group>"; };
 		523B7361290EEA5A0070E12A /* ValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidationHelper.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/ValidationHelper.swift"; sourceTree = "<group>"; };
+		523B7364291027BF0070E12A /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/DesignConstants.swift"; sourceTree = "<group>"; };
+		523B7366291027ED0070E12A /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/APIConstants.swift"; sourceTree = "<group>"; };
+		523B7368291028330070E12A /* ViewControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/ViewControllerConstants.swift"; sourceTree = "<group>"; };
+		523B736A291028A30070E12A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
+		523B736C2910293A0070E12A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/APIManager.swift"; sourceTree = "<group>"; };
+		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/RegisterViewController.swift"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				523B7353290ECEE40070E12A /* MainViewController.swift */,
+				523B736E291072350070E12A /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -127,8 +140,10 @@
 		523B7352290ECE000070E12A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				523B735D290EE1110070E12A /* FirestoreService.swift */,
+				523B736C2910293A0070E12A /* APIManager.swift */,
+				523B735D290EE1110070E12A /* DatabaseService.swift */,
 				523B735F290EE9B00070E12A /* FirebaseService.swift */,
+				523B736A291028A30070E12A /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -136,10 +151,21 @@
 		523B7355290ED0470070E12A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				523B7356290ED04F0070E12A /* AppConstants.swift */,
+				523B73632910279C0070E12A /* Constants */,
 				523B7361290EEA5A0070E12A /* ValidationHelper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		523B73632910279C0070E12A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				523B7356290ED04F0070E12A /* AppConstants.swift */,
+				523B7364291027BF0070E12A /* DesignConstants.swift */,
+				523B7366291027ED0070E12A /* APIConstants.swift */,
+				523B7368291028330070E12A /* ViewControllerConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		6A7505C57BD0EC8E5BEEBC9D /* Frameworks */ = {
@@ -274,11 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
-				523B735E290EE1110070E12A /* FirestoreService.swift in Sources */,
+				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
+				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
+				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
+				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
+				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
+				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
+				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
 				523B7357290ED04F0070E12A /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
