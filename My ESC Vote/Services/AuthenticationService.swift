@@ -8,45 +8,87 @@
 import Foundation
 import FirebaseAuth
 
-enum AuthenticationError: Error {
+enum AuthenticationError: String, Error {
+	
 	case passwordMismatch
 	case invalidEmail
 	case invalidPassword
-	case userNameNotSet
 	case userNotCreated
-	case loginError
-	case logoutError
+	case loginError = "Error logging in"
+	case logoutError = "Error logging out"
+	
 }
+
+extension AuthenticationError: LocalizedError {
+	
+	public var errorDescription: String? {
+		switch self {
+		case .passwordMismatch:
+			return NSLocalizedString(
+				"Passwords do not match",
+				comment: "Password Mismatch"
+			)
+		case .invalidEmail:
+			return NSLocalizedString(
+				"Email is not valid",
+				comment: "Invalid Email"
+			)
+		case .invalidPassword:
+			return NSLocalizedString(
+				"Password must consist of at least 7 characters, one big letter, one small letter, one digit, and one special character: !@#$%^&*",
+				comment: "Invalid Password"
+			)
+		case .userNotCreated:
+			return NSLocalizedString(
+				"Error when creating user. Please try again or contact the Administrator",
+				comment: "User not created"
+			)
+		default:
+			return ""
+		}
+	}
+	
+}
+
 
 class AuthenticationService {
 	
 	// MARK: Public funcs
 	
-	func register(name: String, email: String, password: String, confirmPassword: String, completion: @escaping (_ error: AuthenticationError?) -> ()) {
+	func register(email: String, password: String, confirmPassword: String, completion: ((_ error: AuthenticationError?) -> ())? = nil) throws {
 		
-		guard password == confirmPassword else {
-			completion(.passwordMismatch)
-			return
-		}
 		guard ValidationHelper.validateEmail(email) else {
-			completion(.invalidEmail)
-			return
+			completion?(.invalidEmail)
+			throw AuthenticationError.invalidEmail
 		}
 		
 		guard ValidationHelper.validatePassword(password) else {
-			completion(.invalidPassword)
-			return
+			completion?(.invalidPassword)
+			throw AuthenticationError.invalidPassword
 		}
+		
+		guard password == confirmPassword else {
+			completion?(.passwordMismatch)
+			throw AuthenticationError.passwordMismatch
+		}
+		
+		var authenticationError: AuthenticationError?
 		
 		Auth.auth().createUser(withEmail: email, password: password) { result, error in
 			if let error = error {
 				print(error.localizedDescription)
-				completion(.userNotCreated)
+				completion?(.userNotCreated)
+				authenticationError = .userNotCreated
 			} else {
 				print(result ?? "successfully registered")
-				completion(nil)
+				completion?(nil)
 			}
 		}
+		
+		if let error = authenticationError {
+			throw error
+		}
+		
 	}
 	
 	func login(email: String, password: String, completion: @escaping (_ error: AuthenticationError?) -> ()) {

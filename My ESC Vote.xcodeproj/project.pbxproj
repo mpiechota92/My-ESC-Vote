@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		432B03C0685FE508254BF449 /* Pods_My_ESC_Vote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */; };
+		521541262911A33200E19B6F /* Gotham Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 521541252911A33200E19B6F /* Gotham Book.otf */; };
 		523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7339290ECA7C0070E12A /* AppDelegate.swift */; };
 		523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B733B290ECA7C0070E12A /* SceneDelegate.swift */; };
 		523B7341290ECA7C0070E12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523B733F290ECA7C0070E12A /* Main.storyboard */; };
@@ -15,7 +16,7 @@
 		523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */; };
 		523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 523B734D290ECBCE0070E12A /* GoogleService-Info.plist */; };
 		523B7354290ECEE40070E12A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7353290ECEE40070E12A /* MainViewController.swift */; };
-		523B7357290ED04F0070E12A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7356290ED04F0070E12A /* AppConstants.swift */; };
+		523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7356290ED04F0070E12A /* ContentConstants.swift */; };
 		523B735A290EDEF60070E12A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 523B7359290EDEF60070E12A /* FirebaseAuth */; };
 		523B735C290EDEF60070E12A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 523B735B290EDEF60070E12A /* FirebaseFirestore */; };
 		523B735E290EE1110070E12A /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735D290EE1110070E12A /* DatabaseService.swift */; };
@@ -27,9 +28,14 @@
 		523B736B291028A30070E12A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736A291028A30070E12A /* AuthenticationService.swift */; };
 		523B736D2910293A0070E12A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736C2910293A0070E12A /* APIManager.swift */; };
 		523B736F291072350070E12A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736E291072350070E12A /* RegisterViewController.swift */; };
+		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
+		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
+		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
+		52C327DE291137D100F9965A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327DD291137D100F9965A /* LabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		521541252911A33200E19B6F /* Gotham Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Book.otf"; sourceTree = "<group>"; };
 		523B7336290ECA7C0070E12A /* My ESC Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My ESC Vote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B7339290ECA7C0070E12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523B733B290ECA7C0070E12A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +45,7 @@
 		523B7347290ECA7D0070E12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523B734D290ECBCE0070E12A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		523B7353290ECEE40070E12A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/MainViewController.swift"; sourceTree = "<group>"; };
-		523B7356290ED04F0070E12A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		523B7356290ED04F0070E12A /* ContentConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentConstants.swift; sourceTree = "<group>"; };
 		523B735D290EE1110070E12A /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/DatabaseService.swift"; sourceTree = "<group>"; };
 		523B735F290EE9B00070E12A /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirebaseService.swift"; sourceTree = "<group>"; };
 		523B7361290EEA5A0070E12A /* ValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidationHelper.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/ValidationHelper.swift"; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		523B736A291028A30070E12A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		523B736C2910293A0070E12A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/APIManager.swift"; sourceTree = "<group>"; };
 		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/RegisterViewController.swift"; sourceTree = "<group>"; };
+		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationForm.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/RegistrationForm.swift"; sourceTree = "<group>"; };
+		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
+		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52C327DD291137D100F9965A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +87,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		521541232911A2E900E19B6F /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				521541242911A2F000E19B6F /* Fonts */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		521541242911A2F000E19B6F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				521541252911A33200E19B6F /* Gotham Book.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		523B732D290ECA7C0070E12A = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +124,11 @@
 		523B7338290ECA7C0070E12A /* My ESC Vote */ = {
 			isa = PBXGroup;
 			children = (
+				521541232911A2E900E19B6F /* Src */,
 				523B7355290ED0470070E12A /* Utils */,
 				523B7352290ECE000070E12A /* Services */,
 				523B7351290ECDFB0070E12A /* Models */,
+				52C327CD29108C6500F9965A /* ViewModels */,
 				523B7350290ECDF30070E12A /* Views */,
 				523B734F290ECDEC0070E12A /* Controllers */,
 				523B7339290ECA7C0070E12A /* AppDelegate.swift */,
@@ -109,6 +137,7 @@
 				523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */,
 				523B734D290ECBCE0070E12A /* GoogleService-Info.plist */,
 				523B7347290ECA7D0070E12A /* Info.plist */,
+				52C327D42910A28600F9965A /* Localizable.strings */,
 			);
 			path = "My ESC Vote";
 			sourceTree = "<group>";
@@ -125,6 +154,8 @@
 		523B7350290ECDF30070E12A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52C327E2291139C600F9965A /* View Elements */,
+				52C327E1291139C100F9965A /* Cells */,
 				523B733F290ECA7C0070E12A /* Main.storyboard */,
 			);
 			path = Views;
@@ -133,6 +164,7 @@
 		523B7351290ECDFB0070E12A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52C327CB29108BFB00F9965A /* RegistrationForm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,12 +192,35 @@
 		523B73632910279C0070E12A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				523B7356290ED04F0070E12A /* AppConstants.swift */,
+				523B7356290ED04F0070E12A /* ContentConstants.swift */,
 				523B7364291027BF0070E12A /* DesignConstants.swift */,
 				523B7366291027ED0070E12A /* APIConstants.swift */,
 				523B7368291028330070E12A /* ViewControllerConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		52C327CD29108C6500F9965A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52C327CE291093E300F9965A /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52C327E1291139C100F9965A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		52C327E2291139C600F9965A /* View Elements */ = {
+			isa = PBXGroup;
+			children = (
+				52C327DD291137D100F9965A /* LabelView.swift */,
+			);
+			path = "View Elements";
 			sourceTree = "<group>";
 		};
 		6A7505C57BD0EC8E5BEEBC9D /* Frameworks */ = {
@@ -243,8 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
+				521541262911A33200E19B6F /* Gotham Book.otf in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
 			);
@@ -305,13 +362,16 @@
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
+				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
 				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
 				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
-				523B7357290ED04F0070E12A /* AppConstants.swift in Sources */,
+				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
+				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,
+				52C327DE291137D100F9965A /* LabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +394,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		52C327D42910A28600F9965A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52C327D32910A28600F9965A /* en */,
+			);
+			name = Localizable.strings;
+			path = "../../../../Maciej/Developer/My ESC Vote/My ESC Vote";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -342,6 +411,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -403,6 +473,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

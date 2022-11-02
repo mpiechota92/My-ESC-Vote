@@ -31,8 +31,8 @@ class MainViewController: UIViewController {
 		//navigationController?.navigationBar.isHidden = false
 	}
 	
-	@objc func userBarButtonPressed() {
-		
+	@IBAction func userBarButtonPressed(_ sender: UIBarButtonItem) {
+		performSegue(withIdentifier: Constants.ViewController.Segues.showRegistration, sender: self)
 	}
 	
 }

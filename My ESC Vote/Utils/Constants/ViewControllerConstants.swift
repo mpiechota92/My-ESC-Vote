@@ -10,7 +10,7 @@ extension Constants {
 	struct ViewController {
 		
 		struct Segues {
-			static let showRegister = "showRegister"
+			static let showRegistration = "showRegistration"
 		}
 	}
 	

@@ -8,11 +8,18 @@
 import Foundation
 import UIKit
 
-struct Constants {
+struct Constants { }
+
+extension Constants {
 	
 	struct Content {
 		
+		struct Nib {
+			
+			static let labelView = "LabelView"
+			
+		}
+		
 	}
-	
 	
 }
