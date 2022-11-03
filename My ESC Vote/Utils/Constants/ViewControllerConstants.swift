@@ -7,11 +7,31 @@
 
 extension Constants {
 	
-	struct ViewController {
+	struct UI {
 		
-		struct Segues {
-			static let showRegistration = "showRegistration"
+		struct ViewController {
+			
+			struct Segues {
+				static let showRegistration = "showRegistration"
+			}
+			
+			struct ID {
+				static let register = "RegisterViewController"
+				static let login = "LoginViewController"
+			}
+			
 		}
+		
+		struct TableView {
+			
+			struct Cell {
+				
+				static let menuOption = "MenuOptionTableViewCell"
+				
+			}
+			
+		}
+		
 	}
 	
 }

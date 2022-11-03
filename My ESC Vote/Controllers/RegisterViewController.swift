@@ -28,10 +28,6 @@ class RegisterViewController: UIViewController {
 		
 		registerObserversForTextFields()
 		
-		//		errorLabelView.snp.makeConstraints { make in
-		//			make.width.equalTo(nameTextField)
-		//			make.trailing.leading.equalTo(stackView)
-		//		}
 	}
 	
 	// Text fields must not be empty for register button to be enabled.

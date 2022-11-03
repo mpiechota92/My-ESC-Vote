@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		FirebaseApp.configure()
 		let _ = Firestore.firestore()
 		
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.Design.Color.accentColor]
 		
 		return true
 	}

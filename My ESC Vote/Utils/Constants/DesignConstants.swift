@@ -32,6 +32,8 @@ extension Constants {
 			
 			struct Icon {
 				static let user = "person"
+				static let register = "person.badge.plus"
+				static let login = "person.crop.circle"
 			}
 			
 		}
@@ -49,9 +51,9 @@ extension Constants {
 			}
 			
 			struct Size {
-				static let small = 13.0
-				static let standard = 17.0
-				static let large = 22.0
+				static let small = 15.0
+				static let standard = 19.5
+				static let large = 25.35
 				
 				static let header = 22.0
 				static let subheader = 13.0

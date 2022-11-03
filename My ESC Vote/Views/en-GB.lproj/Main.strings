@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "4Hz-29-mNE"; */
+"4Hz-29-mNE.placeholder" = "Confirm password";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "57w-qb-wmj"; */
+"57w-qb-wmj.placeholder" = "Email";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "GY4-bD-KdD"; */
+"GY4-bD-KdD.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HYJ-yM-mlt"; */
+"HYJ-yM-mlt.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Obd-fI-zk9"; */
+"Obd-fI-zk9.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Op4-uF-gde"; */
+"Op4-uF-gde.placeholder" = "Password";
+
+/* Class = "UINavigationItem"; title = "Register"; ObjectID = "TH4-eI-zNv"; */
+"TH4-eI-zNv.title" = "Register";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UMJ-wq-nUw"; */
+"UMJ-wq-nUw.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "glG-t6-wVC"; */
+"glG-t6-wVC.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "lYB-Pu-iUd"; */
+"lYB-Pu-iUd.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "lYB-Pu-iUd"; */
+"lYB-Pu-iUd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ner-BA-hmO"; */
+"ner-BA-hmO.text" = "Label";

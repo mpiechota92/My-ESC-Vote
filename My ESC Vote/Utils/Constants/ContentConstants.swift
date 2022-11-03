@@ -17,8 +17,11 @@ extension Constants {
 		struct Nib {
 			
 			static let labelView = "LabelView"
+			static let userMenuView = "UserMenuView"
+			static let menuOptionCell = "MenuOptionTableViewCell"
 			
 		}
+		
 		
 	}
 	

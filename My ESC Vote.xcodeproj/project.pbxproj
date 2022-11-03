@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		432B03C0685FE508254BF449 /* Pods_My_ESC_Vote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */; };
 		521541262911A33200E19B6F /* Gotham Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 521541252911A33200E19B6F /* Gotham Book.otf */; };
+		521541282913206D00E19B6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521541272913206D00E19B6F /* LoginViewController.swift */; };
 		523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7339290ECA7C0070E12A /* AppDelegate.swift */; };
 		523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B733B290ECA7C0070E12A /* SceneDelegate.swift */; };
 		523B7341290ECA7C0070E12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523B733F290ECA7C0070E12A /* Main.storyboard */; };
@@ -32,10 +33,16 @@
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
 		52C327DE291137D100F9965A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327DD291137D100F9965A /* LabelView.swift */; };
+		52C81806291460290006CA38 /* UserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81805291460290006CA38 /* UserMenuView.swift */; };
+		52C818082914603E0006CA38 /* UserMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C818072914603E0006CA38 /* UserMenuView.xib */; };
+		52C8180C291465F40006CA38 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180B291465F40006CA38 /* MenuOption.swift */; };
+		52C8180E29146A880006CA38 /* MenuOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */; };
+		52C8181029146A920006CA38 /* MenuOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		521541252911A33200E19B6F /* Gotham Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Book.otf"; sourceTree = "<group>"; };
+		521541272913206D00E19B6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		523B7336290ECA7C0070E12A /* My ESC Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My ESC Vote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B7339290ECA7C0070E12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523B733B290ECA7C0070E12A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +62,15 @@
 		523B736A291028A30070E12A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		523B736C2910293A0070E12A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/APIManager.swift"; sourceTree = "<group>"; };
 		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/RegisterViewController.swift"; sourceTree = "<group>"; };
-		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationForm.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/RegistrationForm.swift"; sourceTree = "<group>"; };
+		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52C327DD291137D100F9965A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		52C81805291460290006CA38 /* UserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserMenuView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/UserMenuView.swift"; sourceTree = "<group>"; };
+		52C818072914603E0006CA38 /* UserMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UserMenuView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/UserMenuView.xib"; sourceTree = "<group>"; };
+		52C8180B291465F40006CA38 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOption.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Menu/MenuOption.swift"; sourceTree = "<group>"; };
+		52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOptionTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/MenuOptionTableViewCell.swift"; sourceTree = "<group>"; };
+		52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuOptionTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/MenuOptionTableViewCell.xib"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +159,7 @@
 			children = (
 				523B7353290ECEE40070E12A /* MainViewController.swift */,
 				523B736E291072350070E12A /* RegisterViewController.swift */,
+				521541272913206D00E19B6F /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,7 +177,8 @@
 		523B7351290ECDFB0070E12A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52C327CB29108BFB00F9965A /* RegistrationForm.swift */,
+				52C8180A291465E50006CA38 /* Registration */,
+				52C81809291465DE0006CA38 /* Menu */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +225,8 @@
 		52C327E1291139C100F9965A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */,
+				52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -219,8 +235,26 @@
 			isa = PBXGroup;
 			children = (
 				52C327DD291137D100F9965A /* LabelView.swift */,
+				52C81805291460290006CA38 /* UserMenuView.swift */,
+				52C818072914603E0006CA38 /* UserMenuView.xib */,
 			);
 			path = "View Elements";
+			sourceTree = "<group>";
+		};
+		52C81809291465DE0006CA38 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				52C8180B291465F40006CA38 /* MenuOption.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		52C8180A291465E50006CA38 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				52C327CB29108BFB00F9965A /* RegistrationForm.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		6A7505C57BD0EC8E5BEEBC9D /* Frameworks */ = {
@@ -301,7 +335,9 @@
 				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
+				52C818082914603E0006CA38 /* UserMenuView.xib in Resources */,
 				521541262911A33200E19B6F /* Gotham Book.otf in Resources */,
+				52C8181029146A920006CA38 /* MenuOptionTableViewCell.xib in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
 			);
@@ -357,10 +393,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
+				52C8180E29146A880006CA38 /* MenuOptionTableViewCell.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
+				52C81806291460290006CA38 /* UserMenuView.swift in Sources */,
 				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
+				52C8180C291465F40006CA38 /* MenuOption.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
@@ -369,6 +408,7 @@
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
+				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
 				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
 				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,
 				52C327DE291137D100F9965A /* LabelView.swift in Sources */,
