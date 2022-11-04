@@ -33,7 +33,7 @@ class RegisterViewController: UIViewController {
 	// Text fields must not be empty for register button to be enabled.
 	private func registerObserversForTextFields() {
 		
-		let notification: (UITextField) -> ((Notification) -> ()) = { textField in
+		let notificationGenerator: NotificationGenerator<UITextField> = { textField in
 			let closure: (Notification) -> () = { _ in
 				let textCount = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
 				let textIsNotEmpty = textCount > 0
@@ -46,33 +46,8 @@ class RegisterViewController: UIViewController {
 			return closure
 		}
 		
-		NotificationCenter.default.addObserver(
-			forName: UITextField.textDidChangeNotification,
-			object: nameTextField,
-			queue: OperationQueue.main,
-			using: notification(nameTextField)
-		)
+		self.addObserversToSubviews(in: self.view, with: notificationGenerator, forName: UITextField.textDidChangeNotification)
 		
-		NotificationCenter.default.addObserver(
-			forName: UITextField.textDidChangeNotification,
-			object: emailTextField,
-			queue: OperationQueue.main,
-			using: notification(emailTextField)
-		)
-		
-		NotificationCenter.default.addObserver(
-			forName: UITextField.textDidChangeNotification,
-			object: passwordTextField,
-			queue: OperationQueue.main,
-			using: notification(passwordTextField)
-		)
-		
-		NotificationCenter.default.addObserver(
-			forName: UITextField.textDidChangeNotification,
-			object: confirmPasswordTextField,
-			queue: OperationQueue.main,
-			using: notification(confirmPasswordTextField)
-		)
 	}
 	
 	@IBAction func registerButtonTapped(_ sender: UIButton) {
@@ -83,8 +58,6 @@ class RegisterViewController: UIViewController {
 			  let confirmPassword = confirmPasswordTextField.text else {
 			return
 		}
-		
-		print(name, email, password, confirmPassword, separator: ", ", terminator: ".")
 		
 		registrationViewModel.registerNewUser(
 			name: name,
@@ -97,6 +70,7 @@ class RegisterViewController: UIViewController {
 					self?.navigationController?.popToRootViewController(animated: true)
 				}
 			}
+		
 	}
 	
 	private func setTextForLabel(from error: LocalizedError) {

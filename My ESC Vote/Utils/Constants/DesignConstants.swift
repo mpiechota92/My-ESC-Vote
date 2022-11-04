@@ -13,6 +13,7 @@ extension Constants {
 		struct Color {
 			
 			static let accentColor = UIColor(named: "AccentColor")!
+			static let tintColor = UIColor(named: "Winter")!
 			
 			struct Primary {
 				
@@ -34,6 +35,9 @@ extension Constants {
 				static let user = "person"
 				static let register = "person.badge.plus"
 				static let login = "person.crop.circle"
+				static let logout = "rectangle.portrait.and.arrow.right"
+				static let settings = "gearshape"
+				static let about = "info.circle"
 			}
 			
 		}

@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let _ = Firestore.firestore()
 		
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.Design.Color.accentColor]
+		//UINavigationBar.appearance().tintColor = Constants.Design.Color.
 		
 		return true
 	}

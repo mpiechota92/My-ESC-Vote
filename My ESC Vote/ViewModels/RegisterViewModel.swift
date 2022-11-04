@@ -15,8 +15,6 @@ class RegistrationFormViewModel {
 		
 		let registrationForm = RegistrationForm(name: name, email: email, password: password, confirmPassword: confirmPassword)
 		
-		print(name, email, password, confirmPassword, separator: " - ", terminator: ";")
-		
 		do {
 			try registrationForm.createUser()
 			handler(nil)

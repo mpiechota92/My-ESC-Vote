@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="My ESC Vote/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.0.1" build-num="14A400"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>My ESC Vote</source>
+        <target>My ESC Vote</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>My ESC Vote</source>
+        <target>My ESC Vote</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="My ESC Vote/Views/Base.lproj/Main.storyboard" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.0.1" build-num="14A400"/>
+    </header>
+    <body>
+      <trans-unit id="4Hz-29-mNE.placeholder" xml:space="preserve">
+        <source>Confirm password</source>
+        <target>Confirm password</target>
+        <note>Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "4Hz-29-mNE";</note>
+      </trans-unit>
+      <trans-unit id="57w-qb-wmj.placeholder" xml:space="preserve">
+        <source>Email</source>
+        <target>Email</target>
+        <note>Class = "UITextField"; placeholder = "Email"; ObjectID = "57w-qb-wmj";</note>
+      </trans-unit>
+      <trans-unit id="GY4-bD-KdD.title" xml:space="preserve">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UIBarButtonItem"; title = "Item"; ObjectID = "GY4-bD-KdD";</note>
+      </trans-unit>
+      <trans-unit id="HYJ-yM-mlt.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "HYJ-yM-mlt";</note>
+      </trans-unit>
+      <trans-unit id="Obd-fI-zk9.placeholder" xml:space="preserve">
+        <source>Name</source>
+        <target>Name</target>
+        <note>Class = "UITextField"; placeholder = "Name"; ObjectID = "Obd-fI-zk9";</note>
+      </trans-unit>
+      <trans-unit id="Op4-uF-gde.placeholder" xml:space="preserve">
+        <source>Password</source>
+        <target>Password</target>
+        <note>Class = "UITextField"; placeholder = "Password"; ObjectID = "Op4-uF-gde";</note>
+      </trans-unit>
+      <trans-unit id="TH4-eI-zNv.title" xml:space="preserve">
+        <source>Register</source>
+        <target>Register</target>
+        <note>Class = "UINavigationItem"; title = "Register"; ObjectID = "TH4-eI-zNv";</note>
+      </trans-unit>
+      <trans-unit id="UMJ-wq-nUw.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "UMJ-wq-nUw";</note>
+      </trans-unit>
+      <trans-unit id="glG-t6-wVC.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "glG-t6-wVC";</note>
+      </trans-unit>
+      <trans-unit id="lYB-Pu-iUd.configuration.title" xml:space="preserve">
+        <source>Register</source>
+        <target>Register</target>
+        <note>Class = "UIButton"; configuration.title = "Register"; ObjectID = "lYB-Pu-iUd";</note>
+      </trans-unit>
+      <trans-unit id="lYB-Pu-iUd.normalTitle" xml:space="preserve">
+        <source>Button</source>
+        <target>Button</target>
+        <note>Class = "UIButton"; normalTitle = "Button"; ObjectID = "lYB-Pu-iUd";</note>
+      </trans-unit>
+      <trans-unit id="ner-BA-hmO.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "ner-BA-hmO";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -29,10 +29,6 @@ class UserMenuView: UIView {
 				   })
 	]
 	
-	class func instanceFromNib(_ nibName: String) -> UserMenuView {
-		return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UserMenuView
-	}
-	
 	func setupView(cellNibName: String, with storyboard: UIStoryboard?) {
 		self.storyboard = storyboard
 		optionsTableView.dataSource = self

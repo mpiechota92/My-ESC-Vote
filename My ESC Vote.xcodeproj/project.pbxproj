@@ -38,6 +38,10 @@
 		52C8180C291465F40006CA38 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180B291465F40006CA38 /* MenuOption.swift */; };
 		52C8180E29146A880006CA38 /* MenuOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */; };
 		52C8181029146A920006CA38 /* MenuOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */; };
+		52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */; };
+		52C81815291566910006CA38 /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81814291566910006CA38 /* AboutInfoView.swift */; };
+		52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */; };
+		52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* AboutInfoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		52C8180B291465F40006CA38 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOption.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Menu/MenuOption.swift"; sourceTree = "<group>"; };
 		52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOptionTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/MenuOptionTableViewCell.swift"; sourceTree = "<group>"; };
 		52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuOptionTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/MenuOptionTableViewCell.xib"; sourceTree = "<group>"; };
+		52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+AddObserversToSubviews.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIViewController+AddObserversToSubviews.swift"; sourceTree = "<group>"; };
+		52C81814291566910006CA38 /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutInfoView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.swift"; sourceTree = "<group>"; };
+		52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+InstanceFromNib.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIView+InstanceFromNib.swift"; sourceTree = "<group>"; };
+		52C81818291572AB0006CA38 /* AboutInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutInfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.xib"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 		523B7338290ECA7C0070E12A /* My ESC Vote */ = {
 			isa = PBXGroup;
 			children = (
+				52C8181129150D1B0006CA38 /* Extensions */,
 				521541232911A2E900E19B6F /* Src */,
 				523B7355290ED0470070E12A /* Utils */,
 				523B7352290ECE000070E12A /* Services */,
@@ -237,6 +246,8 @@
 				52C327DD291137D100F9965A /* LabelView.swift */,
 				52C81805291460290006CA38 /* UserMenuView.swift */,
 				52C818072914603E0006CA38 /* UserMenuView.xib */,
+				52C81814291566910006CA38 /* AboutInfoView.swift */,
+				52C81818291572AB0006CA38 /* AboutInfoView.xib */,
 			);
 			path = "View Elements";
 			sourceTree = "<group>";
@@ -255,6 +266,15 @@
 				52C327CB29108BFB00F9965A /* RegistrationForm.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		52C8181129150D1B0006CA38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */,
+				52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6A7505C57BD0EC8E5BEEBC9D /* Frameworks */ = {
@@ -336,6 +356,7 @@
 				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
 				52C818082914603E0006CA38 /* UserMenuView.xib in Resources */,
+				52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */,
 				521541262911A33200E19B6F /* Gotham Book.otf in Resources */,
 				52C8181029146A920006CA38 /* MenuOptionTableViewCell.xib in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
@@ -404,14 +425,17 @@
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
 				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
+				52C81815291566910006CA38 /* AboutInfoView.swift in Sources */,
 				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
+				52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */,
 				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
 				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
 				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,
 				52C327DE291137D100F9965A /* LabelView.swift in Sources */,
+				52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

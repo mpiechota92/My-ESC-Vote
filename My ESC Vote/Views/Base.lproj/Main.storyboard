@@ -79,7 +79,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="macieq44" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-fI-zk9">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
-                                                <color key="backgroundColor" name="Winter"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="5Uw-4g-wvu"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="zTn-ya-Poz"/>
@@ -89,7 +89,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="macieq44@gmial.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="57w-qb-wmj">
                                                 <rect key="frame" x="0.0" y="42" width="250" height="34"/>
-                                                <color key="backgroundColor" name="Winter"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Jfn-YX-uMT"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ldf-U3-5MJ"/>
@@ -99,7 +99,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kasiarek" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Op4-uF-gde">
                                                 <rect key="frame" x="0.0" y="84" width="250" height="34"/>
-                                                <color key="backgroundColor" name="Winter"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="9GR-Fq-Mtz"/>
                                                     <constraint firstAttribute="height" constant="34" id="fA8-Bs-JCP"/>
@@ -109,7 +109,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kasiarek1" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Hz-29-mNE">
                                                 <rect key="frame" x="0.0" y="126" width="250" height="34"/>
-                                                <color key="backgroundColor" name="Winter"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ObU-SH-ZOH"/>
                                                     <constraint firstAttribute="height" constant="34" id="fQO-Zn-9Ew"/>
@@ -207,12 +207,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSY-Sa-xbh">
                                         <rect key="frame" x="0.0" y="55" width="390" height="789"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxu-vD-0en" customClass="LabelView" customModule="My_ESC_Vote" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="272" width="250" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="500" constant="34" id="h3c-O4-ba6"/>
+                                                    <constraint firstAttribute="width" constant="250" id="n0c-3I-wb9"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zLF-78-PjW">
                                                 <rect key="frame" x="70" y="146" width="250" height="118"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="macieq44@gmial.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1d-dd-aiu">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pjeszi@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1d-dd-aiu">
                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
-                                                        <color key="backgroundColor" name="Winter"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="pd1-oy-xgw"/>
                                                             <constraint firstAttribute="height" constant="34" id="vEw-9A-MId"/>
@@ -220,9 +227,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kasiarek" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KiI-kS-jHg">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kasiarek!1" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KiI-kS-jHg">
                                                         <rect key="frame" x="0.0" y="42" width="250" height="34"/>
-                                                        <color key="backgroundColor" name="Winter"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="1m5-p2-t82"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="oML-gx-hbj"/>
@@ -242,6 +249,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="tinted" title="Login"/>
                                                                 <connections>
+                                                                    <action selector="loginButtonTapped:" destination="46O-U6-YFL" eventType="touchUpInside" id="ZFX-xS-rf4"/>
                                                                     <action selector="registerButtonTapped:" destination="UOM-us-rnt" eventType="touchUpInside" id="9Mk-PV-g3p"/>
                                                                 </connections>
                                                             </button>
@@ -261,13 +269,6 @@
                                                     <constraint firstItem="i0m-dm-osW" firstAttribute="leading" secondItem="zLF-78-PjW" secondAttribute="leading" id="P9F-hl-pqb"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxu-vD-0en" customClass="LabelView" customModule="My_ESC_Vote" customModuleProvider="target">
-                                                <rect key="frame" x="70" y="272" width="250" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="34" id="h3c-O4-ba6"/>
-                                                    <constraint firstAttribute="width" constant="250" id="n0c-3I-wb9"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" name="Navy"/>
                                         <constraints>
@@ -297,6 +298,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gHU-cU-gXk"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="e1d-dd-aiu" id="2eX-Oj-SHi"/>
+                        <outlet property="errorLabelView" destination="Dxu-vD-0en" id="qrb-Hf-pRk"/>
+                        <outlet property="loginButton" destination="l0b-WA-uq2" id="gPI-Va-UrO"/>
+                        <outlet property="passwordTextField" destination="KiI-kS-jHg" id="MdX-Ac-xAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29i-5c-ENt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -312,10 +319,7 @@
             <color red="0.011764705882352941" green="0.0078431372549019607" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Navy">
-            <color red="0.10980392156862745" green="0.10588235294117647" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Winter">
-            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10980392156862745" green="0.10588235294117647" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

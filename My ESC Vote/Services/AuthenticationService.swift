@@ -43,6 +43,8 @@ extension AuthenticationError: LocalizedError {
 				"Error when creating user. Please try again or contact the Administrator",
 				comment: "User not created"
 			)
+		case .loginError:
+			return NSLocalizedString("Error logging in", comment: "")
 		default:
 			return ""
 		}
@@ -91,21 +93,29 @@ class AuthenticationService {
 		
 	}
 	
-	func login(email: String, password: String, completion: @escaping (_ error: AuthenticationError?) -> ()) {
+	func login(email: String, password: String, completion: ((_ error: AuthenticationError?) -> ())? = nil) throws {
 		
 		guard ValidationHelper.validateEmail(email) else {
-			completion(.invalidEmail)
-			return
+			completion?(.invalidEmail)
+			throw AuthenticationError.invalidEmail
 		}
+		
+		var authenticationError: AuthenticationError?
 		
 		Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
 			if let error = error {
+				print(error)
 				print(error.localizedDescription)
-				completion(.loginError)
+				completion?(.loginError)
+				authenticationError = .loginError
 			} else {
 				print(authResult ?? "successfully logged in")
-				completion(nil)
+				completion?(nil)
 			}
+		}
+		
+		if let error = authenticationError {
+			throw error
 		}
 		
 	}
