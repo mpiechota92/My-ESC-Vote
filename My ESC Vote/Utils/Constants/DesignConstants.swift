@@ -14,13 +14,15 @@ extension Constants {
 			
 			static let accentColor = UIColor(named: "AccentColor")!
 			static let tintColor = UIColor(named: "Winter")!
+			static let dimmedAccentColor = UIColor(named: "Dimmed Accent Color")!
+			
 			
 			struct Primary {
 				
 			}
 			
 			struct Secondary {
-				
+				static let lightNavy = UIColor(named: "Light Navy")!
 			}
 			
 			struct Grayscale {
@@ -38,6 +40,12 @@ extension Constants {
 				static let logout = "rectangle.portrait.and.arrow.right"
 				static let settings = "gearshape"
 				static let about = "info.circle"
+				static let close = "xmark.circle"
+				static let back = "chevron.backward"
+				static let home = "music.note.house"
+				static let homeSelected = "music.note.house.fill"
+				static let voting = "list.bullet.clipboard"
+				static let votingSelected = "list.bullet.clipboard.fill"
 			}
 			
 		}

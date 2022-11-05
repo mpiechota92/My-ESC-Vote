@@ -23,11 +23,23 @@ class RegisterViewController: UIViewController {
 	
 	@IBOutlet weak var registerButton: UIButton!
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		tabBarController?.tabBar.isHidden = true
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		registerObserversForTextFields()
 		
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		tabBarController?.tabBar.isHidden = false
 	}
 	
 	// Text fields must not be empty for register button to be enabled.

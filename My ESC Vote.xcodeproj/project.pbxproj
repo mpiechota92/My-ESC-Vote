@@ -29,6 +29,8 @@
 		523B736B291028A30070E12A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736A291028A30070E12A /* AuthenticationService.swift */; };
 		523B736D2910293A0070E12A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736C2910293A0070E12A /* APIManager.swift */; };
 		523B736F291072350070E12A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736E291072350070E12A /* RegisterViewController.swift */; };
+		52615578291660FE006988BD /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52615577291660FE006988BD /* MenuButton.swift */; };
+		5261557A29166884006988BD /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261557929166884006988BD /* Notification+Names.swift */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
@@ -42,6 +44,8 @@
 		52C81815291566910006CA38 /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81814291566910006CA38 /* AboutInfoView.swift */; };
 		52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */; };
 		52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* AboutInfoView.xib */; };
+		52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */; };
+		52C8181D291587800006CA38 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181C291587800006CA38 /* VotingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,8 @@
 		523B736A291028A30070E12A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		523B736C2910293A0070E12A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/APIManager.swift"; sourceTree = "<group>"; };
 		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/RegisterViewController.swift"; sourceTree = "<group>"; };
+		52615577291660FE006988BD /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuButton.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/MenuButton.swift"; sourceTree = "<group>"; };
+		5261557929166884006988BD /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notification+Names.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/Notification+Names.swift"; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 		52C81814291566910006CA38 /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutInfoView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.swift"; sourceTree = "<group>"; };
 		52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+InstanceFromNib.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIView+InstanceFromNib.swift"; sourceTree = "<group>"; };
 		52C81818291572AB0006CA38 /* AboutInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutInfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.xib"; sourceTree = "<group>"; };
+		52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardTabBarController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/DashboardTabBarController.swift"; sourceTree = "<group>"; };
+		52C8181C291587800006CA38 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VotingViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/VotingViewController.swift"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +177,8 @@
 				523B7353290ECEE40070E12A /* MainViewController.swift */,
 				523B736E291072350070E12A /* RegisterViewController.swift */,
 				521541272913206D00E19B6F /* LoginViewController.swift */,
+				52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */,
+				52C8181C291587800006CA38 /* VotingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,8 +186,8 @@
 		523B7350290ECDF30070E12A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52C327E2291139C600F9965A /* View Elements */,
 				52C327E1291139C100F9965A /* Cells */,
+				52C327E2291139C600F9965A /* View Elements */,
 				523B733F290ECA7C0070E12A /* Main.storyboard */,
 			);
 			path = Views;
@@ -248,6 +258,7 @@
 				52C818072914603E0006CA38 /* UserMenuView.xib */,
 				52C81814291566910006CA38 /* AboutInfoView.swift */,
 				52C81818291572AB0006CA38 /* AboutInfoView.xib */,
+				52615577291660FE006988BD /* MenuButton.swift */,
 			);
 			path = "View Elements";
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 			children = (
 				52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */,
 				52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */,
+				5261557929166884006988BD /* Notification+Names.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,9 +435,12 @@
 				52C8180C291465F40006CA38 /* MenuOption.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
+				5261557A29166884006988BD /* Notification+Names.swift in Sources */,
+				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
 				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
 				52C81815291566910006CA38 /* AboutInfoView.swift in Sources */,
+				52C8181D291587800006CA38 /* VotingViewController.swift in Sources */,
 				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
@@ -435,6 +450,7 @@
 				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
 				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,
 				52C327DE291137D100F9965A /* LabelView.swift in Sources */,
+				52615578291660FE006988BD /* MenuButton.swift in Sources */,
 				52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

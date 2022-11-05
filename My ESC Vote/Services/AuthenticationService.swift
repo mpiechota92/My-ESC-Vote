@@ -84,6 +84,8 @@ class AuthenticationService {
 			} else {
 				print(result ?? "successfully registered")
 				completion?(nil)
+				
+				NotificationCenter.default.post(Notification(name: .onLoginStatusChange))
 			}
 		}
 		
@@ -111,6 +113,8 @@ class AuthenticationService {
 			} else {
 				print(authResult ?? "successfully logged in")
 				completion?(nil)
+				
+				NotificationCenter.default.post(Notification(name: .onLoginStatusChange))
 			}
 		}
 		
@@ -125,6 +129,8 @@ class AuthenticationService {
 		do {
 			try Auth.auth().signOut()
 			completion(nil)
+			
+			NotificationCenter.default.post(Notification(name: .onLoginStatusChange))
 		} catch {
 			print(error.localizedDescription)
 			completion(.logoutError)

@@ -9,6 +9,10 @@ extension Constants {
 	
 	struct UI {
 		
+		struct Storyboard {
+			static let main = "Main"
+		}
+		
 		struct ViewController {
 			
 			struct Segues {
@@ -18,6 +22,8 @@ extension Constants {
 			struct ID {
 				static let register = "RegisterViewController"
 				static let login = "LoginViewController"
+				static let main = "MainViewController"
+				static let voting = "VotingViewController"
 			}
 			
 		}
@@ -28,6 +34,14 @@ extension Constants {
 				
 				static let menuOption = "MenuOptionTableViewCell"
 				
+			}
+			
+		}
+		
+		struct TabBarController {
+			
+			struct Item {
+				static let home = "Home"
 			}
 			
 		}

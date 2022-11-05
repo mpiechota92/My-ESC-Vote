@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let _ = Firestore.firestore()
 		
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.Design.Color.accentColor]
-		//UINavigationBar.appearance().tintColor = Constants.Design.Color.
+		
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Constants.Design.Color.accentColor], for: .selected)
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Constants.Design.Color.dimmedAccentColor], for: .normal)
 		
 		return true
 	}

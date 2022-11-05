@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oqV-aW-icA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ix0-Jz-XWm">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
         <!--Main View Controller-->
         <scene sceneID="mid-lR-ifE">
             <objects>
-                <viewController id="9Rh-iK-Hcz" customClass="MainViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="9Rh-iK-Hcz" customClass="MainViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWB-3Y-bAQ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,8 +28,8 @@
                         <color key="backgroundColor" name="Dark Navy"/>
                     </view>
                     <navigationItem key="navigationItem" id="R2P-2m-sBN">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person" catalog="system" style="plain" id="6u2-9h-iLV">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ep2-d6-NiZ">
+                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="jCd-c6-iNG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vnG-5n-Bz6" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
                                 <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -38,17 +38,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="userButton" destination="ep2-d6-NiZ" id="xwf-Qw-Qa1"/>
+                        <outlet property="button" destination="vnG-5n-Bz6" id="AlO-Ky-Yvb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0f-gE-OXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-58"/>
+            <point key="canvasLocation" x="1773.8461538461538" y="-58.293838862559241"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="BoN-P0-Hix">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oqV-aW-icA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="e21-QP-8D8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K0h-6n-j9H">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -61,7 +62,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVa-6m-Wpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72.307692307692307" y="-57.582938388625593"/>
+            <point key="canvasLocation" x="856.92307692307691" y="-57.582938388625593"/>
         </scene>
         <!--Register-->
         <scene sceneID="08Q-4v-xuy">
@@ -191,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WT3-uL-tOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="-660"/>
+            <point key="canvasLocation" x="2363" y="-703"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="At9-mf-0cf">
@@ -307,7 +308,96 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29i-5c-ENt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852.3076923076922" y="150.71090047393363"/>
+            <point key="canvasLocation" x="2991" y="-703"/>
+        </scene>
+        <!--Dashboard Tab Bar Controller-->
+        <scene sceneID="po4-M1-LW4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ix0-Jz-XWm" customClass="DashboardTabBarController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bjh-1q-fV2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Light Navy"/>
+                        <color key="barTintColor" name="Winter"/>
+                        <color key="selectedImageTintColor" name="Winter"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" name="Winter"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" name="Dimmed Accent Color"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oqV-aW-icA" kind="relationship" relationship="viewControllers" id="ji2-D1-t9e"/>
+                        <segue destination="V0g-qF-XEy" kind="relationship" relationship="viewControllers" id="1Iz-RB-Uno"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pq-6h-d97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72.307692307692307" y="-57.582938388625593"/>
+        </scene>
+        <!--Voting View Controller-->
+        <scene sceneID="cxQ-g1-yng">
+            <objects>
+                <viewController storyboardIdentifier="VotingViewController" id="j2s-1m-SBd" customClass="VotingViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHc-Uw-BAT">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wew-BT-gmZ">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <color key="backgroundColor" name="Navy"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UPB-bW-CKW"/>
+                        <color key="backgroundColor" name="Dark Navy"/>
+                        <constraints>
+                            <constraint firstItem="wew-BT-gmZ" firstAttribute="trailing" secondItem="UPB-bW-CKW" secondAttribute="trailing" id="9BB-FC-N2U"/>
+                            <constraint firstItem="wew-BT-gmZ" firstAttribute="top" secondItem="UPB-bW-CKW" secondAttribute="top" id="GOU-fu-80G"/>
+                            <constraint firstItem="wew-BT-gmZ" firstAttribute="leading" secondItem="UPB-bW-CKW" secondAttribute="leading" id="kFo-o5-mzI"/>
+                            <constraint firstAttribute="bottom" secondItem="wew-BT-gmZ" secondAttribute="bottom" id="n2H-p2-7Y3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="812-HN-moG">
+                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="2R9-3G-EPz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="L0o-B9-vuU" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
+                                <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="L0o-B9-vuU" id="X1u-tx-PVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3G9-Gh-LcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.8461538461538" y="679.62085308056874"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="8fA-jO-WjE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V0g-qF-XEy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hca-oo-P0m"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Gyn-Cc-GgI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qTe-kd-qbu">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j2s-1m-SBd" kind="relationship" relationship="rootViewController" id="3Ze-qV-zlO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vP0-DY-gV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="681"/>
         </scene>
     </scenes>
     <resources>
@@ -318,8 +408,17 @@
         <namedColor name="Dark Navy">
             <color red="0.011764705882352941" green="0.0078431372549019607" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <namedColor name="Dimmed Accent Color">
+            <color red="0.71513967803030298" green="0.71513967803030298" blue="0.71513967803030298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light Navy">
+            <color red="0.14421638283752267" green="0.13983573727965382" blue="0.44344710895721917" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Navy">
             <color red="0.10980392156862745" green="0.10588235294117647" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
