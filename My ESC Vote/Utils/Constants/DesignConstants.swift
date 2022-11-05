@@ -44,8 +44,8 @@ extension Constants {
 				static let back = "chevron.backward"
 				static let home = "music.note.house"
 				static let homeSelected = "music.note.house.fill"
-				static let voting = "list.bullet.clipboard"
-				static let votingSelected = "list.bullet.clipboard.fill"
+				static let contests = "list.bullet.clipboard"
+				static let contestsSelected = "list.bullet.clipboard.fill"
 			}
 			
 		}

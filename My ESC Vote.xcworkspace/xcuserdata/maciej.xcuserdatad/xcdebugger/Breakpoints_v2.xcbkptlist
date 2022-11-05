@@ -17,7 +17,23 @@
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "handleLogoutMenu(_:)"
-            landmarkType = "9">
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA1DB6F5-9444-4116-9515-BBBDDA548241"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/ContestViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchContestsData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

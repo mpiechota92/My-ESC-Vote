@@ -29,7 +29,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="R2P-2m-sBN">
                         <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="jCd-c6-iNG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vnG-5n-Bz6" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vnG-5n-Bz6" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
                                 <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -339,16 +339,33 @@
             </objects>
             <point key="canvasLocation" x="-72.307692307692307" y="-57.582938388625593"/>
         </scene>
-        <!--Voting View Controller-->
+        <!--Contests View Controller-->
         <scene sceneID="cxQ-g1-yng">
             <objects>
-                <viewController storyboardIdentifier="VotingViewController" id="j2s-1m-SBd" customClass="VotingViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContestsViewController" id="j2s-1m-SBd" customClass="ContestsViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RHc-Uw-BAT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wew-BT-gmZ">
                                 <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <subviews>
+                                    <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cHV-Sa-Nif">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="662"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContestTableViewCell" id="xdC-ZT-rip" customClass="ContestTableViewCell" customModule="My_ESC_Vote" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdC-ZT-rip" id="K6g-RH-K6B">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" name="Navy"/>
                             </view>
                         </subviews>
@@ -363,7 +380,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="812-HN-moG">
                         <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="2R9-3G-EPz">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="L0o-B9-vuU" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="L0o-B9-vuU" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
                                 <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -372,6 +389,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contestsTableView" destination="cHV-Sa-Nif" id="jLB-ff-zaX"/>
                         <outlet property="menuButton" destination="L0o-B9-vuU" id="X1u-tx-PVa"/>
                     </connections>
                 </viewController>
@@ -409,10 +427,10 @@
             <color red="0.011764705882352941" green="0.0078431372549019607" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Dimmed Accent Color">
-            <color red="0.71513967803030298" green="0.71513967803030298" blue="0.71513967803030298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Light Navy">
-            <color red="0.14421638283752267" green="0.13983573727965382" blue="0.44344710895721917" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14509803921568629" green="0.14117647058823529" blue="0.44313725490196076" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Navy">
             <color red="0.10980392156862745" green="0.10588235294117647" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

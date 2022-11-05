@@ -14,7 +14,16 @@ extension Constants {
 			struct Collections {
 				
 				struct Users {
-					static let tableName = "users"
+					static let collectionName = "users"
+					
+					struct Fields {
+						static let name = "name"
+						static let email = "email"
+					}
+				}
+				
+				struct Contests {
+					static let collectionName = "contests"
 					
 					struct Fields {
 						static let name = "name"

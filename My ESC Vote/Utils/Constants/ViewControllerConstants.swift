@@ -24,6 +24,7 @@ extension Constants {
 				static let login = "LoginViewController"
 				static let main = "MainViewController"
 				static let voting = "VotingViewController"
+				static let contests = "ContestsViewController"
 			}
 			
 		}
@@ -33,6 +34,7 @@ extension Constants {
 			struct Cell {
 				
 				static let menuOption = "MenuOptionTableViewCell"
+				static let contest = "ContestTableViewCell"
 				
 			}
 			

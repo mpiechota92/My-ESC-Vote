@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Gotham Bold.otf</string>
 		<string>Gotham Book.otf</string>
 	</array>
 	<key>CFBundleIdentifier</key>
