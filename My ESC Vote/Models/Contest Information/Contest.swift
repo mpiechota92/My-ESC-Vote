@@ -21,6 +21,9 @@ struct Contest: Codable, HasDocumentID {
 	var endDate: Date
 	var contestType: ContestType
 	
+}
+
+extension Contest {
 	func getID() -> String? {
 		return title
 	}

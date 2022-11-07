@@ -19,6 +19,7 @@ extension Constants {
 			static let userMenuView = "UserMenuView"
 			static let menuOptionCell = "MenuOptionTableViewCell"
 			static let aboutInfoView = "AboutInfoView"
+			static let contestCell = "ContestTableViewCell"
 		}
 		
 		

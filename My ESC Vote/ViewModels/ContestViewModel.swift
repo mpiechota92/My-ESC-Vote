@@ -9,7 +9,7 @@ import Foundation
 
 class ContestsListViewModel {
 	
-	private var contestsList: [ContestViewModel]!
+	private var contestsList: [ContestViewModel] = []
 	
 	func contestsCount() -> Int {
 		return contestsList.count
@@ -19,10 +19,12 @@ class ContestsListViewModel {
 		return contestsList[index]
 	}
 	
-	func fetchContestsData() {
+	func fetchContestsData(completion: @escaping () -> ()) {
 		
-		let contests: [Contest] = APIManager.shared().dbService.fetchAllData(from: Constants.API.Firestore.Collections.Contests.collectionName)
-		contestsList = contests.map(ContestViewModel.init)
+		APIManager.shared().dbService.fetchAllData(from: Collections.Contests.collectionName, as: Contest.self) { records in
+			self.contestsList = records.map(ContestViewModel.init)
+			completion()
+		}
 		
 	}
 	

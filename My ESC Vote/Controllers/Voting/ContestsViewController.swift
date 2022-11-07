@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ContestsViewController: UIViewController {
 	
@@ -14,27 +15,30 @@ class ContestsViewController: UIViewController {
 	
 	private var viewModel: ContestsListViewModel! = ContestsListViewModel()
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		contestsTableView.dataSource = self
-		
-		//let contest = Contest(title: "ESC 2022", country: "Kurwa", startDate: Date(), endDate: Date(), contestType: .ESC)
-		
-		//try? APIManager.shared().dbService.saveData(contest, to: Constants.API.Firestore.Collections.Contests.collectionName)
-		
-		
-		setupUI()
 		setupData()
 	}
 	
 	private func setupUI() {
 		menuButton.setupButton(for: navigationController, with: storyboard)
+		contestsTableView.register(UINib(nibName: Constants.Content.Nib.contestCell, bundle: nil), forCellReuseIdentifier: Constants.UI.TableView.Cell.contest)
+		contestsTableView.reloadData()
 	}
 	
 	private func setupData() {
-		viewModel.fetchContestsData()
-		contestsTableView.reloadData()
+		contestsTableView.dataSource = self
+		
+		viewModel.fetchContestsData() {
+			DispatchQueue.main.async { [weak self] in
+				self?.setupUI()
+			}
+		}
 	}
 }
 
@@ -51,7 +55,7 @@ extension ContestsViewController: UITableViewDataSource {
 		}
 		
 		cell.viewModel = viewModel.contestVMAtIndex(indexPath.row)
-		
+		cell.setup()
 		return cell
 	}
 	

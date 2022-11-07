@@ -29,8 +29,6 @@
 		523B736F291072350070E12A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736E291072350070E12A /* RegisterViewController.swift */; };
 		52615578291660FE006988BD /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52615577291660FE006988BD /* MenuButton.swift */; };
 		5261557A29166884006988BD /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261557929166884006988BD /* Notification+Names.swift */; };
-		5261557C2916ABE6006988BD /* ContestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261557B2916ABE6006988BD /* ContestTableViewCell.swift */; };
-		5261557E2916AC03006988BD /* ContestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5261557D2916AC03006988BD /* ContestTableViewCell.xib */; };
 		526155812916B002006988BD /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526155802916B002006988BD /* Contest.swift */; };
 		526155832916B106006988BD /* ContestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526155822916B106006988BD /* ContestViewModel.swift */; };
 		526155872916E9BF006988BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 526155862916E9BF006988BD /* FirebaseAuth */; };
@@ -38,26 +36,43 @@
 		5261558B2916E9BF006988BD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5261558A2916E9BF006988BD /* FirebaseFirestoreSwift */; };
 		5261558D2916E9BF006988BD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5261558C2916E9BF006988BD /* FirebaseStorage */; };
 		5261558F2916F8FD006988BD /* HasDocumentID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261558E2916F8FD006988BD /* HasDocumentID.swift */; };
+		5261559829180074006988BD /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5261559729180074006988BD /* APIManagerTests.swift */; };
+		5261559F291805D9006988BD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5261559E291805D9006988BD /* FirebaseFirestore */; };
+		526155A1291805F4006988BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 526155A0291805F4006988BD /* FirebaseAuth */; };
+		526155A3291805F4006988BD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 526155A2291805F4006988BD /* FirebaseFirestoreSwift */; };
+		5295AA8629198BF200B820FE /* VoteCategoryMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */; };
+		5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8729198D3F00B820FE /* VoteMenuCell.swift */; };
+		5295AA8A29198EBC00B820FE /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8929198EBC00B820FE /* Typealiases.swift */; };
+		5295AA8C291996D600B820FE /* VoteCategoryPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8B291996D600B820FE /* VoteCategoryPagerViewController.swift */; };
+		5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
 		52C327DE291137D100F9965A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327DD291137D100F9965A /* LabelView.swift */; };
-		52C81806291460290006CA38 /* UserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81805291460290006CA38 /* UserMenuView.swift */; };
-		52C818082914603E0006CA38 /* UserMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C818072914603E0006CA38 /* UserMenuView.xib */; };
 		52C8180C291465F40006CA38 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180B291465F40006CA38 /* MenuOption.swift */; };
-		52C8180E29146A880006CA38 /* MenuOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */; };
-		52C8181029146A920006CA38 /* MenuOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */; };
 		52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */; };
 		52C81815291566910006CA38 /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81814291566910006CA38 /* AboutInfoView.swift */; };
 		52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */; };
 		52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* AboutInfoView.xib */; };
 		52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */; };
 		52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181C291587800006CA38 /* ContestsViewController.swift */; };
+		52EA1BB929195879000F43B6 /* ContestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA1BB729195879000F43B6 /* ContestTableViewCell.swift */; };
+		52EA1BBA29195879000F43B6 /* ContestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EA1BB829195879000F43B6 /* ContestTableViewCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5261559929180074006988BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 523B732E290ECA7C0070E12A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 523B7335290ECA7C0070E12A;
+			remoteInfo = "My ESC Vote";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		521541252911A33200E19B6F /* Gotham Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Book.otf"; sourceTree = "<group>"; };
-		521541272913206D00E19B6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
+		521541272913206D00E19B6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		523B7336290ECA7C0070E12A /* My ESC Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My ESC Vote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B7339290ECA7C0070E12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523B733B290ECA7C0070E12A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,30 +91,33 @@
 		523B7368291028330070E12A /* ViewControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/ViewControllerConstants.swift"; sourceTree = "<group>"; };
 		523B736A291028A30070E12A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		523B736C2910293A0070E12A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/APIManager.swift"; sourceTree = "<group>"; };
-		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/RegisterViewController.swift"; sourceTree = "<group>"; };
+		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		52615577291660FE006988BD /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuButton.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/MenuButton.swift"; sourceTree = "<group>"; };
 		5261557929166884006988BD /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notification+Names.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/Notification+Names.swift"; sourceTree = "<group>"; };
-		5261557B2916ABE6006988BD /* ContestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.swift"; sourceTree = "<group>"; };
-		5261557D2916AC03006988BD /* ContestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContestTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.xib"; sourceTree = "<group>"; };
 		526155802916B002006988BD /* Contest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contest.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Contest Information/Contest.swift"; sourceTree = "<group>"; };
 		526155822916B106006988BD /* ContestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/ContestViewModel.swift"; sourceTree = "<group>"; };
 		526155842916B399006988BD /* Gotham Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Bold.otf"; sourceTree = "<group>"; };
 		5261558E2916F8FD006988BD /* HasDocumentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDocumentID.swift; sourceTree = "<group>"; };
+		5261559529180074006988BD /* My ESC Vote Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My ESC Vote Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5261559729180074006988BD /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
+		5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCategoryMenuController.swift; sourceTree = "<group>"; };
+		5295AA8729198D3F00B820FE /* VoteMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteMenuCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteMenuCell.swift"; sourceTree = "<group>"; };
+		5295AA8929198EBC00B820FE /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Typealiases.swift"; sourceTree = "<group>"; };
+		5295AA8B291996D600B820FE /* VoteCategoryPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCategoryPagerViewController.swift; sourceTree = "<group>"; };
+		5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteCategoryPageCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteCategoryPageCell.swift"; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52C327DD291137D100F9965A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
-		52C81805291460290006CA38 /* UserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserMenuView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/UserMenuView.swift"; sourceTree = "<group>"; };
-		52C818072914603E0006CA38 /* UserMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UserMenuView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/UserMenuView.xib"; sourceTree = "<group>"; };
 		52C8180B291465F40006CA38 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOption.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Menu/MenuOption.swift"; sourceTree = "<group>"; };
-		52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOptionTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/MenuOptionTableViewCell.swift"; sourceTree = "<group>"; };
-		52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuOptionTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/MenuOptionTableViewCell.xib"; sourceTree = "<group>"; };
 		52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+AddObserversToSubviews.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIViewController+AddObserversToSubviews.swift"; sourceTree = "<group>"; };
 		52C81814291566910006CA38 /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutInfoView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.swift"; sourceTree = "<group>"; };
 		52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+InstanceFromNib.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIView+InstanceFromNib.swift"; sourceTree = "<group>"; };
 		52C81818291572AB0006CA38 /* AboutInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutInfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.xib"; sourceTree = "<group>"; };
 		52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardTabBarController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/DashboardTabBarController.swift"; sourceTree = "<group>"; };
-		52C8181C291587800006CA38 /* ContestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestsViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/ContestsViewController.swift"; sourceTree = "<group>"; };
+		52C8181C291587800006CA38 /* ContestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
+		52EA1BB729195879000F43B6 /* ContestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.swift"; sourceTree = "<group>"; };
+		52EA1BB829195879000F43B6 /* ContestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContestTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.xib"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +133,16 @@
 				526155892916E9BF006988BD /* FirebaseFirestore in Frameworks */,
 				5261558D2916E9BF006988BD /* FirebaseStorage in Frameworks */,
 				5261558B2916E9BF006988BD /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5261559229180074006988BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5261559F291805D9006988BD /* FirebaseFirestore in Frameworks */,
+				526155A1291805F4006988BD /* FirebaseAuth in Frameworks */,
+				526155A3291805F4006988BD /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				523B7338290ECA7C0070E12A /* My ESC Vote */,
+				5261559629180074006988BD /* My ESC Vote Tests */,
 				523B7337290ECA7C0070E12A /* Products */,
 				486A8C6BF5502B36C2E396D4 /* Pods */,
 				6A7505C57BD0EC8E5BEEBC9D /* Frameworks */,
@@ -161,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				523B7336290ECA7C0070E12A /* My ESC Vote.app */,
+				5261559529180074006988BD /* My ESC Vote Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,11 +220,10 @@
 		523B734F290ECDEC0070E12A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5295AA902919989200B820FE /* Authentication */,
+				5295AA8F2919988C00B820FE /* Voting */,
 				523B7353290ECEE40070E12A /* MainViewController.swift */,
-				523B736E291072350070E12A /* RegisterViewController.swift */,
-				521541272913206D00E19B6F /* LoginViewController.swift */,
 				52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */,
-				52C8181C291587800006CA38 /* ContestsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +265,7 @@
 			children = (
 				523B73632910279C0070E12A /* Constants */,
 				523B7361290EEA5A0070E12A /* ValidationHelper.swift */,
+				5295AA8929198EBC00B820FE /* Typealiases.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,6 +297,33 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		5261559629180074006988BD /* My ESC Vote Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5261559729180074006988BD /* APIManagerTests.swift */,
+			);
+			path = "My ESC Vote Tests";
+			sourceTree = "<group>";
+		};
+		5295AA8F2919988C00B820FE /* Voting */ = {
+			isa = PBXGroup;
+			children = (
+				52C8181C291587800006CA38 /* ContestsViewController.swift */,
+				5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */,
+				5295AA8B291996D600B820FE /* VoteCategoryPagerViewController.swift */,
+			);
+			path = Voting;
+			sourceTree = "<group>";
+		};
+		5295AA902919989200B820FE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				523B736E291072350070E12A /* RegisterViewController.swift */,
+				521541272913206D00E19B6F /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		52C327CD29108C6500F9965A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,10 +336,10 @@
 		52C327E1291139C100F9965A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				52C8180D29146A880006CA38 /* MenuOptionTableViewCell.swift */,
-				52C8180F29146A920006CA38 /* MenuOptionTableViewCell.xib */,
-				5261557B2916ABE6006988BD /* ContestTableViewCell.swift */,
-				5261557D2916AC03006988BD /* ContestTableViewCell.xib */,
+				52EA1BB729195879000F43B6 /* ContestTableViewCell.swift */,
+				52EA1BB829195879000F43B6 /* ContestTableViewCell.xib */,
+				5295AA8729198D3F00B820FE /* VoteMenuCell.swift */,
+				5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -291,8 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				52C327DD291137D100F9965A /* LabelView.swift */,
-				52C81805291460290006CA38 /* UserMenuView.swift */,
-				52C818072914603E0006CA38 /* UserMenuView.xib */,
 				52C81814291566910006CA38 /* AboutInfoView.swift */,
 				52C81818291572AB0006CA38 /* AboutInfoView.xib */,
 				52615577291660FE006988BD /* MenuButton.swift */,
@@ -362,6 +417,29 @@
 			productReference = 523B7336290ECA7C0070E12A /* My ESC Vote.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5261559429180074006988BD /* My ESC Vote Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5261559D29180074006988BD /* Build configuration list for PBXNativeTarget "My ESC Vote Tests" */;
+			buildPhases = (
+				5261559129180074006988BD /* Sources */,
+				5261559229180074006988BD /* Frameworks */,
+				5261559329180074006988BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5261559A29180074006988BD /* PBXTargetDependency */,
+			);
+			name = "My ESC Vote Tests";
+			packageProductDependencies = (
+				5261559E291805D9006988BD /* FirebaseFirestore */,
+				526155A0291805F4006988BD /* FirebaseAuth */,
+				526155A2291805F4006988BD /* FirebaseFirestoreSwift */,
+			);
+			productName = "My ESC Vote Tests";
+			productReference = 5261559529180074006988BD /* My ESC Vote Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -369,11 +447,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					523B7335290ECA7C0070E12A = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					5261559429180074006988BD = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 523B7335290ECA7C0070E12A;
 					};
 				};
 			};
@@ -394,6 +476,7 @@
 			projectRoot = "";
 			targets = (
 				523B7335290ECA7C0070E12A /* My ESC Vote */,
+				5261559429180074006988BD /* My ESC Vote Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -403,16 +486,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EA1BBA29195879000F43B6 /* ContestTableViewCell.xib in Resources */,
 				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
-				52C818082914603E0006CA38 /* UserMenuView.xib in Resources */,
-				5261557E2916AC03006988BD /* ContestTableViewCell.xib in Resources */,
 				52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */,
 				521541262911A33200E19B6F /* Gotham Book.otf in Resources */,
-				52C8181029146A920006CA38 /* MenuOptionTableViewCell.xib in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5261559329180074006988BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,28 +555,31 @@
 			files = (
 				526155812916B002006988BD /* Contest.swift in Sources */,
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
-				52C8180E29146A880006CA38 /* MenuOptionTableViewCell.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
-				52C81806291460290006CA38 /* UserMenuView.swift in Sources */,
 				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				52C8180C291465F40006CA38 /* MenuOption.swift in Sources */,
-				5261557C2916ABE6006988BD /* ContestTableViewCell.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
+				5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */,
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				5261557A29166884006988BD /* Notification+Names.swift in Sources */,
+				5295AA8629198BF200B820FE /* VoteCategoryMenuController.swift in Sources */,
+				5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */,
 				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
 				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
 				52C81815291566910006CA38 /* AboutInfoView.swift in Sources */,
+				5295AA8A29198EBC00B820FE /* Typealiases.swift in Sources */,
 				52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */,
 				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
+				5295AA8C291996D600B820FE /* VoteCategoryPagerViewController.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
 				52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */,
 				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
+				52EA1BB929195879000F43B6 /* ContestTableViewCell.swift in Sources */,
 				5261558F2916F8FD006988BD /* HasDocumentID.swift in Sources */,
 				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
 				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,
@@ -499,7 +590,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5261559129180074006988BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5261559829180074006988BD /* APIManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5261559A29180074006988BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 523B7335290ECA7C0070E12A /* My ESC Vote */;
+			targetProxy = 5261559929180074006988BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		523B733F290ECA7C0070E12A /* Main.storyboard */ = {
@@ -720,6 +827,45 @@
 			};
 			name = Release;
 		};
+		5261559B29180074006988BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8PQ9DZ93U;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejpiechota92.My-ESC-Vote-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My ESC Vote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My ESC Vote";
+			};
+			name = Debug;
+		};
+		5261559C29180074006988BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8PQ9DZ93U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejpiechota92.My-ESC-Vote-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My ESC Vote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My ESC Vote";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -737,6 +883,15 @@
 			buildConfigurations = (
 				523B734B290ECA7D0070E12A /* Debug */,
 				523B734C290ECA7D0070E12A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5261559D29180074006988BD /* Build configuration list for PBXNativeTarget "My ESC Vote Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5261559B29180074006988BD /* Debug */,
+				5261559C29180074006988BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -774,6 +929,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 526155852916E9BF006988BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		5261559E291805D9006988BD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 526155852916E9BF006988BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		526155A0291805F4006988BD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 526155852916E9BF006988BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		526155A2291805F4006988BD /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 526155852916E9BF006988BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -18,7 +18,7 @@ extension Constants {
 			
 			
 			struct Primary {
-				
+				static let darkNavy = UIColor(named: "Dark Navy")
 			}
 			
 			struct Secondary {
@@ -54,7 +54,7 @@ extension Constants {
 			
 			struct Name {
 				static let gotham = "Gotham Book"
-				static let gothamBold = "GothamBold"
+				static let gothamBold = "Gotham Bold"
 			}
 			
 			struct Color {
@@ -66,6 +66,7 @@ extension Constants {
 				static let small = 15.0
 				static let standard = 19.5
 				static let large = 25.35
+				static let extraLarge = 33.0
 				
 				static let header = 22.0
 				static let subheader = 13.0

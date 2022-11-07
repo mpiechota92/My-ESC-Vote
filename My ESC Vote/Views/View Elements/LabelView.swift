@@ -56,7 +56,7 @@ class LabelView: UIView {
 		}
 		
 		mainLabel.font = UIFont(
-			name: Constants.Design.Font.Name.gotham,
+			name: Constants.Design.Font.Name.gothamBold,
 			size: Constants.Design.Font.Size.small
 		)
 

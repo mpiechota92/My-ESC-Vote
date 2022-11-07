@@ -35,7 +35,7 @@ class DatabaseService {
 	
 	// MARK: Vars & Lets
 	
-	private weak var database: Firestore!
+	private var database: Firestore!
 	
 	// MARK: Init
 	
@@ -76,18 +76,19 @@ class DatabaseService {
 		}
 	}
 	
-	internal func fetchAllData<T: Codable>(from collection: String) -> [T] {
+	internal func fetchAllData<T: Decodable>(from collection: String, as type: T.Type, completion: @escaping (_ records: [T]) -> ()) {
 		
 		var data: [T] = []
 		
 		database.collection(collection).getDocuments { querySnapshot, error in
+			print("im in")
 			guard error == nil else {
 				print(error!)
 				fatalError()
 			}
 			
 			if let querySnapshot = querySnapshot {
-				print(querySnapshot.count)
+				print(querySnapshot.documents.count)
 				for document in querySnapshot.documents {
 					do {
 						let record = try document.data(as: T.self)
@@ -97,11 +98,10 @@ class DatabaseService {
 						print(error.localizedDescription)
 					}
 				}
+				
+				completion(data)
 			}
 		}
-		
-		return data
-		
 	}
 	
 	internal func fetchData<T: Codable>(for documentID: String, from collection: String) -> T? {
