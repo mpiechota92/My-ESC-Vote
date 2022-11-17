@@ -15,6 +15,12 @@ class VoteCategoryMenuController: UICollectionViewController, UICollectionViewDe
 	
 	var delegate: VoteCategoryMenuControllerDelegate?
 	
+	let menuBar: UIView = {
+		let view = UIView()
+		view.backgroundColor = Color.accentColor
+		return view
+	}()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +39,11 @@ class VoteCategoryMenuController: UICollectionViewController, UICollectionViewDe
 			layout.minimumInteritemSpacing = 0
 		}
 		
+		view.addSubview(menuBar)
+		
+		menuBar.snp.makeConstraints { make in
+			make.top.equalTo(collectionView)
+		}
 		
 	}
 	
@@ -55,6 +66,7 @@ class VoteCategoryMenuController: UICollectionViewController, UICollectionViewDe
 		let width = view.frame.width
 		return .init(width: width/CGFloat(menuItems.count), height: view.frame.height)
 	}
+	
 }
 
 protocol VoteCategoryMenuControllerDelegate {

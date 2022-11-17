@@ -20,6 +20,7 @@ struct Contest: Codable, HasDocumentID {
 	var startDate: Date
 	var endDate: Date
 	var contestType: ContestType
+	var participants: [Country]
 	
 }
 

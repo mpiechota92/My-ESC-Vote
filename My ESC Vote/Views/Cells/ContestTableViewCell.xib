@@ -5,81 +5,80 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContestTableViewCell" customModule="My_ESC_Vote" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="ContestTableViewCell" customModule="My_ESC_Vote" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
-                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContestTableViewCell" rowHeight="100" id="m4L-Cu-K5u" customClass="ContestTableViewCell" customModule="My_ESC_Vote" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m4L-Cu-K5u" id="FCA-v0-G2e">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgH-mN-dCL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n96-NB-5Dj">
+                        <rect key="frame" x="14" y="14" width="365" height="112"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contestNameLebel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="czD-qt-rSG">
-                                <rect key="frame" x="8" y="11" width="229" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" name="Winter"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="countryNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qm-EL-WEJ">
-                                <rect key="frame" x="8" y="64" width="161" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" name="Dimmed Accent Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84g-kL-4Xn">
-                                <rect key="frame" x="209" y="58" width="111" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Information"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-Je-WYi">
-                                <rect key="frame" x="253" y="16" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Vote"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="csS-C7-iMT">
+                                <rect key="frame" x="4" y="20.666666666666664" width="357" height="70.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFv-BV-mdg">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="70.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yJ0-WL-E6L">
+                                        <rect key="frame" x="246" y="0.0" width="111" height="70.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1g-UI-xab">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Vote"/>
+                                                <connections>
+                                                    <action selector="voteButtonTapped:" destination="m4L-Cu-K5u" eventType="touchUpInside" id="r6s-oL-Tvp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96I-RJ-qdF">
+                                                <rect key="frame" x="0.0" y="36.333333333333329" width="111" height="34.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Information"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="Dark Navy"/>
+                        <color key="backgroundColor" name="Light Navy"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="112" id="04E-Qn-MFm"/>
+                            <constraint firstAttribute="width" constant="365" id="Uho-TE-FQJ"/>
+                            <constraint firstItem="csS-C7-iMT" firstAttribute="centerX" secondItem="n96-NB-5Dj" secondAttribute="centerX" id="rbV-R2-95i"/>
+                            <constraint firstItem="csS-C7-iMT" firstAttribute="centerY" secondItem="n96-NB-5Dj" secondAttribute="centerY" id="xn9-R0-6z3"/>
+                        </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="tgH-mN-dCL" secondAttribute="trailing" id="Htr-gT-nqT"/>
-                    <constraint firstItem="tgH-mN-dCL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PpV-V5-S90"/>
-                    <constraint firstAttribute="bottom" secondItem="tgH-mN-dCL" secondAttribute="bottom" id="jZn-78-q4k"/>
-                    <constraint firstItem="tgH-mN-dCL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zBS-1s-e0o"/>
+                    <constraint firstAttribute="trailing" secondItem="n96-NB-5Dj" secondAttribute="trailing" constant="14" id="5wY-Qp-dWf"/>
+                    <constraint firstItem="n96-NB-5Dj" firstAttribute="leading" secondItem="FCA-v0-G2e" secondAttribute="leading" constant="14" id="Sdh-Ig-kml"/>
+                    <constraint firstItem="n96-NB-5Dj" firstAttribute="top" secondItem="FCA-v0-G2e" secondAttribute="top" constant="14" id="T0x-ci-vmP"/>
+                    <constraint firstAttribute="bottom" secondItem="n96-NB-5Dj" secondAttribute="bottom" constant="14" id="t7K-hB-oX9"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
-                <outlet property="backgroundView" destination="tgH-mN-dCL" id="f4I-3f-GQZ"/>
-                <outlet property="cellBubble" destination="tgH-mN-dCL" id="ONQ-8I-Hci"/>
-                <outlet property="contentView" destination="H2p-sc-9uM" id="Upn-0n-UR5"/>
-                <outlet property="contestNameLabel" destination="czD-qt-rSG" id="i3N-dW-GBc"/>
-                <outlet property="countryNameLabel" destination="7qm-EL-WEJ" id="Bbu-pi-lRa"/>
+                <outlet property="cellBackgroundView" destination="n96-NB-5Dj" id="kl8-1O-pnh"/>
+                <outlet property="titleLabel" destination="hFv-BV-mdg" id="6tY-Wm-P3e"/>
+                <outlet property="voteButton" destination="x1g-UI-xab" id="vUs-Zf-45c"/>
             </connections>
-            <point key="canvasLocation" x="129.7709923664122" y="-14.43661971830986"/>
+            <point key="canvasLocation" x="58.778625954198468" y="-213.38028169014086"/>
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="Dark Navy">
-            <color red="0.011764705882352941" green="0.0078431372549019607" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Dimmed Accent Color">
-            <color red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Winter">
-            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Light Navy">
+            <color red="0.14509803921568629" green="0.14117647058823529" blue="0.44313725490196076" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

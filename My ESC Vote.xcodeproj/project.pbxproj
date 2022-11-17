@@ -40,10 +40,11 @@
 		5261559F291805D9006988BD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5261559E291805D9006988BD /* FirebaseFirestore */; };
 		526155A1291805F4006988BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 526155A0291805F4006988BD /* FirebaseAuth */; };
 		526155A3291805F4006988BD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 526155A2291805F4006988BD /* FirebaseFirestoreSwift */; };
+		5264B8132926B85D0074F73F /* VoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264B8122926B85D0074F73F /* VoteTableViewController.swift */; };
 		5295AA8629198BF200B820FE /* VoteCategoryMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */; };
 		5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8729198D3F00B820FE /* VoteMenuCell.swift */; };
 		5295AA8A29198EBC00B820FE /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8929198EBC00B820FE /* Typealiases.swift */; };
-		5295AA8C291996D600B820FE /* VoteCategoryPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8B291996D600B820FE /* VoteCategoryPagerViewController.swift */; };
+		5295AA8C291996D600B820FE /* MainVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8B291996D600B820FE /* MainVoteViewController.swift */; };
 		5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
@@ -56,8 +57,13 @@
 		52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* AboutInfoView.xib */; };
 		52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */; };
 		52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181C291587800006CA38 /* ContestsViewController.swift */; };
-		52EA1BB929195879000F43B6 /* ContestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA1BB729195879000F43B6 /* ContestTableViewCell.swift */; };
-		52EA1BBA29195879000F43B6 /* ContestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EA1BB829195879000F43B6 /* ContestTableViewCell.xib */; };
+		52CE1743291C43F000F93E28 /* ContestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE1741291C43F000F93E28 /* ContestTableViewCell.swift */; };
+		52CE1746291E673000F93E28 /* ContestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE1745291E673000F93E28 /* ContestTableViewCell.xib */; };
+		52CE1748291EEB3900F93E28 /* ContestVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */; };
+		52CE174B291EECC500F93E28 /* CountryVoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE1749291EECC500F93E28 /* CountryVoteCell.swift */; };
+		52CE174C291EECC500F93E28 /* CountryVoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CE174A291EECC500F93E28 /* CountryVoteCell.xib */; };
+		52CE174F291EEFA900F93E28 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE174E291EEFA900F93E28 /* Country.swift */; };
+		52CE1751291EF00C00F93E28 /* CountryVoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE1750291EF00C00F93E28 /* CountryVoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +106,11 @@
 		5261558E2916F8FD006988BD /* HasDocumentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDocumentID.swift; sourceTree = "<group>"; };
 		5261559529180074006988BD /* My ESC Vote Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My ESC Vote Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5261559729180074006988BD /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
+		5264B8122926B85D0074F73F /* VoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteTableViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/Voting/VoteTableViewController.swift"; sourceTree = "<group>"; };
 		5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCategoryMenuController.swift; sourceTree = "<group>"; };
 		5295AA8729198D3F00B820FE /* VoteMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteMenuCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteMenuCell.swift"; sourceTree = "<group>"; };
 		5295AA8929198EBC00B820FE /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Typealiases.swift"; sourceTree = "<group>"; };
-		5295AA8B291996D600B820FE /* VoteCategoryPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCategoryPagerViewController.swift; sourceTree = "<group>"; };
+		5295AA8B291996D600B820FE /* MainVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVoteViewController.swift; sourceTree = "<group>"; };
 		5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteCategoryPageCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteCategoryPageCell.swift"; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
@@ -116,8 +123,13 @@
 		52C81818291572AB0006CA38 /* AboutInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutInfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.xib"; sourceTree = "<group>"; };
 		52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardTabBarController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/DashboardTabBarController.swift"; sourceTree = "<group>"; };
 		52C8181C291587800006CA38 /* ContestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
-		52EA1BB729195879000F43B6 /* ContestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.swift"; sourceTree = "<group>"; };
-		52EA1BB829195879000F43B6 /* ContestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContestTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.xib"; sourceTree = "<group>"; };
+		52CE1741291C43F000F93E28 /* ContestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.swift"; sourceTree = "<group>"; };
+		52CE1745291E673000F93E28 /* ContestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContestTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.xib"; sourceTree = "<group>"; };
+		52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestVoteViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/Voting/ContestVoteViewController.swift"; sourceTree = "<group>"; };
+		52CE1749291EECC500F93E28 /* CountryVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryVoteCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/CountryVoteCell.swift"; sourceTree = "<group>"; };
+		52CE174A291EECC500F93E28 /* CountryVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CountryVoteCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/CountryVoteCell.xib"; sourceTree = "<group>"; };
+		52CE174E291EEFA900F93E28 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Country.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Voting/Country.swift"; sourceTree = "<group>"; };
+		52CE1750291EF00C00F93E28 /* CountryVoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryVoteViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/CountryVoteViewModel.swift"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +253,7 @@
 		523B7351290ECDFB0070E12A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52CE174D291EEF9800F93E28 /* Voting */,
 				5261557F2916AFE0006988BD /* Contest Information */,
 				52C8180A291465E50006CA38 /* Registration */,
 				52C81809291465DE0006CA38 /* Menu */,
@@ -310,7 +323,9 @@
 			children = (
 				52C8181C291587800006CA38 /* ContestsViewController.swift */,
 				5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */,
-				5295AA8B291996D600B820FE /* VoteCategoryPagerViewController.swift */,
+				5295AA8B291996D600B820FE /* MainVoteViewController.swift */,
+				52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */,
+				5264B8122926B85D0074F73F /* VoteTableViewController.swift */,
 			);
 			path = Voting;
 			sourceTree = "<group>";
@@ -329,6 +344,7 @@
 			children = (
 				52C327CE291093E300F9965A /* RegisterViewModel.swift */,
 				526155822916B106006988BD /* ContestViewModel.swift */,
+				52CE1750291EF00C00F93E28 /* CountryVoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -336,10 +352,12 @@
 		52C327E1291139C100F9965A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				52EA1BB729195879000F43B6 /* ContestTableViewCell.swift */,
-				52EA1BB829195879000F43B6 /* ContestTableViewCell.xib */,
 				5295AA8729198D3F00B820FE /* VoteMenuCell.swift */,
 				5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */,
+				52CE1741291C43F000F93E28 /* ContestTableViewCell.swift */,
+				52CE1745291E673000F93E28 /* ContestTableViewCell.xib */,
+				52CE1749291EECC500F93E28 /* CountryVoteCell.swift */,
+				52CE174A291EECC500F93E28 /* CountryVoteCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -379,6 +397,14 @@
 				5261557929166884006988BD /* Notification+Names.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52CE174D291EEF9800F93E28 /* Voting */ = {
+			isa = PBXGroup;
+			children = (
+				52CE174E291EEFA900F93E28 /* Country.swift */,
+			);
+			path = Voting;
 			sourceTree = "<group>";
 		};
 		6A7505C57BD0EC8E5BEEBC9D /* Frameworks */ = {
@@ -486,11 +512,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EA1BBA29195879000F43B6 /* ContestTableViewCell.xib in Resources */,
 				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
 				52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */,
+				52CE1746291E673000F93E28 /* ContestTableViewCell.xib in Resources */,
+				52CE174C291EECC500F93E28 /* CountryVoteCell.xib in Resources */,
 				521541262911A33200E19B6F /* Gotham Book.otf in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
@@ -554,32 +581,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				526155812916B002006988BD /* Contest.swift in Sources */,
+				52CE174F291EEFA900F93E28 /* Country.swift in Sources */,
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
+				5264B8132926B85D0074F73F /* VoteTableViewController.swift in Sources */,
 				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
+				52CE1751291EF00C00F93E28 /* CountryVoteViewModel.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				52C8180C291465F40006CA38 /* MenuOption.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
 				5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */,
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
+				52CE174B291EECC500F93E28 /* CountryVoteCell.swift in Sources */,
 				5261557A29166884006988BD /* Notification+Names.swift in Sources */,
 				5295AA8629198BF200B820FE /* VoteCategoryMenuController.swift in Sources */,
 				5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */,
 				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
 				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
+				52CE1748291EEB3900F93E28 /* ContestVoteViewController.swift in Sources */,
 				52C81815291566910006CA38 /* AboutInfoView.swift in Sources */,
 				5295AA8A29198EBC00B820FE /* Typealiases.swift in Sources */,
 				52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */,
 				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
-				5295AA8C291996D600B820FE /* VoteCategoryPagerViewController.swift in Sources */,
+				5295AA8C291996D600B820FE /* MainVoteViewController.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
+				52CE1743291C43F000F93E28 /* ContestTableViewCell.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
 				52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */,
 				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
-				52EA1BB929195879000F43B6 /* ContestTableViewCell.swift in Sources */,
 				5261558F2916F8FD006988BD /* HasDocumentID.swift in Sources */,
 				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
 				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,

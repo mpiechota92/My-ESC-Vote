@@ -13,7 +13,7 @@ class ContestsViewController: UIViewController {
 	@IBOutlet weak var contestsTableView: UITableView!
 	@IBOutlet weak var menuButton: MenuButton!
 	
-	private var viewModel: ContestsListViewModel! = ContestsListViewModel()
+	private var viewModel: ContestsListViewModel = ContestsListViewModel()
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
@@ -42,7 +42,7 @@ class ContestsViewController: UIViewController {
 	}
 }
 
-extension ContestsViewController: UITableViewDataSource {
+extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		print(viewModel.contestsCount())
@@ -54,9 +54,23 @@ extension ContestsViewController: UITableViewDataSource {
 			fatalError("Could not dequeue reusable cell with identifier \(Constants.UI.TableView.Cell.contest)")
 		}
 		
-		cell.viewModel = viewModel.contestVMAtIndex(indexPath.row)
-		cell.setup()
+		let cellViewModel = viewModel.contestVMAtIndex(indexPath.row)
+		cell.setup(with: cellViewModel)
+		cell.delegate = self
+		
 		return cell
+	}
+	
+}
+
+extension ContestsViewController: ContestTableViewCellDelegate {
+	
+	func didTapVoteButton(forContest contestName: String?) {
+		print("KUPAsss")
+		guard let contestName = contestName else { return }
+		print("AFTERKUPAsss")
+		let votePageVC = storyboard?.instantiateViewController(withIdentifier: "VoteCategoryPagerViewController") as! VoteCategoryPagerViewController
+		navigationController?.show(votePageVC, sender: nil)
 	}
 	
 }

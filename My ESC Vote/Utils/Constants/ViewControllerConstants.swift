@@ -35,6 +35,7 @@ extension Constants {
 				
 				static let menuOption = "MenuOptionTableViewCell"
 				static let contest = "ContestTableViewCell"
+				static let vote = "CountryVoteCell"
 				
 			}
 			

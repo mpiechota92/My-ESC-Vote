@@ -19,6 +19,7 @@ extension Constants {
 			
 			struct Primary {
 				static let darkNavy = UIColor(named: "Dark Navy")
+				static let navy = UIColor(named: "Navy")
 			}
 			
 			struct Secondary {
@@ -46,6 +47,7 @@ extension Constants {
 				static let homeSelected = "music.note.house.fill"
 				static let contests = "list.bullet.clipboard"
 				static let contestsSelected = "list.bullet.clipboard.fill"
+				static let voteCellAnchor = "line.3.horizontal"
 			}
 			
 		}
