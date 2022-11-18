@@ -322,10 +322,10 @@
 			isa = PBXGroup;
 			children = (
 				52C8181C291587800006CA38 /* ContestsViewController.swift */,
-				5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */,
 				5295AA8B291996D600B820FE /* MainVoteViewController.swift */,
-				52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */,
+				5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */,
 				5264B8122926B85D0074F73F /* VoteTableViewController.swift */,
+				52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */,
 			);
 			path = Voting;
 			sourceTree = "<group>";

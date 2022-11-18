@@ -11,6 +11,12 @@ class CountryVoteListViewModel {
 	
 	private var countryVotes: [CountryVoteViewModel]
 	
+	var countryCount: Int {
+		get {
+			return countryVotes.count
+		}
+	}
+	
 	init(for contest: Contest) {
 		
 		countryVotes = contest.participants.map(CountryVoteViewModel.init)
@@ -25,9 +31,6 @@ class CountryVoteListViewModel {
 		return countryViewModelAt(index: index).country
 	}
 	
-	func countryCount() -> Int {
-		return countryVotes.count
-	}
 }
 
 struct CountryVoteViewModel {

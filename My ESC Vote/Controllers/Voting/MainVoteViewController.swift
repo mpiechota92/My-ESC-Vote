@@ -10,53 +10,106 @@ import SnapKit
 
 class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 	
-	fileprivate let voteMenuController = VoteCategoryMenuController(collectionViewLayout: UICollectionViewFlowLayout())
-	fileprivate let cellID = "cellID"
+	private let voteMenuController: VoteCategoryMenuController!
+	private let cellID = "cellID"
 	
-	fileprivate let pageNames = ["favourite", "vocals", "performance"]
+	private let pageNames = ["favourite", "vocals", "performance"]
 	
-	var pages: [VoteTableViewController]?
+	private var pages: [VoteTableViewController]?
 	
-	let collectionView: UICollectionView = {
-		let layout = UICollectionViewFlowLayout()
-		layout.minimumLineSpacing = 0
-		layout.scrollDirection = .horizontal
-		
-		let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-		cv.backgroundColor = Color.Secondary.lightNavy
-		cv.showsVerticalScrollIndicator = false
-		cv.showsHorizontalScrollIndicator = false
-		cv.isPagingEnabled = true
-		
-		return cv
-	}()
+	private let menuButton: MenuButton = MenuButton()
+	private let secondaryBackgroundView: UIView!
+	private let votingPagesCollectionView: UICollectionView!
+	
+	var contest: Contest?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		voteMenuController.delegate = self
         
-		setupLayout()
+		setupUI()
+		setupPages()
     }
     
-	fileprivate func setupLayout() {
+	private func setupUI() {
 		guard let voteMenuView = voteMenuController.view else { return }
 		
-		view.addSubview(voteMenuView)
-		view.addSubview(collectionView)
+		setupBackground()
 		
-		collectionView.dataSource = self
-		collectionView.delegate = self
+		setupNavigationBarButtons()
+		setupVoteCategoriesMenu()
+		setupVotingPagesCollectionView()
 		
-		voteMenuView.snp.makeConstraints { make in
-			make.leading.top.trailing.equalToSuperview()
-			make.height.equalTo(50)
-		}
+//		voteMenuView.snp.makeConstraints { make in
+//			make.leading.top.trailing.equalToSuperview()
+//			make.height.equalTo(50)
+//		}
+//
+//		collectionView.snp.makeConstraints { make in
+//			make.top.equalTo(voteMenuView)
+//			make.leading.trailing.bottom.equalToSuperview()
+//		}
+	}
+	
+	private setupBackground() {
+		self.view.backgroundColor = Color.Primary.darkNavy
 		
-		collectionView.snp.makeConstraints { make in
-			make.top.equalTo(voteMenuView)
+		secondaryBackgroundView = UIView(frame: .zero)
+		secondaryBackgroundView.backgroundColor = Color.Secondary.lightNavy
+		self.view.addSubview(secondaryBackgroundView)
+		
+		secondaryBackgroundView.snp.makeConstraints { make in
 			make.leading.trailing.bottom.equalToSuperview()
+			make.top.equalTo(self.view.safeAreaLayoutGuide)
 		}
+	}
+	
+	private setupNavigationBarButtons() {
+		guard let rightBarButtonItem = navigationController?.navigationItem.rightBarButtonItem else { return }
+		
+		menuButton.setImage(UIImage(systemName: Icon.user), for: .normal)
+		rightBarButtonItem = UIBarButtonItem(customView: menuButton)
+	}
+	
+	private func setupVoteCategoriesMenu() {
+		// TODO: add it
+//		let voteCategoryMenu = VoteCategoryMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+//		let voteMenuView = voteCategoryMenu.view
+		
+	}
+	
+	private func setupVotingPagesView() {
+		let layout = UICollectionViewFlowLayout()
+		layout.minimumLineSpacing = 0
+		layout.minimumInteritemSpacing = 0
+		layout.scrollDirection = .horizontal
+		
+		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+		collectionView.backgroundColor = Color.Secondary.lightNavy
+		collectionView.showsVerticalScrollIndicator = false
+		collectionView.showsHorizontalScrollIndicator = false
+		collectionView.isPagingEnabled = true
+		
+		votingPagesCollectionView = collectionView
+		secondaryBackgroundView.addSubview(votingPagesCollectionView)
+		
+		votingPagesCollectionView.snp.makeConstraints { make in
+			make.width.top.leading.trailing.equalToSuperview()
+			make.bottom.equalTo(self.view.safeAreaLayoutGuide)
+		}
+		
+		votingPagesCollectionView.delegate = self
+		votingPagesCollectionView.dataSource = self
+	}
+	
+	private func setupPages() {
+		pages = VoteCategory.allCases.map({ category in
+			let voteVC = VoteTableViewController()
+			voteVC.voteCategory = category
+			
+			return voteVC
+		})
 	}
 }
 
@@ -94,7 +147,9 @@ extension MainVoteViewController: UICollectionViewDelegate, UICollectionViewData
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! VoteCategoryPageCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+		
+		
 		
 		return cell
 	}

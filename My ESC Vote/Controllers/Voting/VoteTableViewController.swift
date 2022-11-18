@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum VoteType: String, Codable {
+enum VoteCategory: String, Codable, CaseIterable {
 	case favourite = "Favourite"
 	case vocals = "Vocals"
 	case performance = "Performance"
@@ -16,7 +16,7 @@ enum VoteType: String, Codable {
 class VoteTableViewController: UITableViewController {
 	
 	var viewModel: CountryVoteListViewModel!
-	var voteType: VoteType?
+	var voteCategory: VoteCategory?
 	var contest: Contest?
 	
 	override func viewDidLoad() {
@@ -28,7 +28,7 @@ class VoteTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.countryCount()
+		return viewModel.countryCount
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

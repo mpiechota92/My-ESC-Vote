@@ -406,49 +406,11 @@
                     <connections>
                         <outlet property="contestsTableView" destination="cHV-Sa-Nif" id="jLB-ff-zaX"/>
                         <outlet property="menuButton" destination="L0o-B9-vuU" id="X1u-tx-PVa"/>
-                        <segue destination="0vd-pv-Jok" kind="show" id="wL3-tz-Evp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3G9-Gh-LcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1772.3076923076922" y="678.90995260663499"/>
-        </scene>
-        <!--Vote Category Pager View Controller-->
-        <scene sceneID="DM4-IM-Vrc">
-            <objects>
-                <viewController storyboardIdentifier="VoteCategoryPagerViewController" id="0vd-pv-Jok" customClass="VoteCategoryPagerViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hrc-hD-wJG">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5U-s3-y54">
-                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
-                                <color key="backgroundColor" name="Navy"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Zoc-jz-FUV"/>
-                        <color key="backgroundColor" name="Dark Navy"/>
-                        <constraints>
-                            <constraint firstItem="n5U-s3-y54" firstAttribute="trailing" secondItem="Zoc-jz-FUV" secondAttribute="trailing" id="5Nm-Pz-aaQ"/>
-                            <constraint firstAttribute="bottom" secondItem="n5U-s3-y54" secondAttribute="bottom" id="Xea-iL-xra"/>
-                            <constraint firstItem="n5U-s3-y54" firstAttribute="leading" secondItem="Zoc-jz-FUV" secondAttribute="leading" id="Xhg-jM-mtd"/>
-                            <constraint firstItem="n5U-s3-y54" firstAttribute="top" secondItem="Zoc-jz-FUV" secondAttribute="top" id="iVg-K5-k9Y"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="rGa-qs-9I5">
-                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="UBN-yl-kOQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="u8h-y0-m2f" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
-                                <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="person" catalog="system"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W4g-yj-ISM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2811" y="678"/>
         </scene>
         <!--Item-->
         <scene sceneID="8fA-jO-WjE">
