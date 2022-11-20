@@ -65,11 +65,13 @@ extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ContestsViewController: ContestTableViewCellDelegate {
 	
-	func didTapVoteButton(forContest contestName: String?) {
-		guard let contestName = contestName else { return }
+	func didTapVoteButton(forContest contest: Contest?) {
+		guard let contest = contest else { return }
 		
-		let votePageVC = storyboard?.instantiateViewController(withIdentifier: "VoteCategoryPagerViewController") as! VoteCategoryPagerViewController
-		navigationController?.show(votePageVC, sender: nil)
+		let mainVoteVC = MainVoteViewController()
+		mainVoteVC.contest = contest
+
+		navigationController?.show(mainVoteVC, sender: nil)
 	}
 	
 }

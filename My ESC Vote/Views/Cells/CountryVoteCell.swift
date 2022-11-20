@@ -13,7 +13,7 @@ class CountryVoteCell: UITableViewCell {
 	@IBOutlet weak var songNameLabel: UILabel!
 	@IBOutlet weak var artistNameLabel: UILabel!
 	
-	var viewModel: CountryVoteViewModel? {
+	var viewModel: CountryViewModel? {
 		didSet {
 			songNameLabel.text = viewModel?.country.song
 			artistNameLabel.text = viewModel?.country.artist

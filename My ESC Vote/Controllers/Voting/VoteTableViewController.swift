@@ -15,7 +15,7 @@ enum VoteCategory: String, Codable, CaseIterable {
 
 class VoteTableViewController: UITableViewController {
 	
-	var viewModel: CountryVoteListViewModel!
+	var viewModel: CountryListViewModel!
 	var voteCategory: VoteCategory?
 	var contest: Contest?
 	
@@ -24,6 +24,8 @@ class VoteTableViewController: UITableViewController {
 		
 		tableView.register(UINib(nibName: Constants.Content.Nib.countryVoteCell, bundle: nil),
 						   forCellReuseIdentifier: Constants.UI.TableView.Cell.vote)
+		
+		tableView.reloadData()
 		
 	}
 	

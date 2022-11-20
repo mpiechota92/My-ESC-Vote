@@ -48,19 +48,19 @@ class ContestTableViewCell: UITableViewCell {
 	}
 	
 	fileprivate func voteButtonTapped(_ action: UIAction) {
-		delegate?.didTapVoteButton(forContest: viewModel.getContestTitle())
+		delegate?.didTapVoteButton(forContest: viewModel.contest)
 	}
 	
 	
 	@IBAction func voteButtonTapped(_ sender: Any) {
-		delegate?.didTapVoteButton(forContest: viewModel.getContestTitle())
+		delegate?.didTapVoteButton(forContest: viewModel.contest)
 	}
 }
 
 
 protocol ContestTableViewCellDelegate {
 	
-	func didTapVoteButton(forContest contestName: String?)
+	func didTapVoteButton(forContest contest: Contest?)
 	
 }
 

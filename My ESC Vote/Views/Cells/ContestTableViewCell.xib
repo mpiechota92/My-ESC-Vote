@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m4L-Cu-K5u" id="FCA-v0-G2e">
                 <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n96-NB-5Dj">
                         <rect key="frame" x="14" y="14" width="365" height="112"/>
@@ -52,7 +52,7 @@
                         </subviews>
                         <color key="backgroundColor" name="Light Navy"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="112" id="04E-Qn-MFm"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="112" id="04E-Qn-MFm"/>
                             <constraint firstAttribute="width" constant="365" id="Uho-TE-FQJ"/>
                             <constraint firstItem="csS-C7-iMT" firstAttribute="centerX" secondItem="n96-NB-5Dj" secondAttribute="centerX" id="rbV-R2-95i"/>
                             <constraint firstItem="csS-C7-iMT" firstAttribute="centerY" secondItem="n96-NB-5Dj" secondAttribute="centerY" id="xn9-R0-6z3"/>

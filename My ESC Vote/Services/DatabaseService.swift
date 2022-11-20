@@ -88,6 +88,7 @@ class DatabaseService {
 			}
 			
 			if let querySnapshot = querySnapshot {
+			
 				print(querySnapshot.documents.count)
 				for document in querySnapshot.documents {
 					do {

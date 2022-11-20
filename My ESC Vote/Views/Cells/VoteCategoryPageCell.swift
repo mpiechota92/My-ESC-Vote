@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import SnapKit
 
 class VoteCategoryPageCell: UICollectionViewCell {
     
+	var view: UIView = UIView()
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
-		// setup
+		addSubview(view)
+		view.snp.makeConstraints { make in
+			make.edges.equalToSuperview()
+		}
 	}
 	
 	
