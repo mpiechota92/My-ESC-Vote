@@ -40,7 +40,7 @@
 		5261559F291805D9006988BD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5261559E291805D9006988BD /* FirebaseFirestore */; };
 		526155A1291805F4006988BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 526155A0291805F4006988BD /* FirebaseAuth */; };
 		526155A3291805F4006988BD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 526155A2291805F4006988BD /* FirebaseFirestoreSwift */; };
-		5264B8132926B85D0074F73F /* VoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264B8122926B85D0074F73F /* VoteTableViewController.swift */; };
+		5264B890292BE0BC0074F73F /* VoteCategoryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5264B88F292BE0BC0074F73F /* VoteCategoryPageCell.xib */; };
 		5295AA8629198BF200B820FE /* VoteCategoryMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */; };
 		5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8729198D3F00B820FE /* VoteMenuCell.swift */; };
 		5295AA8A29198EBC00B820FE /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8929198EBC00B820FE /* Typealiases.swift */; };
@@ -87,7 +87,7 @@
 		523B7345290ECA7D0070E12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		523B7347290ECA7D0070E12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523B734D290ECBCE0070E12A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		523B7353290ECEE40070E12A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/MainViewController.swift"; sourceTree = "<group>"; };
+		523B7353290ECEE40070E12A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		523B7356290ED04F0070E12A /* ContentConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentConstants.swift; sourceTree = "<group>"; };
 		523B735D290EE1110070E12A /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/DatabaseService.swift"; sourceTree = "<group>"; };
 		523B735F290EE9B00070E12A /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirebaseService.swift"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		5261558E2916F8FD006988BD /* HasDocumentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDocumentID.swift; sourceTree = "<group>"; };
 		5261559529180074006988BD /* My ESC Vote Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My ESC Vote Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5261559729180074006988BD /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
-		5264B8122926B85D0074F73F /* VoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteTableViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/Voting/VoteTableViewController.swift"; sourceTree = "<group>"; };
+		5264B88F292BE0BC0074F73F /* VoteCategoryPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VoteCategoryPageCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteCategoryPageCell.xib"; sourceTree = "<group>"; };
 		5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCategoryMenuController.swift; sourceTree = "<group>"; };
 		5295AA8729198D3F00B820FE /* VoteMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteMenuCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteMenuCell.swift"; sourceTree = "<group>"; };
 		5295AA8929198EBC00B820FE /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Typealiases.swift"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		52C8181C291587800006CA38 /* ContestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
 		52CE1741291C43F000F93E28 /* ContestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestTableViewCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.swift"; sourceTree = "<group>"; };
 		52CE1745291E673000F93E28 /* ContestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContestTableViewCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/ContestTableViewCell.xib"; sourceTree = "<group>"; };
-		52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestVoteViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/Voting/ContestVoteViewController.swift"; sourceTree = "<group>"; };
+		52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestVoteViewController.swift; sourceTree = "<group>"; };
 		52CE1749291EECC500F93E28 /* CountryVoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryVoteCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/CountryVoteCell.swift"; sourceTree = "<group>"; };
 		52CE174A291EECC500F93E28 /* CountryVoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CountryVoteCell.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/CountryVoteCell.xib"; sourceTree = "<group>"; };
 		52CE174E291EEFA900F93E28 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Country.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Voting/Country.swift"; sourceTree = "<group>"; };
@@ -234,8 +234,9 @@
 			children = (
 				5295AA902919989200B820FE /* Authentication */,
 				5295AA8F2919988C00B820FE /* Voting */,
-				523B7353290ECEE40070E12A /* MainViewController.swift */,
 				52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */,
+				52C8181C291587800006CA38 /* ContestsViewController.swift */,
+				523B7353290ECEE40070E12A /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -321,11 +322,9 @@
 		5295AA8F2919988C00B820FE /* Voting */ = {
 			isa = PBXGroup;
 			children = (
-				52C8181C291587800006CA38 /* ContestsViewController.swift */,
 				5295AA8B291996D600B820FE /* MainVoteViewController.swift */,
-				5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */,
-				5264B8122926B85D0074F73F /* VoteTableViewController.swift */,
 				52CE1747291EEB3900F93E28 /* ContestVoteViewController.swift */,
+				5295AA8529198BF200B820FE /* VoteCategoryMenuController.swift */,
 			);
 			path = Voting;
 			sourceTree = "<group>";
@@ -354,6 +353,7 @@
 			children = (
 				5295AA8729198D3F00B820FE /* VoteMenuCell.swift */,
 				5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */,
+				5264B88F292BE0BC0074F73F /* VoteCategoryPageCell.xib */,
 				52CE1741291C43F000F93E28 /* ContestTableViewCell.swift */,
 				52CE1745291E673000F93E28 /* ContestTableViewCell.xib */,
 				52CE1749291EECC500F93E28 /* CountryVoteCell.swift */,
@@ -520,6 +520,7 @@
 				52CE174C291EECC500F93E28 /* CountryVoteCell.xib in Resources */,
 				521541262911A33200E19B6F /* Gotham Book.otf in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
+				5264B890292BE0BC0074F73F /* VoteCategoryPageCell.xib in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +585,6 @@
 				52CE174F291EEFA900F93E28 /* Country.swift in Sources */,
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
-				5264B8132926B85D0074F73F /* VoteTableViewController.swift in Sources */,
 				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
 				52CE1751291EF00C00F93E28 /* CountryVoteViewModel.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
@@ -793,9 +793,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H8PQ9DZ93U;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H8PQ9DZ93U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My ESC Vote/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "My ESC Vote";
@@ -814,6 +817,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejpiechota92.My-ESC-Vote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "My ESC Vote Provisioning Profile";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -829,9 +834,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H8PQ9DZ93U;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H8PQ9DZ93U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My ESC Vote/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "My ESC Vote";
@@ -850,6 +858,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejpiechota92.My-ESC-Vote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "My ESC Vote Provisioning Profile";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

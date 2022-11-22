@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VoteCategoryPageCell" id="jRt-EE-rgp" customClass="VoteCategoryPageCell" customModule="My_ESC_Vote" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="566"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hgn-FF-qeZ">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="566"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="61" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UmB-wm-3GY">
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="566"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="UmB-wm-3GY" secondAttribute="trailing" id="9S0-q5-8s0"/>
+                    <constraint firstAttribute="bottom" secondItem="UmB-wm-3GY" secondAttribute="bottom" id="Wnj-7X-tfV"/>
+                    <constraint firstItem="UmB-wm-3GY" firstAttribute="leading" secondItem="Hgn-FF-qeZ" secondAttribute="leading" id="ege-Bc-Dqa"/>
+                    <constraint firstItem="UmB-wm-3GY" firstAttribute="top" secondItem="Hgn-FF-qeZ" secondAttribute="top" id="yoZ-V2-yA2"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <size key="customSize" width="333" height="566"/>
+            <connections>
+                <outlet property="countriesVoteTableView" destination="UmB-wm-3GY" id="n64-Zl-B81"/>
+            </connections>
+            <point key="canvasLocation" x="-257" y="-16"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -8,20 +8,26 @@
 import UIKit
 import SnapKit
 
+enum VoteCategory: String, Codable, CaseIterable {
+	case favourite = "Favourite"
+	case vocals = "Vocals"
+	case performance = "Performance"
+}
+
 class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 	
 	private var voteMenuController: VoteCategoryMenuController!
-	private let cellID = "cellID"
-	
-	private let pageNames = ["favourite", "vocals", "performance"]
-	
-	private var pages: [VoteTableViewController]!
-	
+
+	private var pages: [CountryListViewModel]!
 	private let menuButton: MenuButton = MenuButton()
 	private var secondaryBackgroundView: UIView!
 	private var votingPagesCollectionView: UICollectionView!
 	
-	var contest: Contest?
+	var contest: Contest! {
+		didSet {
+			setupPagesViewModels()
+		}
+	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
@@ -35,22 +41,28 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		//voteMenuController.delegate = self
         
 		setupUI()
-		setupPages()
+		print(view.frame.height)
+		print(secondaryBackgroundView.frame.height)
+		print(votingPagesCollectionView.frame.height)
+		print("Before reload")
+		print("\(pages.count)")
+		votingPagesCollectionView.reloadData()
     }
     
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
-		tabBarController?.tabBar.isHidden = true
+		print(view.frame.height)
+		print(secondaryBackgroundView.frame.height)
+		print(votingPagesCollectionView.frame.height)
+		tabBarController?.tabBar.isHidden = false
 	}
 	
 	private func setupUI() {
 		setupBackground()
-		
 		setupNavigationBarButtons()
 		setupVoteCategoriesMenu()
 		setupVotingPagesView()
-		
 	}
 	
 	private func setupBackground() {
@@ -81,7 +93,8 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 	private func setupVotingPagesView() {
 		let layout = UICollectionViewFlowLayout()
 		print(secondaryBackgroundView.frame.width)
-		layout.itemSize = CGSize(width: view.frame.width - 2, height: 200)
+
+		//layout.itemSize = CGSize(width: view.frame.width, height: 200)
 		layout.minimumLineSpacing = 0
 		layout.minimumInteritemSpacing = 0
 		layout.scrollDirection = .horizontal
@@ -92,25 +105,24 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		collectionView.showsHorizontalScrollIndicator = false
 		collectionView.isPagingEnabled = true
 		
-		collectionView.register(VoteCategoryPageCell.self, forCellWithReuseIdentifier: "cellID")
+		collectionView.register(VoteCategoryPageCell.nib(), forCellWithReuseIdentifier: VoteCategoryPageCell.identifier)
 		
 		votingPagesCollectionView = collectionView
-		secondaryBackgroundView.addSubview(votingPagesCollectionView)
+		view.addSubview(votingPagesCollectionView)
 		
 		votingPagesCollectionView.snp.makeConstraints { make in
-			make.edges.equalToSuperview()
+			make.top.equalTo(view.safeAreaLayoutGuide)
+			make.bottom.trailing.leading.equalTo(view)
 		}
 		
 		votingPagesCollectionView.delegate = self
 		votingPagesCollectionView.dataSource = self
 	}
 	
-	private func setupPages() {
+	private func setupPagesViewModels() {
 		pages = VoteCategory.allCases.map({ category in
-			let voteVC = VoteTableViewController()
-			voteVC.voteCategory = category
-			
-			return voteVC
+			let viewModel = CountryListViewModel(for: contest, category: category)
+			return viewModel
 		})
 	}
 	
@@ -151,13 +163,16 @@ extension MainVoteViewController: UICollectionViewDelegate, UICollectionViewData
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! VoteCategoryPageCell
-		cell.view = pages[indexPath.item].view
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteCategoryPageCell.identifier, for: indexPath) as! VoteCategoryPageCell
+		
+		cell.countryListViewModel = pages[indexPath.item]
+		cell.setupPageCell()
+		
 		return cell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return .init(width: view.frame.width, height: view.frame.height)
+		return .init(width: view.frame.width, height: secondaryBackgroundView.frame.height)
 	}
 	
 }

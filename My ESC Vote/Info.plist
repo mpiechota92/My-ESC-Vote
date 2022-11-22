@@ -9,12 +9,6 @@
 		<string>Gotham Book.otf</string>
 		<string>Gotham Bold.otf</string>
 	</array>
-	<key>CFBundleIdentifier</key>
-	<string></string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -34,5 +28,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

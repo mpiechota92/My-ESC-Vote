@@ -11,16 +11,20 @@ class CountryListViewModel {
 	
 	private var countryVotes: [CountryViewModel] = []
 	
+	var voteCategory: VoteCategory!
 	var countryCount: Int {
 		get {
 			return countryVotes.count
 		}
 	}
 	
-	init(for contest: Contest) {
+	init(for contest: Contest, category: VoteCategory) {
+		self.voteCategory = category
 		
 		//TODO: Get data about contestants
+		#if DEBUG
 		mockData()
+		#endif
 		
 	}
 	
