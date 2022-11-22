@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,18 +18,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="566"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="61" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UmB-wm-3GY">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="61" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UmB-wm-3GY">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="566"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" name="Dimmed Accent Color"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tableView>
                 </subviews>
                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="UmB-wm-3GY" secondAttribute="trailing" id="9S0-q5-8s0"/>
-                    <constraint firstAttribute="bottom" secondItem="UmB-wm-3GY" secondAttribute="bottom" id="Wnj-7X-tfV"/>
-                    <constraint firstItem="UmB-wm-3GY" firstAttribute="leading" secondItem="Hgn-FF-qeZ" secondAttribute="leading" id="ege-Bc-Dqa"/>
-                    <constraint firstItem="UmB-wm-3GY" firstAttribute="top" secondItem="Hgn-FF-qeZ" secondAttribute="top" id="yoZ-V2-yA2"/>
+                    <constraint firstItem="UmB-wm-3GY" firstAttribute="leading" secondItem="Hgn-FF-qeZ" secondAttribute="leading" id="ChL-Hv-giJ"/>
+                    <constraint firstAttribute="trailing" secondItem="UmB-wm-3GY" secondAttribute="trailing" id="gfy-Sf-yjA"/>
+                    <constraint firstAttribute="bottom" secondItem="UmB-wm-3GY" secondAttribute="bottom" id="sre-3u-T2p"/>
+                    <constraint firstItem="UmB-wm-3GY" firstAttribute="top" secondItem="Hgn-FF-qeZ" secondAttribute="top" id="xOL-rG-IUd"/>
                 </constraints>
             </collectionViewCellContentView>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,7 +38,12 @@
             <connections>
                 <outlet property="countriesVoteTableView" destination="UmB-wm-3GY" id="n64-Zl-B81"/>
             </connections>
-            <point key="canvasLocation" x="-257" y="-16"/>
+            <point key="canvasLocation" x="-257.25190839694653" y="-16.197183098591552"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="Dimmed Accent Color">
+            <color red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

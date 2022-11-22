@@ -46,6 +46,11 @@
 		5295AA8A29198EBC00B820FE /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8929198EBC00B820FE /* Typealiases.swift */; };
 		5295AA8C291996D600B820FE /* MainVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8B291996D600B820FE /* MainVoteViewController.swift */; };
 		5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */; };
+		52ADDB16292D7E2200D6703F /* CollectionViewSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */; };
+		52ADDB18292D7FA700D6703F /* SegmentedControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */; };
+		52ADDB1A292D809500D6703F /* CollectionViewSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */; };
+		52ADDB1C292D824E00D6703F /* SegmentedControlButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */; };
+		52ADDB1E292D8AF500D6703F /* Array+ForEachOtherThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
@@ -112,6 +117,11 @@
 		5295AA8929198EBC00B820FE /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Typealiases.swift"; sourceTree = "<group>"; };
 		5295AA8B291996D600B820FE /* MainVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVoteViewController.swift; sourceTree = "<group>"; };
 		5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteCategoryPageCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteCategoryPageCell.swift"; sourceTree = "<group>"; };
+		52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewSegmentedControl.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/CollectionViewSegmentedControl.swift"; sourceTree = "<group>"; };
+		52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegmentedControlButton.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/SegmentedControlButton.swift"; sourceTree = "<group>"; };
+		52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionViewSegmentedControl.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/CollectionViewSegmentedControl.xib"; sourceTree = "<group>"; };
+		52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SegmentedControlButton.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/SegmentedControlButton.xib"; sourceTree = "<group>"; };
+		52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+ForEachOtherThan.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/Array+ForEachOtherThan.swift"; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -369,6 +379,10 @@
 				52C81814291566910006CA38 /* AboutInfoView.swift */,
 				52C81818291572AB0006CA38 /* AboutInfoView.xib */,
 				52615577291660FE006988BD /* MenuButton.swift */,
+				52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */,
+				52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */,
+				52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */,
+				52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */,
 			);
 			path = "View Elements";
 			sourceTree = "<group>";
@@ -395,6 +409,7 @@
 				52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */,
 				52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */,
 				5261557929166884006988BD /* Notification+Names.swift */,
+				52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +530,8 @@
 				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */,
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
+				52ADDB1A292D809500D6703F /* CollectionViewSegmentedControl.xib in Resources */,
+				52ADDB1C292D824E00D6703F /* SegmentedControlButton.xib in Resources */,
 				52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */,
 				52CE1746291E673000F93E28 /* ContestTableViewCell.xib in Resources */,
 				52CE174C291EECC500F93E28 /* CountryVoteCell.xib in Resources */,
@@ -583,9 +600,11 @@
 			files = (
 				526155812916B002006988BD /* Contest.swift in Sources */,
 				52CE174F291EEFA900F93E28 /* Country.swift in Sources */,
+				52ADDB1E292D8AF500D6703F /* Array+ForEachOtherThan.swift in Sources */,
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
 				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
+				52ADDB18292D7FA700D6703F /* SegmentedControlButton.swift in Sources */,
 				52CE1751291EF00C00F93E28 /* CountryVoteViewModel.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
@@ -595,6 +614,7 @@
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				52CE174B291EECC500F93E28 /* CountryVoteCell.swift in Sources */,
 				5261557A29166884006988BD /* Notification+Names.swift in Sources */,
+				52ADDB16292D7E2200D6703F /* CollectionViewSegmentedControl.swift in Sources */,
 				5295AA8629198BF200B820FE /* VoteCategoryMenuController.swift in Sources */,
 				5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */,
 				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,

@@ -12,14 +12,17 @@ extension Constants {
 		
 		struct Color {
 			
-			static let accentColor = UIColor(named: "AccentColor")!
 			static let tintColor = UIColor(named: "Winter")!
-			static let dimmedAccentColor = UIColor(named: "Dimmed Accent Color")!
+			static let transparent = UIColor(named: "Transparent")
 			
+			static let error = UIColor(named: "Error")!
+			static let succsess = UIColor(named: "Success")!
 			
 			struct Primary {
 				static let darkNavy = UIColor(named: "Dark Navy")
 				static let navy = UIColor(named: "Navy")
+				static let accentColor = UIColor(named: "AccentColor")!
+				static let dimmedAccentColor = UIColor(named: "Dimmed Accent Color")!
 			}
 			
 			struct Secondary {
@@ -57,11 +60,6 @@ extension Constants {
 			struct Name {
 				static let gotham = "Gotham Book"
 				static let gothamBold = "Gotham Bold"
-			}
-			
-			struct Color {
-				static let error = UIColor(named: "Error")!
-				static let succsess = UIColor(named: "Success")!
 			}
 			
 			struct Size {

@@ -26,19 +26,19 @@
                             <constraint firstAttribute="width" constant="55" id="xL1-qN-eSL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-nX-zIY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-nX-zIY">
                         <rect key="frame" x="71" y="24" width="203" height="27.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRL-EP-IsE">
-                        <rect key="frame" x="71" y="55.666666666666664" width="54.333333333333343" height="20.333333333333336"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRL-EP-IsE">
+                        <rect key="frame" x="71" y="55.666666666666664" width="203" height="20.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lithuania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rei-0S-ONM">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rei-0S-ONM">
                         <rect key="frame" x="12" y="4" width="300" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -46,13 +46,14 @@
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.3.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rNk-eB-nPZ">
                         <rect key="frame" x="282" y="27.666666666666664" width="30" height="30"/>
+                        <color key="tintColor" name="Dark Navy"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="1uU-aJ-8mW"/>
                             <constraint firstAttribute="height" constant="39.666666666666643" id="ZX4-1Q-jjc"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" name="Light Navy"/>
+                <color key="backgroundColor" name="Winter"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="rei-0S-ONM" secondAttribute="trailing" constant="8" id="1D6-HD-7nl"/>
                     <constraint firstItem="rNk-eB-nPZ" firstAttribute="leading" secondItem="XqG-nX-zIY" secondAttribute="trailing" constant="8" id="3jK-cI-5yT"/>
@@ -63,7 +64,7 @@
                     <constraint firstItem="rNk-eB-nPZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HAu-6n-f4q"/>
                     <constraint firstItem="XqG-nX-zIY" firstAttribute="leading" secondItem="SbH-tH-Kc2" secondAttribute="trailing" constant="8" id="M03-GQ-VcO"/>
                     <constraint firstItem="rei-0S-ONM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="MZ7-A7-miP"/>
-                    <constraint firstItem="vRL-EP-IsE" firstAttribute="width" secondItem="XqG-nX-zIY" secondAttribute="width" multiplier="0.267652" id="iaC-bV-wPp"/>
+                    <constraint firstItem="vRL-EP-IsE" firstAttribute="width" secondItem="XqG-nX-zIY" secondAttribute="width" id="iaC-bV-wPp"/>
                     <constraint firstItem="vRL-EP-IsE" firstAttribute="leading" secondItem="SbH-tH-Kc2" secondAttribute="trailing" constant="8" id="phX-6b-i5m"/>
                     <constraint firstItem="XqG-nX-zIY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="sSz-Lk-KiO"/>
                     <constraint firstItem="SbH-tH-Kc2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="t14-G5-Zhk"/>
@@ -73,6 +74,7 @@
             <connections>
                 <outlet property="artistNameLabel" destination="vRL-EP-IsE" id="Jr5-Yw-8wW"/>
                 <outlet property="countryImageView" destination="SbH-tH-Kc2" id="J8N-8E-XuG"/>
+                <outlet property="countryNameLabel" destination="rei-0S-ONM" id="Wcy-Za-47G"/>
                 <outlet property="songNameLabel" destination="XqG-nX-zIY" id="M3S-eG-2Ed"/>
             </connections>
             <point key="canvasLocation" x="22.900763358778626" y="-34.859154929577464"/>
@@ -80,8 +82,11 @@
     </objects>
     <resources>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
-        <namedColor name="Light Navy">
-            <color red="0.14509803921568629" green="0.14117647058823529" blue="0.44313725490196076" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Dark Navy">
+            <color red="0.011764705882352941" green="0.0078431372549019607" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

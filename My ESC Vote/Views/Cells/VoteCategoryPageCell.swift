@@ -38,12 +38,6 @@ class VoteCategoryPageCell: UICollectionViewCell {
 		countriesVoteTableView.estimatedRowHeight = UITableView.automaticDimension
 		countriesVoteTableView.rowHeight = UITableView.automaticDimension
 		countriesVoteTableView.register(CountryVoteCell.nib(), forCellReuseIdentifier: CountryVoteCell.identifier)
-		print(contentView.frame)
-		
-		countriesVoteTableView.snp.makeConstraints { make in
-			make.top.equalTo(contentView).offset(80)
-		}
-		
 		countriesVoteTableView.reloadData()
 	}
 

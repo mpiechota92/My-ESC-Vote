@@ -29,11 +29,11 @@ class LabelView: UIView {
 		willSet {
 			switch newValue {
 			case .error:
-				mainLabel.textColor = Constants.Design.Font.Color.error
+				mainLabel.textColor = Color.error
 			case .success:
-				mainLabel.textColor = Constants.Design.Font.Color.succsess
+				mainLabel.textColor = Color.succsess
 			default:
-				mainLabel.textColor = Constants.Design.Color.accentColor
+				mainLabel.textColor = Color.Primary.accentColor
 			}
 		}
 	}

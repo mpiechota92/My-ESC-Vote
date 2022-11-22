@@ -14,14 +14,14 @@ class VoteMenuCell: UICollectionViewCell {
 		let label = UILabel()
 		label.text = "Menu Item"
 		label.textAlignment = .center
-		label.textColor = Constants.Design.Color.accentColor
+		label.textColor = Color.Primary.accentColor
 		
 		return label
 	}()
 	
 	override var isSelected: Bool {
 		didSet {
-			menuTitleLabel.textColor = isSelected ? Constants.Design.Color.accentColor : Constants.Design.Color.dimmedAccentColor
+			menuTitleLabel.textColor = isSelected ? Color.Primary.accentColor : Color.Primary.dimmedAccentColor
 		}
 	}
 	

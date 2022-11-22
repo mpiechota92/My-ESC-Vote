@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		FirebaseApp.configure()
 		let _ = Firestore.firestore()
 		
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.Design.Color.accentColor]
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.Primary.accentColor]
 		
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Constants.Design.Color.accentColor], for: .selected)
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Constants.Design.Color.dimmedAccentColor], for: .normal)
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.accentColor], for: .selected)
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.dimmedAccentColor], for: .normal)
 		
 		return true
 	}
