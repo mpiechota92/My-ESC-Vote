@@ -58,8 +58,24 @@ extension Constants {
 		struct Font {
 			
 			struct Name {
-				static let gotham = "Gotham Book"
-				static let gothamBold = "Gotham Bold"
+				static let metropolisBlack = "Metropolis-Black"
+				static let metropolisBlackItalic = "Metropolis-BlackItalic"
+				static let metropolisBold = "Metropolis-Bold"
+				static let metropolisBoldItalic = "Metropolis-BoldItalic"
+				static let metropolisExtraBold = "Metropolis-ExtraBold"
+				static let metropolisExtraBoldItalic = "Metropolis-ExtraBoldItalic"
+				static let metropolisExtraLight = "Metropolis-ExtraLight"
+				static let metropolisExtraLightItalic = "Metropolis-ExtraLightItalic"
+				static let metropolisLight = "Metropolis-Light"
+				static let metropolisLightItalic = "Metropolis-LightItalic"
+				static let metropolisMedium = "Metropolis-Medium"
+				static let metropolisMediumItalic = "Metropolis-MediumItalic"
+				static let metropolisRegular = "Metropolis-Regular"
+				static let metropolisRegularItalic = "Metropolis-RegularItalic"
+				static let metropolisSemiBold = "Metropolis-SemiBold"
+				static let metropolisSemiBoldItalic = "Metropolis-SemiBoldItalic"
+				static let metropolisThin = "Metropolis-Thin"
+				static let metropolisThinItalic = "Metropolis-ThinItalic"
 			}
 			
 			struct Size {

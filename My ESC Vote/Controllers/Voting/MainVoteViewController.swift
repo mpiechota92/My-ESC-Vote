@@ -16,8 +16,7 @@ enum VoteCategory: String, Codable, CaseIterable {
 
 class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 	
-	private var voteMenuController: VoteCategoryMenuController!
-
+	private var voteCategoriesMenu: CollectionViewSegmentedControl!
 	private var pages: [CountryListViewModel]!
 	private let menuButton: MenuButton = MenuButton()
 	private var secondaryBackgroundView: UIView!
@@ -38,30 +37,20 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		//voteMenuController.delegate = self
-        
 		setupUI()
-		print(view.frame.height)
-		print(secondaryBackgroundView.frame.height)
-		print(votingPagesCollectionView.frame.height)
-		print("Before reload")
-		print("\(pages.count)")
 		votingPagesCollectionView.reloadData()
     }
     
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
-		print(view.frame.height)
-		print(secondaryBackgroundView.frame.height)
-		print(votingPagesCollectionView.frame.height)
 		tabBarController?.tabBar.isHidden = false
 	}
 	
 	private func setupUI() {
 		setupBackground()
 		setupNavigationBarButtons()
-		setupVoteCategoriesMenu()
+		setupVoteCategoriesBar()
 		setupVotingPagesView()
 	}
 	
@@ -85,16 +74,28 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		rightBarButtonItem = UIBarButtonItem(customView: menuButton)
 	}
 	
-	private func setupVoteCategoriesMenu() {
-		// TODO: add it
+	private func setupVoteCategoriesBar() {
+		voteCategoriesMenu = .instanceFromNib()
+		voteCategoriesMenu.delegate = self
+		self.view.addSubview(voteCategoriesMenu)
 		
+		voteCategoriesMenu.setup(with: [VoteCategory.favourite.rawValue,
+										VoteCategory.vocals.rawValue,
+										VoteCategory.performance.rawValue])
+		
+		
+		voteCategoriesMenu.snp.makeConstraints { make in
+			make.leading.trailing.equalToSuperview()
+			make.top.equalTo(self.view.safeAreaLayoutGuide)
+			make.width.equalToSuperview()
+			make.height.equalTo(60)
+		}
+		
+		voteCategoriesMenu.delegate = self
 	}
 	
 	private func setupVotingPagesView() {
 		let layout = UICollectionViewFlowLayout()
-		print(secondaryBackgroundView.frame.width)
-
-		//layout.itemSize = CGSize(width: view.frame.width, height: 200)
 		layout.minimumLineSpacing = 0
 		layout.minimumInteritemSpacing = 0
 		layout.scrollDirection = .horizontal
@@ -104,6 +105,7 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		collectionView.showsVerticalScrollIndicator = false
 		collectionView.showsHorizontalScrollIndicator = false
 		collectionView.isPagingEnabled = true
+		collectionView.isScrollEnabled = true
 		
 		collectionView.register(VoteCategoryPageCell.nib(), forCellWithReuseIdentifier: VoteCategoryPageCell.identifier)
 		
@@ -111,7 +113,7 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		view.addSubview(votingPagesCollectionView)
 		
 		votingPagesCollectionView.snp.makeConstraints { make in
-			make.top.equalTo(view.safeAreaLayoutGuide)
+			make.top.equalTo(voteCategoriesMenu.snp_bottomMargin)
 			make.bottom.trailing.leading.equalTo(view)
 		}
 		
@@ -173,6 +175,16 @@ extension MainVoteViewController: UICollectionViewDelegate, UICollectionViewData
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return .init(width: view.frame.width, height: secondaryBackgroundView.frame.height)
+	}
+	
+}
+
+extension MainVoteViewController: CollectionViewSegmentedControlDelegate {
+	
+	func didSelectItem(_ indexPath: IndexPath) {
+		votingPagesCollectionView.isPagingEnabled = false
+		votingPagesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+		votingPagesCollectionView.isPagingEnabled = true
 	}
 	
 }

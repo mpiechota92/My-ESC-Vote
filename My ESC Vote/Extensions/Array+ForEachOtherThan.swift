@@ -18,4 +18,17 @@ extension Array {
 		}
 	}
 	
+	func forEachWithIndex(_ body: @escaping (_ index: Int, _ element: Element) -> ()) where Element: Equatable {
+		
+		self.forEach { element in
+			let index = self.firstIndex { _element in
+				return _element == element
+			}
+			
+			guard let index = index else { return }
+			
+			body(index, element)
+		}
+		
+	}
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class ContestTableViewCell: UITableViewCell {
 	
+	static let identifier = "ContestTableViewCell"
+	
 	var viewModel: ContestViewModel!
 	var delegate: ContestTableViewCellDelegate?
 	

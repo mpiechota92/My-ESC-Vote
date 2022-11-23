@@ -15,7 +15,6 @@ protocol CollectionViewSegmentedControlDelegate {
 
 class CollectionViewSegmentedControl: UIView {
 	
-	var collectionView: UICollectionView!
 	var segmentButtons: [SegmentedControlButton]!
 	
 	@IBOutlet weak var segmentsStackVIew: UIStackView!
@@ -25,8 +24,31 @@ class CollectionViewSegmentedControl: UIView {
 	func setup(with segments: [String]) {
 		var segmentButtons: [SegmentedControlButton];
 		
-		segmentButtons = segments.map(SegmentedControlButton.init)
+		segmentButtons = segments.map { segment in
+			let button: SegmentedControlButton = .instanceFromNib()
+			button.delegate = self
+			button.controlButton.setTitle(segment, for: .normal)
+			//button.controlButton.titleLabel?.font = UIFont(name: Font.Name.gotham, size: Font.Size.small)
+			
+			return button
+		}
 		
+		self.segmentButtons = segmentButtons
+		
+		setupUI()
+	}
+	
+	private func setupUI() {
+		segmentsStackVIew.distribution = .fillEqually
+		segmentsStackVIew.alignment = .center
+		segmentsStackVIew.spacing = 10
+		
+		segmentButtons.forEachWithIndex { index, button in
+			button.index = index
+			self.segmentsStackVIew.addArrangedSubview(button)
+		}
+		
+		segmentButtons.first?.isSelected = true
 	}
 	
 	func setSegmentButtonsObservers() {
@@ -44,8 +66,8 @@ extension CollectionViewSegmentedControl: SegmentedControlButtonDelegate {
 			button.isSelected = false
 		}
 		
+		
 		let indexPath = IndexPath(item: item, section: 0)
-		collectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionView.ScrollPosition.bottom)
 		delegate.didSelectItem(indexPath)
 	}
 	

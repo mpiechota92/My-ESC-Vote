@@ -56,8 +56,8 @@ class LabelView: UIView {
 		}
 		
 		mainLabel.font = UIFont(
-			name: Constants.Design.Font.Name.gothamBold,
-			size: Constants.Design.Font.Size.small
+			name: Font.Name.metropolisBold,
+			size: Font.Size.small
 		)
 
 		self.backgroundColor = .init(white: 1.0, alpha: 0.0)

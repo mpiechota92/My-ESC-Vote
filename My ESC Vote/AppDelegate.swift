@@ -18,17 +18,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		FirebaseApp.configure()
-		let _ = Firestore.firestore()
-		
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.Primary.accentColor]
-		
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.accentColor], for: .selected)
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.dimmedAccentColor], for: .normal)
+		initFirebase()
+		navigationBarAppearance()
+		tabBarAppearance()
+		buttonAppearance()
 		
 		return true
 	}
 
+	private func initFirebase() {
+		FirebaseApp.configure()
+		let _ = Firestore.firestore()
+	}
+	
+	private func navigationBarAppearance() {
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.Primary.accentColor]
+	}
+	
+	private func tabBarAppearance() {
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.accentColor], for: .selected)
+		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.dimmedAccentColor], for: .normal)
+	}
+	
+	private func buttonAppearance() {
+		UIButton.appearance().titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: 10)
+	}
+	
+	
 	// MARK: UISceneSession Lifecycle
 
 	func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

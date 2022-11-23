@@ -51,8 +51,8 @@ extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UI.TableView.Cell.contest, for: indexPath) as? ContestTableViewCell else {
-			fatalError("Could not dequeue reusable cell with identifier \(Constants.UI.TableView.Cell.contest)")
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: ContestTableViewCell.identifier, for: indexPath) as? ContestTableViewCell else {
+			fatalError("Could not dequeue reusable cell with identifier \(ContestTableViewCell.identifier)")
 		}
 		
 		let cellViewModel = viewModel.contestVMAtIndex(indexPath.row)
