@@ -34,7 +34,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R2P-2m-sBN">
-                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="jCd-c6-iNG">
+                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" id="jCd-c6-iNG">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vnG-5n-Bz6" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
                                 <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -392,7 +392,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="812-HN-moG">
-                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="2R9-3G-EPz">
+                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" id="2R9-3G-EPz">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="L0o-B9-vuU" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
                                 <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

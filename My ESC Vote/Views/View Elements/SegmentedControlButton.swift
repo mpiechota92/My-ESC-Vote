@@ -15,12 +15,15 @@ protocol SegmentedControlButtonDelegate {
 
 class SegmentedControlButton: UIView {
 	
+	static let height = 50.0
+	
 	var isSelected: Bool = false {
 		willSet {
 			let textColor = newValue ? Color.Primary.darkNavy : Color.Primary.accentColor
-			controlButton.titleLabel?.textColor = textColor
-			
-			controlButtonBackground.backgroundColor = newValue ? Color.Primary.accentColor : Color.transparent
+			DispatchQueue.main.async {
+				self.controlButton.setTitleColor(textColor, for: .normal)
+				self.controlButtonBackground.backgroundColor = newValue ? Color.Primary.accentColor : Color.transparent
+			}
 		}
 	}
 	
@@ -28,7 +31,10 @@ class SegmentedControlButton: UIView {
 	var index: Int!
 	var title: String! {
 		didSet {
-			controlButton.setTitle(title, for: [.normal, .selected, .focused, .highlighted, .application, .disabled, .reserved])
+			self.controlButton.setTitle(self.title, for: .normal)
+			self.controlButton.setTitle(self.title, for: [.normal, .selected])
+			self.controlButton.setTitle(self.title, for: .highlighted)
+			
 		}
 	}
 	
@@ -37,8 +43,10 @@ class SegmentedControlButton: UIView {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
+		
+		controlButton.titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: 10)
+		controlButton.setTitleColor(Color.Primary.accentColor, for: .normal)
 		controlButtonBackground.layer.cornerRadius = controlButtonBackground.frame.height / 5.0
-		controlButton.titleLabel?.font  = UIFont(name: Font.Name.metropolisThin, size: 10)
 	}
 	
 	@IBAction func didTapControlButton(_ sender: Any) {

@@ -28,16 +28,15 @@ class VoteCategoryPageCell: UICollectionViewCell {
 	}
 	
 	override func awakeFromNib() {
-		print("Kupaaaa")
 		countriesVoteTableView.delegate = self
 		countriesVoteTableView.dataSource = self
 	}
 	
 	func setupPageCell() {
-
 		countriesVoteTableView.estimatedRowHeight = UITableView.automaticDimension
 		countriesVoteTableView.rowHeight = UITableView.automaticDimension
 		countriesVoteTableView.register(CountryVoteCell.nib(), forCellReuseIdentifier: CountryVoteCell.identifier)
+		
 		countriesVoteTableView.reloadData()
 	}
 
@@ -66,3 +65,4 @@ extension VoteCategoryPageCell: UITableViewDataSource {
 	}
 	
 }
+

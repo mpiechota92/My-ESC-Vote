@@ -27,8 +27,7 @@ class CollectionViewSegmentedControl: UIView {
 		segmentButtons = segments.map { segment in
 			let button: SegmentedControlButton = .instanceFromNib()
 			button.delegate = self
-			button.controlButton.setTitle(segment, for: .normal)
-			//button.controlButton.titleLabel?.font = UIFont(name: Font.Name.gotham, size: Font.Size.small)
+			button.title = segment
 			
 			return button
 		}
@@ -42,6 +41,9 @@ class CollectionViewSegmentedControl: UIView {
 		segmentsStackVIew.distribution = .fillEqually
 		segmentsStackVIew.alignment = .center
 		segmentsStackVIew.spacing = 10
+		
+		print(self.frame.height)
+		print(segmentsStackVIew.frame.height)
 		
 		segmentButtons.forEachWithIndex { index, button in
 			button.index = index
@@ -73,3 +75,15 @@ extension CollectionViewSegmentedControl: SegmentedControlButtonDelegate {
 	
 }
 
+
+extension CollectionViewSegmentedControl: PagesCollectionViewDelegate {
+	
+	func didSelectItem(at index: Int) {
+		segmentButtons.forEachOtherThan(at: index) { button in
+			button.isSelected = false
+		}
+		
+		segmentButtons[index].isSelected = true
+	}
+	
+}

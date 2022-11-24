@@ -24,7 +24,8 @@ class ContestTableViewCell: UITableViewCell {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		// Initialization code
+		
+		titleLabel.font = UIFont(name: Font.Name.metropolisExtraBold, size: 10)
 	}
 	
 	override func setSelected(_ selected: Bool, animated: Bool) {
