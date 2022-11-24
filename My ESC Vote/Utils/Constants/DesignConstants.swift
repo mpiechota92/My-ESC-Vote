@@ -12,14 +12,17 @@ extension Constants {
 		
 		struct Color {
 			
-			static let accentColor = UIColor(named: "AccentColor")!
 			static let tintColor = UIColor(named: "Winter")!
-			static let dimmedAccentColor = UIColor(named: "Dimmed Accent Color")!
+			static let transparent = UIColor(named: "Transparent")
 			
+			static let error = UIColor(named: "Error")!
+			static let succsess = UIColor(named: "Success")!
 			
 			struct Primary {
 				static let darkNavy = UIColor(named: "Dark Navy")
 				static let navy = UIColor(named: "Navy")
+				static let accentColor = UIColor(named: "AccentColor")!
+				static let dimmedAccentColor = UIColor(named: "Dimmed Accent Color")!
 			}
 			
 			struct Secondary {
@@ -55,13 +58,24 @@ extension Constants {
 		struct Font {
 			
 			struct Name {
-				static let gotham = "Gotham Book"
-				static let gothamBold = "Gotham Bold"
-			}
-			
-			struct Color {
-				static let error = UIColor(named: "Error")!
-				static let succsess = UIColor(named: "Success")!
+				static let metropolisBlack = "Metropolis-Black"
+				static let metropolisBlackItalic = "Metropolis-BlackItalic"
+				static let metropolisBold = "Metropolis-Bold"
+				static let metropolisBoldItalic = "Metropolis-BoldItalic"
+				static let metropolisExtraBold = "Metropolis-ExtraBold"
+				static let metropolisExtraBoldItalic = "Metropolis-ExtraBoldItalic"
+				static let metropolisExtraLight = "Metropolis-ExtraLight"
+				static let metropolisExtraLightItalic = "Metropolis-ExtraLightItalic"
+				static let metropolisLight = "Metropolis-Light"
+				static let metropolisLightItalic = "Metropolis-LightItalic"
+				static let metropolisMedium = "Metropolis-Medium"
+				static let metropolisMediumItalic = "Metropolis-MediumItalic"
+				static let metropolisRegular = "Metropolis-Regular"
+				static let metropolisRegularItalic = "Metropolis-RegularItalic"
+				static let metropolisSemiBold = "Metropolis-SemiBold"
+				static let metropolisSemiBoldItalic = "Metropolis-SemiBoldItalic"
+				static let metropolisThin = "Metropolis-Thin"
+				static let metropolisThinItalic = "Metropolis-ThinItalic"
 			}
 			
 			struct Size {

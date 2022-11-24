@@ -17,7 +17,7 @@ class VoteCategoryMenuController: UICollectionViewController, UICollectionViewDe
 	
 	let menuBar: UIView = {
 		let view = UIView()
-		view.backgroundColor = Color.accentColor
+		view.backgroundColor = Color.Primary.accentColor
 		return view
 	}()
 	
@@ -29,7 +29,7 @@ class VoteCategoryMenuController: UICollectionViewController, UICollectionViewDe
 
 	func setupCollectionView() {
 		
-		collectionView.backgroundColor = Constants.Design.Color.Primary.darkNavy
+		collectionView.backgroundColor = Color.Primary.darkNavy
 		collectionView.allowsSelection = true
 		collectionView.register(VoteMenuCell.self, forCellWithReuseIdentifier: cellID)
 		

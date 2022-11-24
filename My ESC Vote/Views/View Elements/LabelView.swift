@@ -29,11 +29,11 @@ class LabelView: UIView {
 		willSet {
 			switch newValue {
 			case .error:
-				mainLabel.textColor = Constants.Design.Font.Color.error
+				mainLabel.textColor = Color.error
 			case .success:
-				mainLabel.textColor = Constants.Design.Font.Color.succsess
+				mainLabel.textColor = Color.succsess
 			default:
-				mainLabel.textColor = Constants.Design.Color.accentColor
+				mainLabel.textColor = Color.Primary.accentColor
 			}
 		}
 	}
@@ -56,8 +56,8 @@ class LabelView: UIView {
 		}
 		
 		mainLabel.font = UIFont(
-			name: Constants.Design.Font.Name.gothamBold,
-			size: Constants.Design.Font.Size.small
+			name: Font.Name.metropolisBold,
+			size: Font.Size.small
 		)
 
 		self.backgroundColor = .init(white: 1.0, alpha: 0.0)

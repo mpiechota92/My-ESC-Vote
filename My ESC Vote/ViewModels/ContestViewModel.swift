@@ -24,6 +24,8 @@ class ContestsListViewModel {
 		APIManager.shared().dbService.fetchAllData(from: Collections.Contests.collectionName, as: Contest.self) { records in
 			self.contestsList = records.map(ContestViewModel.init)
 			completion()
+			
+			print("fetchContestsData")
 		}
 		
 	}
@@ -32,7 +34,7 @@ class ContestsListViewModel {
 
 struct ContestViewModel {
 	
-	private var contest: Contest
+	var contest: Contest
 	
 	init(contest: Contest) {
 		self.contest = contest

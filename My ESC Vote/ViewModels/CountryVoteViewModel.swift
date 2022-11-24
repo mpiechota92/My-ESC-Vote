@@ -7,17 +7,41 @@
 
 import Foundation
 
-class CountryVoteListViewModel {
+class CountryListViewModel {
 	
-	private var countryVotes: [CountryVoteViewModel]
+	private var countryVotes: [CountryViewModel] = []
 	
-	init(for contest: Contest) {
+	var voteCategory: VoteCategory!
+	var countryCount: Int {
+		get {
+			return countryVotes.count
+		}
+	}
+	
+	init(for contest: Contest, category: VoteCategory) {
+		self.voteCategory = category
 		
-		countryVotes = contest.participants.map(CountryVoteViewModel.init)
+		//TODO: Get data about contestants
+		#if DEBUG
+		mockData()
+		#endif
 		
 	}
 	
-	func countryViewModelAt(index: Int) -> CountryVoteViewModel {
+	func mockData() {
+		let countries: [Country] = [
+			Country(name: "Poland", song: "Kupa", artist: "Kayah", place: 0),
+			Country(name: "Poland", song: "Kupa", artist: "Kayah", place: 1),
+			Country(name: "Poland", song: "Kupa", artist: "Kayah", place: 2),
+			Country(name: "Poland", song: "Kupa", artist: "Kayah", place: 3),
+			Country(name: "Poland", song: "Kupa", artist: "Kayah", place: 4),
+		]
+		
+		self.countryVotes = countries.map(CountryViewModel.init)
+	}
+	
+	
+	func countryViewModelAt(index: Int) -> CountryViewModel {
 		return countryVotes[index]
 	}
 	
@@ -25,12 +49,9 @@ class CountryVoteListViewModel {
 		return countryViewModelAt(index: index).country
 	}
 	
-	func countryCount() -> Int {
-		return countryVotes.count
-	}
 }
 
-struct CountryVoteViewModel {
+struct CountryViewModel {
 	
 	var country: Country
 	

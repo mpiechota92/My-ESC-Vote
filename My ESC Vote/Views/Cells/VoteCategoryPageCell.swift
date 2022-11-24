@@ -6,20 +6,63 @@
 //
 
 import UIKit
+import SnapKit
 
 class VoteCategoryPageCell: UICollectionViewCell {
     
-	override init(frame: CGRect) {
-		super.init(frame: frame)
+
+	static let identifier = "VoteCategoryPageCell"
+	
+	static func nib() -> UINib {
+		return UINib(nibName: "VoteCategoryPageCell",
+					 bundle: nil)
+	}
+	
+	@IBOutlet var countriesVoteTableView: UITableView!
+	
+	var countryListViewModel: CountryListViewModel!
+	
+	var view: UIView!
+	func setupView(for superView: UIView) {
 		
-		// setup
 	}
 	
-	
-	
-	
-	
-	required init?(coder: NSCoder) {
-		fatalError()
+	override func awakeFromNib() {
+		countriesVoteTableView.delegate = self
+		countriesVoteTableView.dataSource = self
 	}
+	
+	func setupPageCell() {
+		countriesVoteTableView.estimatedRowHeight = UITableView.automaticDimension
+		countriesVoteTableView.rowHeight = UITableView.automaticDimension
+		countriesVoteTableView.register(CountryVoteCell.nib(), forCellReuseIdentifier: CountryVoteCell.identifier)
+		
+		countriesVoteTableView.reloadData()
+	}
+
 }
+
+extension VoteCategoryPageCell: UITableViewDelegate {
+	
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableView.automaticDimension
+	}
+	
+}
+
+extension VoteCategoryPageCell: UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return countryListViewModel.countryCount
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: CountryVoteCell.identifier, for: indexPath) as! CountryVoteCell
+		
+		cell.viewModel = countryListViewModel.countryViewModelAt(index: indexPath.row)
+		
+		return cell
+	}
+	
+}
+

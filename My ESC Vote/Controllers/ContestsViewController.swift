@@ -25,12 +25,6 @@ class ContestsViewController: UIViewController {
 		setupData()
 	}
 	
-	private func setupUI() {
-		menuButton.setupButton(for: navigationController, with: storyboard)
-		contestsTableView.register(UINib(nibName: Constants.Content.Nib.contestCell, bundle: nil), forCellReuseIdentifier: Constants.UI.TableView.Cell.contest)
-		contestsTableView.reloadData()
-	}
-	
 	private func setupData() {
 		contestsTableView.dataSource = self
 		
@@ -40,6 +34,13 @@ class ContestsViewController: UIViewController {
 			}
 		}
 	}
+	
+	private func setupUI() {
+		menuButton.setupButton(for: navigationController, with: storyboard)
+		contestsTableView.register(UINib(nibName: Constants.Content.Nib.contestCell, bundle: nil), forCellReuseIdentifier: Constants.UI.TableView.Cell.contest)
+		contestsTableView.reloadData()
+	}
+	
 }
 
 extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -50,8 +51,8 @@ extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UI.TableView.Cell.contest, for: indexPath) as? ContestTableViewCell else {
-			fatalError("Could not dequeue reusable cell with identifier \(Constants.UI.TableView.Cell.contest)")
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: ContestTableViewCell.identifier, for: indexPath) as? ContestTableViewCell else {
+			fatalError("Could not dequeue reusable cell with identifier \(ContestTableViewCell.identifier)")
 		}
 		
 		let cellViewModel = viewModel.contestVMAtIndex(indexPath.row)
@@ -65,12 +66,13 @@ extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ContestsViewController: ContestTableViewCellDelegate {
 	
-	func didTapVoteButton(forContest contestName: String?) {
-		print("KUPAsss")
-		guard let contestName = contestName else { return }
-		print("AFTERKUPAsss")
-		let votePageVC = storyboard?.instantiateViewController(withIdentifier: "VoteCategoryPagerViewController") as! VoteCategoryPagerViewController
-		navigationController?.show(votePageVC, sender: nil)
+	func didTapVoteButton(forContest contest: Contest?) {
+		guard let contest = contest else { return }
+		
+		let mainVoteVC = MainVoteViewController()
+		mainVoteVC.contest = contest
+
+		navigationController?.show(mainVoteVC, sender: nil)
 	}
 	
 }

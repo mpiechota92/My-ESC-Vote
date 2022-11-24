@@ -6,15 +6,23 @@
 	<string>My ESC Vote/Src/Fonts/</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Gotham Book.otf</string>
-		<string>Gotham Bold.otf</string>
+		<string>Metropolis-Black.tff</string>
+		<string>Metropolis-BlackItallic.tff</string>
+		<string>Metropolis-Bold.tff</string>
+		<string>Metropolis-BoldItalic.tff</string>
+		<string>Metropolis-ExtraBold.tff</string>
+		<string>Metropolis-ExtraBoldItalic.tff</string>
+		<string>Metropolis-ExtraLight.tff</string>
+		<string>Metropolis-ExtraLightItalic.tff</string>
+		<string>Metropolis-Light.tff</string>
+		<string>Metropolis-LightItalic.tff</string>
+		<string>Metropolis-Medium.tff</string>
+		<string>Metropolis-MediumItalic.tff</string>
+		<string>Metropolis-Regular.tff</string>
+		<string>Metropolis-RegularItalic.tff</string>
+		<string>Metropolis-Thin.tff</string>
+		<string>Metropolis-ThinItalic.tff</string>
 	</array>
-	<key>CFBundleIdentifier</key>
-	<string></string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -34,5 +42,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
