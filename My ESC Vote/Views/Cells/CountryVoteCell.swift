@@ -29,8 +29,11 @@ class CountryVoteCell: UITableViewCell {
 			let country = viewModel.country
 			
 			songNameLabel.text = country.song
+			songNameLabel.font = UIFont(name: Font.Name.metropolisBold, size: Font.Size.large)
 			artistNameLabel.text = country.artist
+			artistNameLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.medium)
 			countryNameLabel.text = country.name
+			countryNameLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.extraSmall)
 			countryImageView.image = UIImage(named: country.name)
 		}
 	}

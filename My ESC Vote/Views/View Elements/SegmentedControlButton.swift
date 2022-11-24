@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SegmentedControlButtonDelegate {
+protocol SegmentedControlButtonDelegate: AnyObject {
 	
 	func didTapControlButton(_ sender: SegmentedControlButton)
 	
@@ -27,7 +27,7 @@ class SegmentedControlButton: UIView {
 		}
 	}
 	
-	var delegate: SegmentedControlButtonDelegate!
+	weak var delegate: SegmentedControlButtonDelegate!
 	var index: Int!
 	var title: String! {
 		didSet {
@@ -44,7 +44,7 @@ class SegmentedControlButton: UIView {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
-		controlButton.titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: 10)
+		controlButton.titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: Font.Size.small)
 		controlButton.setTitleColor(Color.Primary.accentColor, for: .normal)
 		controlButtonBackground.layer.cornerRadius = controlButtonBackground.frame.height / 5.0
 	}

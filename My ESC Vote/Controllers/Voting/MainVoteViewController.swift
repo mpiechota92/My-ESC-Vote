@@ -14,7 +14,7 @@ enum VoteCategory: String, Codable, CaseIterable {
 	case performance = "Performance"
 }
 
-protocol PagesCollectionViewDelegate {
+protocol PagesCollectionViewDelegate: AnyObject {
 	
 	func didSelectItem(at index: Int)
 	
@@ -27,7 +27,7 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 	private let menuButton: MenuButton = MenuButton()
 	private var secondaryBackgroundView: UIView!
 	private var votingPagesCollectionView: UICollectionView!
-	private var pagesDelegate: PagesCollectionViewDelegate!
+	private weak var pagesDelegate: PagesCollectionViewDelegate!
 	
 	private var navBarSafeAreaTopPadding: CGFloat!
 	
@@ -177,7 +177,6 @@ extension MainVoteViewController: UICollectionViewDelegate {
 		pagesDelegate.didSelectItem(at: item)
 	}
 	
-	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return .init(width: view.frame.width, height: collectionView.frame.height)
 	}
@@ -196,6 +195,7 @@ extension MainVoteViewController: UICollectionViewDataSource {
 		cell.countryListViewModel = pages[indexPath.item]
 		cell.setupPageCell()
 		cell.scrollViewDelegate = self
+		cell.votePageDraggingDelegate = self
 		
 		return cell
 	}
@@ -241,4 +241,22 @@ extension MainVoteViewController: VoteScrollViewDelegate {
 		}
 		
 	}
+}
+
+extension MainVoteViewController: VoteCategoryPageCountriesTableViewDraggingDelegate {
+	
+	var isDraggingItem: Bool {
+		get {
+			return isDraggingItem
+		}
+		
+		set {
+			isDraggingItem = newValue
+		}
+	}
+	
+	func setScrolling(enabled: Bool) {
+		votingPagesCollectionView.isScrollEnabled = enabled
+	}
+	
 }

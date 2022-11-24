@@ -7,19 +7,19 @@
 
 extension Constants {
 	
-	struct UI {
+	enum UI {
 		
-		struct Storyboard {
+		enum Storyboard {
 			static let main = "Main"
 		}
 		
-		struct ViewController {
+		enum ViewController {
 			
-			struct Segues {
+			enum Segues {
 				static let showRegistration = "showRegistration"
 			}
 			
-			struct ID {
+			enum ID {
 				static let register = "RegisterViewController"
 				static let login = "LoginViewController"
 				static let main = "MainViewController"
@@ -29,9 +29,9 @@ extension Constants {
 			
 		}
 		
-		struct TableView {
+		enum TableView {
 			
-			struct Cell {
+			enum Cell {
 				
 				static let menuOption = "MenuOptionTableViewCell"
 				static let contest = "ContestTableViewCell"
@@ -41,9 +41,9 @@ extension Constants {
 			
 		}
 		
-		struct TabBarController {
+		enum TabBarController {
 			
-			struct Item {
+			enum Item {
 				static let home = "Home"
 			}
 			

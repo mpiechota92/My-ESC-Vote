@@ -7,25 +7,25 @@
 
 extension Constants {
 	
-	struct API {
+	enum API {
 		
-		struct Firestore {
+		enum Firestore {
 			
-			struct Collections {
+			enum Collections {
 				
-				struct Users {
+				enum Users {
 					static let collectionName = "users"
 					
-					struct Fields {
+					enum Fields {
 						static let name = "name"
 						static let email = "email"
 					}
 				}
 				
-				struct Contests {
+				enum Contests {
 					static let collectionName = "contests"
 					
-					struct Fields {
+					enum Fields {
 						static let name = "name"
 						static let email = "email"
 					}

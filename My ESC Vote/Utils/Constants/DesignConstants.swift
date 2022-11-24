@@ -8,9 +8,9 @@ import UIKit
 
 extension Constants {
 	
-	struct Design {
+	enum Design {
 		
-		struct Color {
+		enum Color {
 			
 			static let tintColor = UIColor(named: "Winter")!
 			static let transparent = UIColor(named: "Transparent")
@@ -18,7 +18,7 @@ extension Constants {
 			static let error = UIColor(named: "Error")!
 			static let succsess = UIColor(named: "Success")!
 			
-			struct Primary {
+			enum Primary {
 				static let darkNavy = UIColor(named: "Dark Navy")
 				static let navy = UIColor(named: "Navy")
 				static let accentColor = UIColor(named: "AccentColor")!
@@ -26,19 +26,19 @@ extension Constants {
 				static let winter = UIColor(named: "Winter")!
 			}
 			
-			struct Secondary {
+			enum Secondary {
 				static let lightNavy = UIColor(named: "Light Navy")!
 			}
 			
-			struct Grayscale {
+			enum Grayscale {
 				
 			}
 			
 		}
 		
-		struct Image {
+		enum Image {
 			
-			struct Icon {
+			enum Icon {
 				static let user = "person"
 				static let register = "person.badge.plus"
 				static let login = "person.crop.circle"
@@ -56,9 +56,9 @@ extension Constants {
 			
 		}
 		
-		struct Font {
+		enum Font {
 			
-			struct Name {
+			enum Name {
 				static let metropolisBlack = "Metropolis-Black"
 				static let metropolisBlackItalic = "Metropolis-BlackItalic"
 				static let metropolisBold = "Metropolis-Bold"
@@ -79,10 +79,11 @@ extension Constants {
 				static let metropolisThinItalic = "Metropolis-ThinItalic"
 			}
 			
-			struct Size {
+			enum Size {
+				static let extraSmall = 12.0
 				static let small = 15.0
-				static let standard = 19.5
-				static let large = 25.35
+				static let medium = 17.0
+				static let large = 23.0
 				static let extraLarge = 33.0
 				
 				static let header = 22.0

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CollectionViewSegmentedControlDelegate {
+protocol CollectionViewSegmentedControlDelegate: AnyObject {
 	
 	func didSelectItem(_ indexPath: IndexPath)
 	
@@ -19,7 +19,7 @@ class CollectionViewSegmentedControl: UIView {
 	
 	@IBOutlet weak var segmentsStackVIew: UIStackView!
 	
-	var delegate: CollectionViewSegmentedControlDelegate!
+	weak var delegate: CollectionViewSegmentedControlDelegate!
 	
 	func setup(with segments: [String]) {
 		var segmentButtons: [SegmentedControlButton];

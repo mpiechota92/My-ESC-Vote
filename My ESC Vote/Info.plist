@@ -6,22 +6,22 @@
 	<string>My ESC Vote/Src/Fonts/</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Metropolis-Black.tff</string>
-		<string>Metropolis-BlackItallic.tff</string>
-		<string>Metropolis-Bold.tff</string>
-		<string>Metropolis-BoldItalic.tff</string>
-		<string>Metropolis-ExtraBold.tff</string>
-		<string>Metropolis-ExtraBoldItalic.tff</string>
-		<string>Metropolis-ExtraLight.tff</string>
-		<string>Metropolis-ExtraLightItalic.tff</string>
-		<string>Metropolis-Light.tff</string>
-		<string>Metropolis-LightItalic.tff</string>
-		<string>Metropolis-Medium.tff</string>
-		<string>Metropolis-MediumItalic.tff</string>
-		<string>Metropolis-Regular.tff</string>
-		<string>Metropolis-RegularItalic.tff</string>
-		<string>Metropolis-Thin.tff</string>
-		<string>Metropolis-ThinItalic.tff</string>
+		<string>Metropolis-Black.ttf</string>
+		<string>Metropolis-BlackItallic.ttf</string>
+		<string>Metropolis-Bold.ttf</string>
+		<string>Metropolis-BoldItalic.ttf</string>
+		<string>Metropolis-ExtraBold.ttf</string>
+		<string>Metropolis-ExtraBoldItalic.ttf</string>
+		<string>Metropolis-ExtraLight.ttf</string>
+		<string>Metropolis-ExtraLightItalic.ttf</string>
+		<string>Metropolis-Light.ttf</string>
+		<string>Metropolis-LightItalic.ttf</string>
+		<string>Metropolis-Medium.ttf</string>
+		<string>Metropolis-MediumItalic.ttf</string>
+		<string>Metropolis-Regular.ttf</string>
+		<string>Metropolis-RegularItalic.ttf</string>
+		<string>Metropolis-Thin.ttf</string>
+		<string>Metropolis-ThinItalic.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

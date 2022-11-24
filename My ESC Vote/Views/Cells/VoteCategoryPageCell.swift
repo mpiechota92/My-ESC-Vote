@@ -8,8 +8,13 @@
 import UIKit
 import SnapKit
 
-protocol VoteScrollViewDelegate {
+protocol VoteScrollViewDelegate: AnyObject {
 	func voteScrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+}
+
+protocol VoteCategoryPageCountriesTableViewDraggingDelegate: AnyObject {
+	var isDraggingItem: Bool { get set }
+	func setScrolling(enabled: Bool)
 }
 
 class VoteCategoryPageCell: UICollectionViewCell {
@@ -25,7 +30,8 @@ class VoteCategoryPageCell: UICollectionViewCell {
 	@IBOutlet var countriesVoteTableView: UITableView!
 	
 	var countryListViewModel: CountryListViewModel!
-	var scrollViewDelegate: VoteScrollViewDelegate!
+	weak var scrollViewDelegate: VoteScrollViewDelegate!
+	weak var votePageDraggingDelegate: VoteCategoryPageCountriesTableViewDraggingDelegate!
 	var view: UIView!
 	func setupView(for superView: UIView) {
 		
@@ -36,6 +42,7 @@ class VoteCategoryPageCell: UICollectionViewCell {
 		countriesVoteTableView.dataSource = self
 		countriesVoteTableView.dragDelegate = self
 		countriesVoteTableView.dragInteractionEnabled = true
+		countriesVoteTableView.showsVerticalScrollIndicator = false
 	}
 	
 	func setupPageCell() {
@@ -83,12 +90,16 @@ extension VoteCategoryPageCell: UITableViewDragDelegate {
 		let dragItem = UIDragItem(itemProvider: NSItemProvider())
 		dragItem.localObject = countryListViewModel.countryAt(index: indexPath.row)
 		
+		votePageDraggingDelegate.setScrolling(enabled: false)
+		
 		return [dragItem]
 	}
 	
 	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
 		let mover = countryListViewModel.removeAt(index: sourceIndexPath.row)
 		countryListViewModel.insertAt(mover, index: destinationIndexPath.row)
+		
+		votePageDraggingDelegate.setScrolling(enabled: true)
 	}
 	
 }
