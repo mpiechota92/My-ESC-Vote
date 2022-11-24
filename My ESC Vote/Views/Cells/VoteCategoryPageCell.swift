@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol VoteScrollViewDelegate {
+	func voteScrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+}
+
 class VoteCategoryPageCell: UICollectionViewCell {
     
 
@@ -21,7 +25,7 @@ class VoteCategoryPageCell: UICollectionViewCell {
 	@IBOutlet var countriesVoteTableView: UITableView!
 	
 	var countryListViewModel: CountryListViewModel!
-	
+	var scrollViewDelegate: VoteScrollViewDelegate!
 	var view: UIView!
 	func setupView(for superView: UIView) {
 		
@@ -30,6 +34,8 @@ class VoteCategoryPageCell: UICollectionViewCell {
 	override func awakeFromNib() {
 		countriesVoteTableView.delegate = self
 		countriesVoteTableView.dataSource = self
+		countriesVoteTableView.dragDelegate = self
+		countriesVoteTableView.dragInteractionEnabled = true
 	}
 	
 	func setupPageCell() {
@@ -48,6 +54,11 @@ extension VoteCategoryPageCell: UITableViewDelegate {
 		return UITableView.automaticDimension
 	}
 	
+	func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+		
+		scrollViewDelegate.voteScrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+		
+	}
 }
 
 extension VoteCategoryPageCell: UITableViewDataSource {
@@ -66,3 +77,18 @@ extension VoteCategoryPageCell: UITableViewDataSource {
 	
 }
 
+extension VoteCategoryPageCell: UITableViewDragDelegate {
+	
+	func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+		let dragItem = UIDragItem(itemProvider: NSItemProvider())
+		dragItem.localObject = countryListViewModel.countryAt(index: indexPath.row)
+		
+		return [dragItem]
+	}
+	
+	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		let mover = countryListViewModel.removeAt(index: sourceIndexPath.row)
+		countryListViewModel.insertAt(mover, index: destinationIndexPath.row)
+	}
+	
+}

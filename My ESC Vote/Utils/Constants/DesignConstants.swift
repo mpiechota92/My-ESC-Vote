@@ -23,6 +23,7 @@ extension Constants {
 				static let navy = UIColor(named: "Navy")
 				static let accentColor = UIColor(named: "AccentColor")!
 				static let dimmedAccentColor = UIColor(named: "Dimmed Accent Color")!
+				static let winter = UIColor(named: "Winter")!
 			}
 			
 			struct Secondary {
