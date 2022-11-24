@@ -22,9 +22,9 @@ class CountryListViewModel {
 		self.voteCategory = category
 		
 		//TODO: Get data about contestants
-		#if DEBUG
+#if DEBUG
 		mockData()
-		#endif
+#endif
 		
 	}
 	
@@ -49,6 +49,13 @@ class CountryListViewModel {
 		return countryViewModelAt(index: index).country
 	}
 	
+	func insertAt(_ country: CountryViewModel, index: Int) {
+		self.countryVotes.insert(country, at: index)
+	}
+	
+	func removeAt(index: Int) -> CountryViewModel {
+		return countryVotes.remove(at: index)
+	}
 }
 
 struct CountryViewModel {

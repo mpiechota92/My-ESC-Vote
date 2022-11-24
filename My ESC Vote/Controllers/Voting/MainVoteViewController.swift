@@ -29,6 +29,8 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 	private var votingPagesCollectionView: UICollectionView!
 	private var pagesDelegate: PagesCollectionViewDelegate!
 	
+	private var navBarSafeAreaTopPadding: CGFloat!
+	
 	var contest: Contest! {
 		didSet {
 			setupPagesViewModels()
@@ -41,13 +43,13 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		tabBarController?.tabBar.isHidden = true
 	}
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
 		setupUI()
 		votingPagesCollectionView.reloadData()
-    }
-    
+	}
+	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
@@ -65,7 +67,7 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		self.view.backgroundColor = Color.Primary.darkNavy
 		
 		secondaryBackgroundView = UIView(frame: .zero)
-		secondaryBackgroundView.backgroundColor = Color.Primary.navy
+		secondaryBackgroundView.backgroundColor = Color.Primary.winter
 		self.view.addSubview(secondaryBackgroundView)
 		
 		secondaryBackgroundView.snp.makeConstraints { make in
@@ -87,8 +89,8 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		self.view.addSubview(voteCategoriesBar)
 		
 		voteCategoriesBar.setup(with: [VoteCategory.favourite.rawValue,
-										VoteCategory.vocals.rawValue,
-										VoteCategory.performance.rawValue])
+									   VoteCategory.vocals.rawValue,
+									   VoteCategory.performance.rawValue])
 		
 		
 		voteCategoriesBar.snp.makeConstraints { make in
@@ -103,17 +105,17 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 	
 	private func setupVotingPagesView() {
 		let offsetValue = voteCategoriesBar.frame.height
-		let topPadding = view.safeAreaInsets.top
+		navBarSafeAreaTopPadding = view.safeAreaInsets.top
 		
 		let layout = UICollectionViewFlowLayout()
 		layout.minimumLineSpacing = 0
 		layout.minimumInteritemSpacing = 0
 		layout.scrollDirection = .horizontal
 		layout.itemSize = CGSize(width: view.frame.width,
-								 height: view.frame.height - (offsetValue + topPadding + 50))
+								 height: view.frame.height - (offsetValue + navBarSafeAreaTopPadding))
 		
 		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-		collectionView.backgroundColor = Color.Primary.navy
+		collectionView.backgroundColor = Color.Primary.winter
 		collectionView.showsVerticalScrollIndicator = false
 		collectionView.showsHorizontalScrollIndicator = false
 		collectionView.automaticallyAdjustsScrollIndicatorInsets = false
@@ -132,18 +134,19 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 		
 		votingPagesCollectionView.delegate = self
 		votingPagesCollectionView.dataSource = self
+		
 	}
 	
 	private func setupPagesViewModels() {
-		pages = VoteCategory.allCases.map({ category in
-			let viewModel = CountryListViewModel(for: contest, category: category)
-			return viewModel
-		})
+		pages = VoteCategory.allCases.map{ category in
+			return CountryListViewModel(for: contest, category: category)
+		}
 	}
 	
 	
 }
 
+//TODO: Delete?
 extension MainVoteViewController: VoteCategoryMenuControllerDelegate {
 	
 	func didTapMenuItem(at indexPath: IndexPath) {
@@ -152,7 +155,7 @@ extension MainVoteViewController: VoteCategoryMenuControllerDelegate {
 	
 }
 
-extension MainVoteViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainVoteViewController: UICollectionViewDelegate {
 	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let x = scrollView.contentOffset.x
@@ -169,9 +172,19 @@ extension MainVoteViewController: UICollectionViewDelegate, UICollectionViewData
 	func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 		let x = targetContentOffset.pointee.x
 		let item = Int(x / view.frame.width)
-		let indexPath = IndexPath(item: item, section: 0)
+		
+		// Paging
 		pagesDelegate.didSelectItem(at: item)
 	}
+	
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return .init(width: view.frame.width, height: collectionView.frame.height)
+	}
+	
+}
+
+extension MainVoteViewController: UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return pages.count
@@ -182,18 +195,10 @@ extension MainVoteViewController: UICollectionViewDelegate, UICollectionViewData
 		
 		cell.countryListViewModel = pages[indexPath.item]
 		cell.setupPageCell()
+		cell.scrollViewDelegate = self
 		
 		return cell
 	}
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return .init(width: view.frame.width, height: collectionView.frame.height)
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-		//pagesDelegate.didSelectItem(at: indexPath.item)
-	}
-	
 }
 
 extension MainVoteViewController: CollectionViewSegmentedControlDelegate {
@@ -204,4 +209,36 @@ extension MainVoteViewController: CollectionViewSegmentedControlDelegate {
 		votingPagesCollectionView.isPagingEnabled = true
 	}
 	
+}
+
+extension MainVoteViewController: VoteScrollViewDelegate {
+	func voteScrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+		// TODO: Not implemented yet. Not working properly.
+		guard velocity.y > CGFloat.infinity else { return }
+		
+		if velocity.y > 0 {
+			UIView.animate(withDuration: 0.5, delay: 0) {
+				self.navigationController?.setNavigationBarHidden(true, animated: true)
+				let barFrame = self.voteCategoriesBar.frame
+				
+				self.voteCategoriesBar.frame = CGRect(x: barFrame.minX,
+													  y: barFrame.minY - self.navBarSafeAreaTopPadding,
+													  width: barFrame.width,
+													  height: barFrame.height)
+			}
+		} else {
+			UIView.animate(withDuration: 0.5, delay: 0) {
+				self.navigationController?.setNavigationBarHidden(false, animated: true)
+				
+				let barFrame = self.voteCategoriesBar.frame
+				self.voteCategoriesBar.frame = CGRect(x: barFrame.minX,
+													  y: barFrame.minY + self.navBarSafeAreaTopPadding,
+													  width: barFrame.width,
+													  height: barFrame.height)
+				
+				
+			}
+		}
+		
+	}
 }
