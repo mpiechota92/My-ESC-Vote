@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol ContestTableViewCellDelegate: AnyObject {
+	
+	func didTapVoteButton(forContest contest: Contest?)
+	
+}
+
 class ContestTableViewCell: UITableViewCell {
 	
 	static let identifier = "ContestTableViewCell"
 	
 	var viewModel: ContestViewModel!
-	var delegate: ContestTableViewCellDelegate?
+	weak var delegate: ContestTableViewCellDelegate?
 	
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var countryLabel: UILabel!
@@ -61,9 +67,4 @@ class ContestTableViewCell: UITableViewCell {
 }
 
 
-protocol ContestTableViewCellDelegate {
-	
-	func didTapVoteButton(forContest contest: Contest?)
-	
-}
 

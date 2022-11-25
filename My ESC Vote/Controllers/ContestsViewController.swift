@@ -28,11 +28,27 @@ class ContestsViewController: UIViewController {
 	private func setupData() {
 		contestsTableView.dataSource = self
 		
-		viewModel.fetchContestsData() {
-			DispatchQueue.main.async { [weak self] in
-				self?.setupUI()
+		let activityIndicator = UIActivityIndicatorView()
+		activityIndicator.color = Color.Primary.accentColor
+		activityIndicator.startAnimating()
+		view.addSubview(activityIndicator)
+		
+		activityIndicator.snp.makeConstraints { make in
+			make.centerX.equalToSuperview()
+			make.top.equalTo(self.view.safeAreaLayoutGuide).offset(50)
+			make.width.height.equalTo(70)
+		}
+		
+		DispatchQueue.global(qos: .background).async {
+			self.viewModel.fetchContestsData() {
+				DispatchQueue.main.async {
+					self.setupUI()
+					activityIndicator.removeFromSuperview()
+				}
 			}
 		}
+		
+		
 	}
 	
 	private func setupUI() {
