@@ -10,3 +10,4 @@
 typealias Color = Constants.Design.Color
 typealias Font = Constants.Design.Font
 typealias Collections = Constants.API.Firestore.Collections
+typealias Icon = Constants.Design.Image.Icon

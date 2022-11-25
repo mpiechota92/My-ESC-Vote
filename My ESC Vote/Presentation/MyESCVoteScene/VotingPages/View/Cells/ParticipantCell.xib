@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="CountryVoteCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryVoteCell" rowHeight="85" id="KGk-i7-Jjw" customClass="CountryVoteCell" customModule="My_ESC_Vote" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="CountryVoteCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" rowHeight="85" id="KGk-i7-Jjw" customClass="ParticipantCell" customModule="My_ESC_Vote" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -26,64 +26,79 @@
                             <constraint firstAttribute="width" constant="55" id="xL1-qN-eSL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-nX-zIY">
-                        <rect key="frame" x="71" y="24" width="203" height="27.666666666666671"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-nX-zIY">
+                        <rect key="frame" x="71" y="24" width="237" height="27.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRL-EP-IsE">
-                        <rect key="frame" x="71" y="55.666666666666664" width="203" height="20.333333333333336"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRL-EP-IsE">
+                        <rect key="frame" x="71" y="55.666666666666664" width="237" height="20.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rei-0S-ONM">
-                        <rect key="frame" x="12" y="4" width="300" height="14"/>
+                        <rect key="frame" x="12" y="4" width="277" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.3.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rNk-eB-nPZ">
-                        <rect key="frame" x="282" y="27.666666666666664" width="30" height="30"/>
-                        <color key="tintColor" name="Dark Navy"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex0-X8-cbg">
+                        <rect key="frame" x="284" y="26" width="28" height="33"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="1uU-aJ-8mW"/>
-                            <constraint firstAttribute="height" constant="39.666666666666643" id="ZX4-1Q-jjc"/>
+                            <constraint firstAttribute="width" constant="28" id="Ncc-3h-6Ed"/>
+                            <constraint firstAttribute="height" constant="33" id="qJg-Gi-dWK"/>
                         </constraints>
-                    </imageView>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-NF-dDK">
+                        <rect key="frame" x="293" y="4" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="4kV-wC-j48"/>
+                            <constraint firstAttribute="width" constant="15" id="oda-vB-vgB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="Dimmed Accent Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" name="Winter"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="rei-0S-ONM" secondAttribute="trailing" constant="8" id="1D6-HD-7nl"/>
-                    <constraint firstItem="rNk-eB-nPZ" firstAttribute="leading" secondItem="XqG-nX-zIY" secondAttribute="trailing" constant="8" id="3jK-cI-5yT"/>
                     <constraint firstAttribute="bottom" secondItem="SbH-tH-Kc2" secondAttribute="bottom" constant="8" id="3sA-LF-922"/>
                     <constraint firstItem="vRL-EP-IsE" firstAttribute="top" secondItem="XqG-nX-zIY" secondAttribute="bottom" constant="4" id="9Ko-Ba-7DU"/>
                     <constraint firstItem="SbH-tH-Kc2" firstAttribute="top" secondItem="rei-0S-ONM" secondAttribute="bottom" constant="4" id="E6R-rE-XAO"/>
+                    <constraint firstAttribute="trailing" secondItem="Ex0-X8-cbg" secondAttribute="trailing" constant="8" id="FUb-TB-W0h"/>
                     <constraint firstItem="rei-0S-ONM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="GMa-Dr-Vwt"/>
-                    <constraint firstItem="rNk-eB-nPZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HAu-6n-f4q"/>
+                    <constraint firstItem="Fvp-NF-dDK" firstAttribute="leading" secondItem="rei-0S-ONM" secondAttribute="trailing" constant="4" id="H8G-EX-X68"/>
                     <constraint firstItem="XqG-nX-zIY" firstAttribute="leading" secondItem="SbH-tH-Kc2" secondAttribute="trailing" constant="8" id="M03-GQ-VcO"/>
                     <constraint firstItem="rei-0S-ONM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="MZ7-A7-miP"/>
+                    <constraint firstAttribute="trailing" secondItem="vRL-EP-IsE" secondAttribute="trailing" constant="12" id="Mwm-Uk-cyf"/>
+                    <constraint firstItem="Fvp-NF-dDK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="hcF-jP-He9"/>
                     <constraint firstItem="vRL-EP-IsE" firstAttribute="width" secondItem="XqG-nX-zIY" secondAttribute="width" id="iaC-bV-wPp"/>
+                    <constraint firstItem="Ex0-X8-cbg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lZo-NJ-7od"/>
+                    <constraint firstAttribute="trailing" secondItem="Fvp-NF-dDK" secondAttribute="trailing" constant="12" id="p6f-V0-eCc"/>
                     <constraint firstItem="vRL-EP-IsE" firstAttribute="leading" secondItem="SbH-tH-Kc2" secondAttribute="trailing" constant="8" id="phX-6b-i5m"/>
                     <constraint firstItem="XqG-nX-zIY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="sSz-Lk-KiO"/>
                     <constraint firstItem="SbH-tH-Kc2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="t14-G5-Zhk"/>
-                    <constraint firstAttribute="trailing" secondItem="rNk-eB-nPZ" secondAttribute="trailing" constant="8" id="vjU-t6-ygs"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="artistNameLabel" destination="vRL-EP-IsE" id="Jr5-Yw-8wW"/>
                 <outlet property="countryImageView" destination="SbH-tH-Kc2" id="J8N-8E-XuG"/>
                 <outlet property="countryNameLabel" destination="rei-0S-ONM" id="Wcy-Za-47G"/>
+                <outlet property="orderLabel" destination="Fvp-NF-dDK" id="aK3-fL-d7x"/>
+                <outlet property="pointsLabel" destination="Ex0-X8-cbg" id="d9l-bi-nJR"/>
                 <outlet property="songNameLabel" destination="XqG-nX-zIY" id="M3S-eG-2Ed"/>
             </connections>
             <point key="canvasLocation" x="22.900763358778626" y="-34.859154929577464"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
-        <namedColor name="Dark Navy">
-            <color red="0.011764705882352941" green="0.0078431372549019607" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="Dimmed Accent Color">
+            <color red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Winter">
             <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

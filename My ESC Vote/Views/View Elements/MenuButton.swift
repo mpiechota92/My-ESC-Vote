@@ -48,7 +48,7 @@ class MenuButton: UIButton {
 		
 		isLoggedin = APIManager.shared().authService.isLoggedIn()
 		
-		NotificationCenter.default.addObserver(forName: .onLoginStatusChange, object: nil, queue: .main) { notification in
+		NotificationCenter.default.addObserver(forName: .onLoginStatusChangeNotification, object: nil, queue: .main) { notification in
 			self.isLoggedin = APIManager.shared().authService.isLoggedIn()
 		}
 		

@@ -21,6 +21,7 @@ extension Array {
 	func forEachWithIndex(_ body: @escaping (_ index: Int, _ element: Element) -> ()) where Element: Equatable {
 		
 		self.forEach { element in
+			// Get the index of the element
 			let index = self.firstIndex { _element in
 				return _element == element
 			}
@@ -29,6 +30,6 @@ extension Array {
 			
 			body(index, element)
 		}
-		
 	}
+	
 }

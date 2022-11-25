@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		
 		initFirebase()
-		navigationBarAppearance()
-		tabBarAppearance()
-		buttonAppearance()
+		AppAppearance.setupAppearance()
 		
 		return true
 	}
@@ -30,20 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		FirebaseApp.configure()
 		let _ = Firestore.firestore()
 	}
-	
-	private func navigationBarAppearance() {
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.Primary.accentColor]
-	}
-	
-	private func tabBarAppearance() {
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.accentColor], for: .selected)
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Color.Primary.dimmedAccentColor], for: .normal)
-	}
-	
-	private func buttonAppearance() {
-		UIButton.appearance().titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: 10)
-	}
-	
 	
 	// MARK: UISceneSession Lifecycle
 

@@ -38,7 +38,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <size key="customSize" width="333" height="566"/>
             <connections>
-                <outlet property="countriesVoteTableView" destination="UmB-wm-3GY" id="n64-Zl-B81"/>
+                <outlet property="participantsTableView" destination="UmB-wm-3GY" id="n64-Zl-B81"/>
             </connections>
             <point key="canvasLocation" x="-257.25190839694653" y="-16.197183098591552"/>
         </collectionViewCell>

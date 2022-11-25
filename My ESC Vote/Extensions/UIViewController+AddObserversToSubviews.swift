@@ -38,7 +38,7 @@ extension UIViewController {
 		
 	}
 	
-	fileprivate func getAllSubviews<T: UIView>(fromView view: UIView) -> [T] {
+	func getAllSubviews<T: UIView>(fromView view: UIView) -> [T] {
 		
 		return view.subviews.flatMap { (view) -> [T] in
 			if view is T {

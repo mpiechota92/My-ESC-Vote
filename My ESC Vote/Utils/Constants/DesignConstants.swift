@@ -84,7 +84,7 @@ extension Constants {
 				static let small = 15.0
 				static let medium = 17.0
 				static let large = 23.0
-				static let extraLarge = 33.0
+				static let extraLarge = 27.0
 				
 				static let header = 22.0
 				static let subheader = 13.0

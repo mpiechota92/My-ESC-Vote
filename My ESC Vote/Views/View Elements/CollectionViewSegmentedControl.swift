@@ -45,7 +45,7 @@ class CollectionViewSegmentedControl: UIView {
 		print(self.frame.height)
 		print(segmentsStackVIew.frame.height)
 		
-		segmentButtons.forEachWithIndex { index, button in
+		for (index, button) in segmentButtons.enumerated() {
 			button.index = index
 			self.segmentsStackVIew.addArrangedSubview(button)
 		}

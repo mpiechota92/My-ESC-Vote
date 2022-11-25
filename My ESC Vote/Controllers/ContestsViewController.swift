@@ -53,7 +53,7 @@ class ContestsViewController: UIViewController {
 	
 	private func setupUI() {
 		menuButton.setupButton(for: navigationController, with: storyboard)
-		contestsTableView.register(UINib(nibName: Constants.Content.Nib.contestCell, bundle: nil), forCellReuseIdentifier: Constants.UI.TableView.Cell.contest)
+		contestsTableView.register(ContestTableViewCell.nib(), forCellReuseIdentifier: ContestTableViewCell.identifier)
 		contestsTableView.reloadData()
 	}
 	

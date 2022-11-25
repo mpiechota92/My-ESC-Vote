@@ -12,9 +12,13 @@ protocol VoteScrollViewDelegate: AnyObject {
 	func voteScrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
 }
 
-protocol VoteCategoryPageCountriesTableViewDraggingDelegate: AnyObject {
-	var isDraggingItem: Bool { get set }
+protocol VoteCategoryPageParticipantsTableViewDraggingDelegate: AnyObject {
 	func setScrolling(enabled: Bool)
+	
+}
+
+extension VoteCategoryPageParticipantsTableViewDraggingDelegate {
+	func setScrolling(enabled: Bool) {}
 }
 
 class VoteCategoryPageCell: UICollectionViewCell {
@@ -27,30 +31,30 @@ class VoteCategoryPageCell: UICollectionViewCell {
 					 bundle: nil)
 	}
 	
-	@IBOutlet var countriesVoteTableView: UITableView!
+	@IBOutlet var participantsTableView: UITableView!
 	
-	var countryListViewModel: CountryListViewModel!
+	var participantListViewModel: ParticipantListViewModel!
 	weak var scrollViewDelegate: VoteScrollViewDelegate!
-	weak var votePageDraggingDelegate: VoteCategoryPageCountriesTableViewDraggingDelegate!
+	weak var votePageDraggingDelegate: VoteCategoryPageParticipantsTableViewDraggingDelegate!
 	var view: UIView!
 	func setupView(for superView: UIView) {
 		
 	}
 	
 	override func awakeFromNib() {
-		countriesVoteTableView.delegate = self
-		countriesVoteTableView.dataSource = self
-		countriesVoteTableView.dragDelegate = self
-		countriesVoteTableView.dragInteractionEnabled = true
-		countriesVoteTableView.showsVerticalScrollIndicator = false
+		participantsTableView.delegate = self
+		participantsTableView.dataSource = self
+		participantsTableView.dragDelegate = self
+		participantsTableView.dragInteractionEnabled = true
+		participantsTableView.showsVerticalScrollIndicator = false
 	}
 	
 	func setupPageCell() {
-		countriesVoteTableView.estimatedRowHeight = UITableView.automaticDimension
-		countriesVoteTableView.rowHeight = UITableView.automaticDimension
-		countriesVoteTableView.register(CountryVoteCell.nib(), forCellReuseIdentifier: CountryVoteCell.identifier)
+		participantsTableView.estimatedRowHeight = UITableView.automaticDimension
+		participantsTableView.rowHeight = UITableView.automaticDimension
+		participantsTableView.register(ParticipantCell.nib(), forCellReuseIdentifier: ParticipantCell.identifier)
 		
-		countriesVoteTableView.reloadData()
+		participantsTableView.reloadData()
 	}
 
 }
@@ -71,13 +75,13 @@ extension VoteCategoryPageCell: UITableViewDelegate {
 extension VoteCategoryPageCell: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return countryListViewModel.countryCount
+		return participantListViewModel.participantsCount
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: CountryVoteCell.identifier, for: indexPath) as! CountryVoteCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: ParticipantCell.identifier, for: indexPath) as! ParticipantCell
 		
-		cell.viewModel = countryListViewModel.countryViewModelAt(index: indexPath.row)
+		cell.viewModel = participantListViewModel.modelAt(index: indexPath.row)
 		
 		return cell
 	}
@@ -88,7 +92,7 @@ extension VoteCategoryPageCell: UITableViewDragDelegate {
 	
 	func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
 		let dragItem = UIDragItem(itemProvider: NSItemProvider())
-		dragItem.localObject = countryListViewModel.countryAt(index: indexPath.row)
+		dragItem.localObject = participantListViewModel.participantAt(index: indexPath.row)
 		
 		votePageDraggingDelegate.setScrolling(enabled: false)
 		
@@ -96,10 +100,23 @@ extension VoteCategoryPageCell: UITableViewDragDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		let mover = countryListViewModel.removeAt(index: sourceIndexPath.row)
-		countryListViewModel.insertAt(mover, index: destinationIndexPath.row)
+		
+		let mover = participantListViewModel.removeAt(index: sourceIndexPath.row)
+		participantListViewModel.insertAt(mover, index: destinationIndexPath.row)
 		
 		votePageDraggingDelegate.setScrolling(enabled: true)
+		
+		updateParticipantsData()
+	}
+	
+	private func updateParticipantsData() {
+		participantListViewModel.updateData()
+		
+		NotificationCenter.default.post(name: NSNotification.Name.participentDataDidChangeNotification, object: nil)
+		
+		DispatchQueue.main.async {
+			self.participantsTableView.reloadData()
+		}
 	}
 	
 }

@@ -7,12 +7,22 @@
 
 import Foundation
 
-struct Country: Codable {
+struct Participant: Codable {
 	
-	let name: String
+	let countryName: String
 	let artist: String
 	let song: String
 	var place: Int
+	var order: Int = 0
+	var points: String = ""
+	
+}
+
+extension Participant: Equatable {
+	
+	static func == (lhs: Participant, rhs: Participant) -> Bool {
+		return (lhs.countryName == rhs.countryName) && (lhs.artist == rhs.artist) && (lhs.song == rhs.song)
+	}
 	
 }
 
@@ -74,7 +84,7 @@ enum CountryName {
 	static let Wales = "Wales"
 	static let Yugoslavia = "Yugoslavia"
 	
-	// MARK: Extra
+	// MARK: - Extra
 	static let Rainbow = "Rainbow"
 	static let EU = "European Union"
 	

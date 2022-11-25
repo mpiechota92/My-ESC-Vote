@@ -23,7 +23,7 @@ protocol PagesCollectionViewDelegate: AnyObject {
 class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 	
 	private var voteCategoriesBar: CollectionViewSegmentedControl!
-	private var pages: [CountryListViewModel]!
+	private var pages: [ParticipantListViewModel]!
 	private let menuButton: MenuButton = MenuButton()
 	private var secondaryBackgroundView: UIView!
 	private var votingPagesCollectionView: UICollectionView!
@@ -139,19 +139,10 @@ class MainVoteViewController: UIViewController, UICollectionViewDelegateFlowLayo
 	
 	private func setupPagesViewModels() {
 		pages = VoteCategory.allCases.map{ category in
-			return CountryListViewModel(for: contest, category: category)
+			return ParticipantListViewModel(for: contest, category: category)
 		}
 	}
 	
-	
-}
-
-//TODO: Delete?
-extension MainVoteViewController: VoteCategoryMenuControllerDelegate {
-	
-	func didTapMenuItem(at indexPath: IndexPath) {
-		//collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-	}
 	
 }
 
@@ -192,7 +183,7 @@ extension MainVoteViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteCategoryPageCell.identifier, for: indexPath) as! VoteCategoryPageCell
 		
-		cell.countryListViewModel = pages[indexPath.item]
+		cell.participantListViewModel = pages[indexPath.item]
 		cell.setupPageCell()
 		cell.scrollViewDelegate = self
 		cell.votePageDraggingDelegate = self
@@ -243,18 +234,8 @@ extension MainVoteViewController: VoteScrollViewDelegate {
 	}
 }
 
-extension MainVoteViewController: VoteCategoryPageCountriesTableViewDraggingDelegate {
-	
-	var isDraggingItem: Bool {
-		get {
-			return isDraggingItem
-		}
-		
-		set {
-			isDraggingItem = newValue
-		}
-	}
-	
+extension MainVoteViewController: VoteCategoryPageParticipantsTableViewDraggingDelegate {
+
 	func setScrolling(enabled: Bool) {
 		votingPagesCollectionView.isScrollEnabled = enabled
 	}

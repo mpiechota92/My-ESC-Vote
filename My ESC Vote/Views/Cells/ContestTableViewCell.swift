@@ -16,6 +16,9 @@ protocol ContestTableViewCellDelegate: AnyObject {
 class ContestTableViewCell: UITableViewCell {
 	
 	static let identifier = "ContestTableViewCell"
+	static func nib() -> UINib {
+		return UINib(nibName: "ContestTableViewCell", bundle: nil)
+	}
 	
 	var viewModel: ContestViewModel!
 	weak var delegate: ContestTableViewCellDelegate?

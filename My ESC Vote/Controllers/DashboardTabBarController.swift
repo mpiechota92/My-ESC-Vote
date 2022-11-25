@@ -7,8 +7,6 @@
 
 import UIKit
 
-typealias Icon = Constants.Design.Image.Icon
-
 class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate {
 	
 	

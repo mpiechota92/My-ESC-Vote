@@ -18,18 +18,4 @@ extension Constants {
 		static let JESC2023 = "JuniorEurovisionSongContest2023"
 	}
 	
-	enum Content {
-		
-		enum Nib {
-			static let labelView = "LabelView"
-			static let userMenuView = "UserMenuView"
-			static let menuOptionCell = "MenuOptionTableViewCell"
-			static let aboutInfoView = "AboutInfoView"
-			static let contestCell = "ContestTableViewCell"
-			static let countryVoteCell = "CountryVoteCell"
-		}
-		
-		
-	}
-	
 }
