@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseFirestore
 
 class ContestsViewController: UIViewController {
 	
@@ -32,7 +31,7 @@ class ContestsViewController: UIViewController {
 		activityIndicator.color = Color.Primary.accentColor
 		activityIndicator.startAnimating()
 		view.addSubview(activityIndicator)
-		
+		 
 		activityIndicator.snp.makeConstraints { make in
 			make.centerX.equalToSuperview()
 			make.top.equalTo(self.view.safeAreaLayoutGuide).offset(50)
@@ -83,12 +82,11 @@ extension ContestsViewController: UITableViewDataSource, UITableViewDelegate {
 extension ContestsViewController: ContestTableViewCellDelegate {
 	
 	func didTapVoteButton(forContest contest: Contest?) {
-		guard let contest = contest else { return }
-		
-		let mainVoteVC = MainVoteViewController()
-		mainVoteVC.contest = contest
-
-		navigationController?.show(mainVoteVC, sender: nil)
+//		guard let contest = contest else { return }
+//		
+//		let mainVoteVC = MainVoteViewController.
+//
+//		navigationController?.show(mainVoteVC, sender: nil)
 	}
 	
 }

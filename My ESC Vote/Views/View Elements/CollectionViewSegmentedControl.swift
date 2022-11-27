@@ -36,7 +36,7 @@ class CollectionViewSegmentedControl: UIView {
 		
 		setupUI()
 	}
-	
+	// TODO: it's null because there is no outlet for this property
 	private func setupUI() {
 		segmentsStackVIew.distribution = .fillEqually
 		segmentsStackVIew.alignment = .center

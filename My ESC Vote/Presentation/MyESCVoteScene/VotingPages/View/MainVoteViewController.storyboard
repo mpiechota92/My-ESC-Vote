@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Vote View Controller-->
+        <scene sceneID="JKi-ZX-8AQ">
+            <objects>
+                <viewController restorationIdentifier="MainVoteViewController" storyboardIdentifier="MainVoteViewController" id="bDz-0b-6AA" customClass="MainVoteViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wIG-9K-bnn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8C0-SO-klb">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYp-gB-X1A" customClass="CollectionViewSegmentedControl" customModule="My_ESC_Vote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oE2-vN-E76"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Scr-gw-cXy">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="699"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xIV-pf-Q16">
+                                            <size key="itemSize" width="392" height="698"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="Navy"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Scr-gw-cXy" secondAttribute="trailing" id="2f3-RN-nhL"/>
+                                    <constraint firstItem="Scr-gw-cXy" firstAttribute="top" secondItem="wYp-gB-X1A" secondAttribute="bottom" id="AgG-IB-tJD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Scr-gw-cXy" secondAttribute="bottom" id="OFf-rq-Uwx"/>
+                                    <constraint firstItem="Scr-gw-cXy" firstAttribute="leading" secondItem="8C0-SO-klb" secondAttribute="leading" id="QyM-wy-mNj"/>
+                                    <constraint firstAttribute="trailing" secondItem="wYp-gB-X1A" secondAttribute="trailing" id="fhz-aL-aDI"/>
+                                    <constraint firstItem="wYp-gB-X1A" firstAttribute="leading" secondItem="8C0-SO-klb" secondAttribute="leading" id="ufZ-vb-eAe"/>
+                                    <constraint firstItem="wYp-gB-X1A" firstAttribute="top" secondItem="8C0-SO-klb" secondAttribute="top" id="xPo-Uw-fUA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="umn-UO-vO8"/>
+                        <color key="backgroundColor" name="Dark Navy"/>
+                        <constraints>
+                            <constraint firstItem="8C0-SO-klb" firstAttribute="top" secondItem="umn-UO-vO8" secondAttribute="top" id="0za-Iq-fxF"/>
+                            <constraint firstItem="umn-UO-vO8" firstAttribute="trailing" secondItem="8C0-SO-klb" secondAttribute="trailing" id="1sJ-6f-1hT"/>
+                            <constraint firstAttribute="bottom" secondItem="8C0-SO-klb" secondAttribute="bottom" id="EZm-Jf-eJz"/>
+                            <constraint firstItem="8C0-SO-klb" firstAttribute="leading" secondItem="umn-UO-vO8" secondAttribute="leading" id="FlG-ZZ-ODc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LLC-r1-e7b"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="voteCategoriesBar" destination="wYp-gB-X1A" id="IRF-Gp-Zsd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amh-TD-u4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510.6870229007632" y="-48.591549295774648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Dark Navy">
+            <color red="0.012000000104308128" green="0.0080000003799796104" blue="0.24300000071525574" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Navy">
+            <color red="0.10999999940395355" green="0.10599999874830246" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

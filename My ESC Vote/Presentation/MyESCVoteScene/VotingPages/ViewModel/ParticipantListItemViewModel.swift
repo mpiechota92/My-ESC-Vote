@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct ParticipantListItemViewModel {
+class ParticipantsListItemViewModel {
 	let countryName: String
 	let artist: String
 	let song: String
-	var order: Int
-	var place: Int = 0
-}
-
-extension ParticipantListItemViewModel {
+	let order: String
+	var place: Observable<Int> = Observable(0)
 	
 	init(participant: Participant) {
 		self.countryName = participant.countryName
 		self.artist = participant.artist
 		self.song = participant.song
-		self.order = participant.order
+		self.order = participant.order < 10 ? "0\(participant.order)" : "\(participant.order)"
 	}
-	
+}
+
+extension ParticipantsListItemViewModel {
+
 	var points: String {
 		var _points: Int
 		
-		switch place {
+		switch self.place.value {
 		case 0:
 			_points = 12
 		case 1:
@@ -39,7 +39,15 @@ extension ParticipantListItemViewModel {
 			_points = 0
 		}
 		
-		return String(_points)
+		return _points == 0 ? "" : "\(_points)"
+	}
+	
+}
+
+extension ParticipantsListItemViewModel: Equatable {
+	
+	static func == (lhs: ParticipantsListItemViewModel, rhs: ParticipantsListItemViewModel) -> Bool {
+		return (lhs.countryName == rhs.countryName) && (lhs.artist == rhs.artist)
 	}
 	
 }

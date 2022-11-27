@@ -8,25 +8,25 @@
 import Foundation
 
 protocol ParticipantsListViewModelInput {
-	func insertItem(_ item: ParticipantViewModel, at indexPath: IndexPath)
-	func updateData()
+	func insertItem(_ item: ParticipantsListItemViewModel, at indexPath: IndexPath)
 }
 
 protocol ParticipantsListViewModelOutput {
-	func item(for indexPath: IndexPath) -> ParticipantListItemViewModel
-	func numberOfItems(in section: Int) -> Int
-	func removeItem(at indexPath: IndexPath) -> ParticipantListItemViewModel
+	func item(for indexPath: IndexPath) -> ParticipantsListItemViewModel
+	func numberOfRows(in section: Int) -> Int
+	func removeItem(at indexPath: IndexPath) -> ParticipantsListItemViewModel
 	var voteCategory: VoteCategory { get }
-	var reloadItems: Observable<Bool> { get }
+	var updateItems: Observable<Bool> { get }
 }
 
 protocol ParticipantsListViewModel: ParticipantsListViewModelInput, ParticipantsListViewModelOutput {}
 
 class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 	
-	var reloadItems: Observable<Bool> = Observable(true)
-	var participants: [Participant] = [] { didSet { reloadItems.value = true } }
-	let voteCategory: VoteCategory!
+	private var participants: [ParticipantsListItemViewModel] = []
+	
+	let updateItems: Observable<Bool> = Observable(true)
+	var voteCategory: VoteCategory
 	
 	init(for contest: Contest, category: VoteCategory) {
 		self.voteCategory = category
@@ -36,36 +36,28 @@ class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 		mockData()
 #endif
 		
+		bindParticipants()
 	}
 	
-	func item(for indexPath: IndexPath) -> ParticipantListItemViewModel {
-		return .init(participant: participants[indexPath.row])
-	}
-	
-	func modelAt(index: Int) -> ParticipantViewModel {
-		return participants[index]
-	}
-	
-	func participantAt(index: Int) -> Participant {
-		return modelAt(index: index).participant
-	}
-	
-	func insertAt(_ viewModel: ParticipantViewModel, index: Int) {
-		self.participants.insert(viewModel, at: index)
-	}
-	
-	func removeAt(index: Int) -> ParticipantViewModel {
-		return participants.remove(at: index)
-	}
-	
-	// Delete probably - update will happen through observing
-	func updateData() {
-		for (index, participant) in participants.enumerated() {
-			participant.participant.order = index
-		}
+	func item(for indexPath: IndexPath) -> ParticipantsListItemViewModel {
+		return participants[indexPath.row]
 	}
 	
 	
+	func insertItem(_ item: ParticipantsListItemViewModel, at indexPath: IndexPath) {
+		participants.insert(item, at: indexPath.row)
+		updateItems.value = true
+	}
+	
+	func removeItem(at indexPath: IndexPath) -> ParticipantsListItemViewModel {
+		return participants.remove(at: indexPath.row)
+	}
+	
+	func numberOfRows(in section: Int) -> Int {
+		return participants.count
+	}
+	
+	// MARK: - Mock for now
 	
 	func mockData() {
 		let countries: [Participant] = [
@@ -87,8 +79,39 @@ class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 			Participant(countryName: CountryName.UnitedKingdom, artist: "Freya Skye", song: "Lose My Head", place: 0)
 		]
 		
-		self.participants = countries.map(ParticipantViewModel.init)
+		self.participants = countries.map(ParticipantsListItemViewModel.init)
+		
+		bindParticipants()
 	}
 	
+	private func bindParticipants() {
+		
+		self.participants.forEach { participantViewModel in
+			updateItems.observer(on: participantViewModel) { [weak self] updated in
+				
+				let index = self?.participants.firstIndex(where: { _participantViewModel in
+					return participantViewModel == _participantViewModel
+				})
+				
+				// Participant not found
+				guard let index = index else { return }
+				
+				if updated {
+					let oldValue = participantViewModel.place.value
+					if oldValue != index {
+						participantViewModel.place.value = index
+					}
+				}
+				
+			}
+		}
+		
+	}
+	
+	deinit {
+		self.participants.forEach { participantViewModel in
+			self.updateItems.remove(observer: participantViewModel)
+		}
+	}
 }
 

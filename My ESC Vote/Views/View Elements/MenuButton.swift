@@ -45,6 +45,8 @@ class MenuButton: UIButton {
 		
 		self.showsMenuAsPrimaryAction = true
 		self.overrideUserInterfaceStyle = .dark
+		self.tintColor = Color.tintColor
+		self.setImage(UIImage(systemName: Icon.user), for: .normal)
 		
 		isLoggedin = APIManager.shared().authService.isLoggedIn()
 		
