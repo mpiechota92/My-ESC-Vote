@@ -13,7 +13,7 @@ protocol CollectionViewSegmentedControlDelegate: AnyObject {
 	
 }
 
-class CollectionViewSegmentedControl: UIView {
+class CollectionViewSegmentedControl: UIView, HavingNib {
 	
 	var segmentButtons: [SegmentedControlButton]!
 	
@@ -22,10 +22,10 @@ class CollectionViewSegmentedControl: UIView {
 	weak var delegate: CollectionViewSegmentedControlDelegate!
 	
 	func setup(with segments: [String]) {
-		var segmentButtons: [SegmentedControlButton];
+		var segmentButtons: [SegmentedControlButton]
 		
 		segmentButtons = segments.map { segment in
-			let button: SegmentedControlButton = .instanceFromNib()
+			let button: SegmentedControlButton = .instantiateFromNib()
 			button.delegate = self
 			button.title = segment
 			
@@ -36,6 +36,7 @@ class CollectionViewSegmentedControl: UIView {
 		
 		setupUI()
 	}
+	
 	// TODO: it's null because there is no outlet for this property
 	private func setupUI() {
 		segmentsStackVIew.distribution = .fillEqually
@@ -43,11 +44,13 @@ class CollectionViewSegmentedControl: UIView {
 		segmentsStackVIew.spacing = 10
 		
 		print(self.frame.height)
-		print(segmentsStackVIew.frame.height)
+		print("kupa \(segmentsStackVIew.frame.height)")
 		
 		for (index, button) in segmentButtons.enumerated() {
 			button.index = index
 			self.segmentsStackVIew.addArrangedSubview(button)
+			print("\(index) of \(button.title!), frame: \(button.frame)")
+			self.addSubview(button)
 		}
 		
 		segmentButtons.first?.isSelected = true
@@ -75,15 +78,15 @@ extension CollectionViewSegmentedControl: SegmentedControlButtonDelegate {
 	
 }
 
-
-extension CollectionViewSegmentedControl: PagesCollectionViewDelegate {
-	
-	func didSelectItem(at index: Int) {
-		segmentButtons.forEachOtherThan(at: index) { button in
-			button.isSelected = false
-		}
-		
-		segmentButtons[index].isSelected = true
-	}
-	
-}
+//
+//extension CollectionViewSegmentedControl: PagesCollectionViewDelegate {
+//
+//	func didSelectItem(at index: Int) {
+//		segmentButtons.forEachOtherThan(at: index) { button in
+//			button.isSelected = false
+//		}
+//
+//		segmentButtons[index].isSelected = true
+//	}
+//
+//}

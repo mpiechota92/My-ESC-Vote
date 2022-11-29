@@ -29,16 +29,12 @@ class MainViewController: UIViewController {
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
 	}
 	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		
-		guard let vc = segue.destination as? MainVoteViewController else { return }
-		
-		let viewModel = DefaultVoteCategoriesListViewModel(for: [.favourite, .vocals, .performance])
-		vc.fill(with: viewModel)
-	}
-	
 	@IBAction func didTapVoteButton(_ sender: Any) {
 		let vc = MainVoteViewController.instantiateViewController()
+		let contest = Contest(country: CountryName.Armenia, startDate: Date(), endDate: Date(), contestType: .JSEC)
+		let viewModel = DefaultVoteCategoriesListViewModel(for: [.favourite, .vocals, .performance], in: contest)
+		vc.fill(with: viewModel)
+		
 		navigationController?.pushViewController(vc, animated: true)
 	}
 	

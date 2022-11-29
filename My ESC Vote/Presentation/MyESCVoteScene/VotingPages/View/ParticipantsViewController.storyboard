@@ -4,32 +4,46 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Participants View Controller-->
-        <scene sceneID="QvV-NB-BG1">
+        <scene sceneID="xd0-2V-cqt">
             <objects>
-                <tableViewController storyboardIdentifier="ParticipantsViewController" id="9lT-ON-wdh" customClass="ParticipantsViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eXk-ER-83T">
+                <viewController restorationIdentifier="ParticipantsViewController" storyboardIdentifier="ParticipantsViewController" id="NTM-vH-pok" customClass="ParticipantsViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="XJg-Jg-Oil">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="9lT-ON-wdh" id="e6z-BB-cUb"/>
-                            <outlet property="delegate" destination="9lT-ON-wdh" id="6uV-0s-8df"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CcX-tL-Orh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zoY-6c-y3y">
+                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <color key="backgroundColor" name="Winter"/>
+                                <color key="sectionIndexBackgroundColor" name="Winter"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QXV-2c-C1F"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zoY-6c-y3y" firstAttribute="top" secondItem="QXV-2c-C1F" secondAttribute="top" id="HXw-jE-8ui"/>
+                            <constraint firstItem="zoY-6c-y3y" firstAttribute="trailing" secondItem="QXV-2c-C1F" secondAttribute="trailing" id="VaD-fX-kIH"/>
+                            <constraint firstItem="zoY-6c-y3y" firstAttribute="leading" secondItem="QXV-2c-C1F" secondAttribute="leading" id="dGn-8w-Kkd"/>
+                            <constraint firstAttribute="bottom" secondItem="zoY-6c-y3y" secondAttribute="bottom" id="ecu-3L-NGB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="zoY-6c-y3y" id="zLZ-8W-XiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6N-b0-YSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="-49"/>
+            <point key="canvasLocation" x="940" y="-24.170616113744074"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

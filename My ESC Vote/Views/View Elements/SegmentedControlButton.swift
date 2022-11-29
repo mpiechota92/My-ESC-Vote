@@ -13,7 +13,7 @@ protocol SegmentedControlButtonDelegate: AnyObject {
 	
 }
 
-class SegmentedControlButton: UIView {
+class SegmentedControlButton: UIView, HavingNib {
 	
 	static let height = 50.0
 	
@@ -34,7 +34,6 @@ class SegmentedControlButton: UIView {
 			self.controlButton.setTitle(self.title, for: .normal)
 			self.controlButton.setTitle(self.title, for: [.normal, .selected])
 			self.controlButton.setTitle(self.title, for: .highlighted)
-			
 		}
 	}
 	

@@ -39,26 +39,26 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rei-0S-ONM">
-                        <rect key="frame" x="12" y="4" width="277" height="14"/>
+                        <rect key="frame" x="12" y="4" width="257" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex0-X8-cbg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex0-X8-cbg">
                         <rect key="frame" x="284" y="26" width="28" height="33"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="28" id="Ncc-3h-6Ed"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="Ncc-3h-6Ed"/>
                             <constraint firstAttribute="height" constant="33" id="qJg-Gi-dWK"/>
                         </constraints>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-NF-dDK">
-                        <rect key="frame" x="293" y="4" width="15" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-NF-dDK">
+                        <rect key="frame" x="287" y="4" width="21" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="4kV-wC-j48"/>
-                            <constraint firstAttribute="width" constant="15" id="oda-vB-vgB"/>
+                            <constraint firstAttribute="width" constant="21" id="xof-w2-KJI"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="Dimmed Accent Color"/>
@@ -72,10 +72,10 @@
                     <constraint firstItem="SbH-tH-Kc2" firstAttribute="top" secondItem="rei-0S-ONM" secondAttribute="bottom" constant="4" id="E6R-rE-XAO"/>
                     <constraint firstAttribute="trailing" secondItem="Ex0-X8-cbg" secondAttribute="trailing" constant="8" id="FUb-TB-W0h"/>
                     <constraint firstItem="rei-0S-ONM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="GMa-Dr-Vwt"/>
-                    <constraint firstItem="Fvp-NF-dDK" firstAttribute="leading" secondItem="rei-0S-ONM" secondAttribute="trailing" constant="4" id="H8G-EX-X68"/>
                     <constraint firstItem="XqG-nX-zIY" firstAttribute="leading" secondItem="SbH-tH-Kc2" secondAttribute="trailing" constant="8" id="M03-GQ-VcO"/>
                     <constraint firstItem="rei-0S-ONM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="MZ7-A7-miP"/>
                     <constraint firstAttribute="trailing" secondItem="vRL-EP-IsE" secondAttribute="trailing" constant="12" id="Mwm-Uk-cyf"/>
+                    <constraint firstItem="Fvp-NF-dDK" firstAttribute="leading" secondItem="rei-0S-ONM" secondAttribute="trailing" constant="18" id="QBU-3H-gjI"/>
                     <constraint firstItem="Fvp-NF-dDK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="hcF-jP-He9"/>
                     <constraint firstItem="vRL-EP-IsE" firstAttribute="width" secondItem="XqG-nX-zIY" secondAttribute="width" id="iaC-bV-wPp"/>
                     <constraint firstItem="Ex0-X8-cbg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lZo-NJ-7od"/>

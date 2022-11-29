@@ -5,7 +5,7 @@
 //  Created by Maciej Piechota on 25/11/2022.
 //
 
-import Foundation
+import UIKit
 
 class ParticipantsListItemViewModel {
 	let countryName: String
@@ -40,6 +40,19 @@ extension ParticipantsListItemViewModel {
 		}
 		
 		return _points == 0 ? "" : "\(_points)"
+	}
+	
+	var pointsColor: UIColor {
+		switch self.place.value {
+		case 0:
+			return Color.Points.gold
+		case 1:
+			return Color.Points.silver
+		case 2:
+			return Color.Points.bronze
+		default:
+			return Color.Points.regular
+		}
 	}
 	
 }

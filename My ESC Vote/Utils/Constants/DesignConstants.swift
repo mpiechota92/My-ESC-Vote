@@ -18,6 +18,13 @@ extension Constants {
 			static let error = UIColor(named: "Error")!
 			static let succsess = UIColor(named: "Success")!
 			
+			enum Points {
+				static let gold = UIColor(named: "Gold")!
+				static let silver = UIColor(named: "Silver")!
+				static let bronze = UIColor(named: "Bronze")!
+				static let regular = UIColor(named: "Regular")!
+			}
+			
 			enum Primary {
 				static let darkNavy = UIColor(named: "Dark Navy")
 				static let navy = UIColor(named: "Navy")

@@ -70,6 +70,7 @@
 		52ADDB40292E60CC00D6703F /* Metropolis-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB23292E60A600D6703F /* Metropolis-MediumItalic.ttf */; };
 		52ADDB41292E60CC00D6703F /* Metropolis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB24292E60A600D6703F /* Metropolis-Light.ttf */; };
 		52ADDB42292E60CC00D6703F /* Metropolis-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */; };
+		52BA482C2936406A005233D9 /* VoteCategoryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
@@ -167,6 +168,7 @@
 		52ADDB2E292E60A700D6703F /* Metropolis-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Bold.ttf"; sourceTree = "<group>"; };
 		52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.ttf"; sourceTree = "<group>"; };
 		52ADDB30292E60A700D6703F /* Metropolis-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoteCategoryPageCell.xib; path = ../../../../../../../../../Maciej/.Trash/VoteCategoryPageCell.xib; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */,
+				52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */,
 				52CE1749291EECC500F93E28 /* ParticipantCell.swift */,
 				52CE174A291EECC500F93E28 /* ParticipantCell.xib */,
 			);
@@ -736,6 +739,7 @@
 			files = (
 				52ADDB3E292E60CC00D6703F /* Metropolis-BoldItalic.ttf in Resources */,
 				52ADDB39292E60CC00D6703F /* Metropolis-Black.ttf in Resources */,
+				52BA482C2936406A005233D9 /* VoteCategoryPageCell.xib in Resources */,
 				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				52ADDB41292E60CC00D6703F /* Metropolis-Light.ttf in Resources */,
 				52ADDB34292E60CC00D6703F /* Metropolis-SemiBold.ttf in Resources */,

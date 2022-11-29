@@ -6,7 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +21,51 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8C0-SO-klb">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYp-gB-X1A" customClass="CollectionViewSegmentedControl" customModule="My_ESC_Vote" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYp-gB-X1A">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L1K-eu-pi2">
+                                                <rect key="frame" x="10" y="10" width="373" height="31"/>
+                                                <color key="backgroundColor" name="Winter"/>
+                                                <segments>
+                                                    <segment title="Favourite"/>
+                                                    <segment title="Vocals"/>
+                                                    <segment title="Performance"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="L1K-eu-pi2" firstAttribute="leading" secondItem="wYp-gB-X1A" secondAttribute="leading" constant="10" id="8qJ-FA-uev"/>
+                                            <constraint firstAttribute="bottom" secondItem="L1K-eu-pi2" secondAttribute="bottom" constant="10" id="AiL-zR-ahI"/>
+                                            <constraint firstItem="L1K-eu-pi2" firstAttribute="centerX" secondItem="wYp-gB-X1A" secondAttribute="centerX" id="IHi-TM-XDV"/>
+                                            <constraint firstItem="L1K-eu-pi2" firstAttribute="centerY" secondItem="wYp-gB-X1A" secondAttribute="centerY" id="K0l-Ar-NTb"/>
+                                            <constraint firstItem="L1K-eu-pi2" firstAttribute="top" secondItem="wYp-gB-X1A" secondAttribute="top" constant="10" id="kKt-qe-gUo"/>
+                                            <constraint firstAttribute="trailing" secondItem="L1K-eu-pi2" secondAttribute="trailing" constant="10" id="kkd-OX-gND"/>
                                             <constraint firstAttribute="height" constant="50" id="oE2-vN-E76"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Scr-gw-cXy">
                                         <rect key="frame" x="0.0" y="50" width="393" height="699"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="Winter"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xIV-pf-Q16">
                                             <size key="itemSize" width="392" height="698"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
-                                        <cells/>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VoteCategoryPageCell" id="tfR-qn-UtX" customClass="VoteCategoryPageCell" customModule="My_ESC_Vote" customModuleProvider="target">
+                                                <rect key="frame" x="0.66666666666666663" y="0.0" width="392" height="698"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v7V-B7-Mfz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="392" height="698"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" name="Winter"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" name="Winter"/>
+                                            </collectionViewCell>
+                                        </cells>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" name="Navy"/>
@@ -51,6 +79,25 @@
                                     <constraint firstItem="wYp-gB-X1A" firstAttribute="top" secondItem="8C0-SO-klb" secondAttribute="top" id="xPo-Uw-fUA"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Cy-BF-E4G">
+                                <rect key="frame" x="0.0" y="752" width="393" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N3-TS-C4I">
+                                        <rect key="frame" x="146.66666666666666" y="32.666666666666629" width="100" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CwB-3Y-QlH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Vote"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Light Navy"/>
+                                <constraints>
+                                    <constraint firstItem="7N3-TS-C4I" firstAttribute="centerX" secondItem="9Cy-BF-E4G" secondAttribute="centerX" id="LQ8-m8-7Re"/>
+                                    <constraint firstAttribute="height" constant="100" id="TWM-R2-cUJ"/>
+                                    <constraint firstItem="7N3-TS-C4I" firstAttribute="centerY" secondItem="9Cy-BF-E4G" secondAttribute="centerY" id="Zju-gA-8Lw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="umn-UO-vO8"/>
                         <color key="backgroundColor" name="Dark Navy"/>
@@ -59,12 +106,17 @@
                             <constraint firstItem="umn-UO-vO8" firstAttribute="trailing" secondItem="8C0-SO-klb" secondAttribute="trailing" id="1sJ-6f-1hT"/>
                             <constraint firstAttribute="bottom" secondItem="8C0-SO-klb" secondAttribute="bottom" id="EZm-Jf-eJz"/>
                             <constraint firstItem="8C0-SO-klb" firstAttribute="leading" secondItem="umn-UO-vO8" secondAttribute="leading" id="FlG-ZZ-ODc"/>
+                            <constraint firstAttribute="bottom" secondItem="9Cy-BF-E4G" secondAttribute="bottom" id="MQ8-7f-a0l"/>
+                            <constraint firstItem="9Cy-BF-E4G" firstAttribute="leading" secondItem="umn-UO-vO8" secondAttribute="leading" id="O6a-by-caO"/>
+                            <constraint firstItem="9Cy-BF-E4G" firstAttribute="trailing" secondItem="umn-UO-vO8" secondAttribute="trailing" id="zDG-4C-5Zz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LLC-r1-e7b"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="voteCategoriesBar" destination="wYp-gB-X1A" id="IRF-Gp-Zsd"/>
+                        <outlet property="bottomVoteView" destination="9Cy-BF-E4G" id="QHC-fW-VZV"/>
+                        <outlet property="categoriesControl" destination="L1K-eu-pi2" id="05H-mc-yWG"/>
+                        <outlet property="votingPagesCollectionView" destination="Scr-gw-cXy" id="Yxz-wa-w0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amh-TD-u4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -76,11 +128,14 @@
         <namedColor name="Dark Navy">
             <color red="0.012000000104308128" green="0.0080000003799796104" blue="0.24300000071525574" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <namedColor name="Light Navy">
+            <color red="0.14499999582767487" green="0.14100000262260437" blue="0.44299998879432678" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Navy">
             <color red="0.10999999940395355" green="0.10599999874830246" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

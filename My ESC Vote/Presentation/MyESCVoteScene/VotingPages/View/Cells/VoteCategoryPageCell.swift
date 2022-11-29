@@ -12,7 +12,7 @@ protocol VoteScrollViewDelegate: AnyObject {
 	func voteScrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
 }
 
-class VoteCategoryPageCell: UICollectionViewCell {
+class VoteCategoryPageCell: UICollectionViewCell, HavingNib {
 	
 	// TODO: Create xib for this cell
 	static let identifier = String(describing: VoteCategoryPageCell.self)
@@ -21,12 +21,15 @@ class VoteCategoryPageCell: UICollectionViewCell {
 					 bundle: nil)
 	}
 	
-	@IBOutlet var participantsTableView: UITableView!
+	weak var parent: MainVoteViewController? {
+		didSet {
+			setupPageCell()
+		}
+	}
 	
-	weak var parent: MainVoteViewController?
 	var participantsTable: ParticipantsViewController? = nil
 	
-	var viewModel: VoteCategoriesListItemViewModel!
+	private var viewModel: VoteCategoriesListItemViewModel!
 	
 	// Not needed?
 	weak var scrollViewDelegate: VoteScrollViewDelegate!
@@ -35,25 +38,16 @@ class VoteCategoryPageCell: UICollectionViewCell {
 	
 	func fill(with viewModel: VoteCategoriesListItemViewModel) {
 		self.viewModel = viewModel
-		setupPageCell()
 	}
 	
 	private func setupPageCell() {
 		participantsViewController = ParticipantsViewController.instantiateViewController()
-		parent?.addChild(participantsViewController)
-		participantsViewController.view.frame = contentView.bounds
 		participantsViewController.proxyParent = parent
+		participantsViewController.view.frame = contentView.bounds
+		participantsViewController.fill(with: DefaultParticipantsListViewModel(for: viewModel.contest, category: viewModel.category))
+		parent?.addChild(participantsViewController)
 		contentView.addSubview(participantsViewController.view)
 		participantsViewController.didMove(toParent: parent)
-		
-//		participantsTableView.delegate = self
-//		participantsTableView.dataSource = self
-//		participantsTableView.dragDelegate = self
-//		participantsTableView.dragInteractionEnabled = true
-//		participantsTableView.showsVerticalScrollIndicator = false
-//		participantsTableView.estimatedRowHeight = UITableView.automaticDimension
-//		participantsTableView.rowHeight = UITableView.automaticDimension
-		
 	}
 	
 }

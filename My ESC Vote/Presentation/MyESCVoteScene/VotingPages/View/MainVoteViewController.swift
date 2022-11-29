@@ -8,27 +8,20 @@
 import UIKit
 import SnapKit
 
-enum VoteCategory: String, Codable, CaseIterable {
-	case favourite = "Favourite"
-	case vocals = "Vocals"
-	case performance = "Performance"
-}
-
-protocol PagesCollectionViewDelegate: AnyObject {
-	
-	func didSelectItem(at index: Int)
-	
-}
 
 class MainVoteViewController: UIViewController, HavingStoryboard {
 
-	@IBOutlet private var voteCategoriesBar: CollectionViewSegmentedControl!
+	private let categories = ["Favourite", "Vocals", "Performance"]
+	
+	@IBOutlet private var categoriesControl: UISegmentedControl!
 	@IBOutlet private var votingPagesCollectionView: UICollectionView!
+	@IBOutlet private var bottomVoteView: UIView!
 	
 	private var viewModel: VoteCategoriesListViewModel!
 	
 	private var secondaryBackgroundView: UIView!
-	private weak var pagesDelegate: PagesCollectionViewDelegate!
+	
+	var contest: Contest!
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
@@ -59,105 +52,62 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 		setupVotingPagesView()
 	}
 	
-	private func setupBackground() {
-//		self.view.backgroundColor = Color.Primary.darkNavy
-//
-//		secondaryBackgroundView = UIView(frame: .zero)
-//		secondaryBackgroundView.backgroundColor = Color.Primary.winter
-//		self.view.addSubview(secondaryBackgroundView)
-//
-//		secondaryBackgroundView.snp.makeConstraints { make in
-//			make.bottom.width.equalToSuperview()
-//			make.top.equalTo(view.safeAreaLayoutGuide)
-//		}
-	}
-	
-	private func setupNavigationBarButtons() {
-//		guard var rightBarButtonItem = navigationController?.navigationItem.rightBarButtonItem else { return }
-//
-//		menuButton.setImage(UIImage(systemName: Icon.user), for: .normal)
-//		rightBarButtonItem = UIBarButtonItem(customView: menuButton)
-	}
-	
 	private func setupVoteCategoriesBar() {
-//		voteCategoriesBar = .instanceFromNib()
-		voteCategoriesBar.delegate = self
-//		self.view.addSubview(voteCategoriesBar)
 		
-		voteCategoriesBar.setup(with: [VoteCategory.favourite.rawValue,
-									   VoteCategory.vocals.rawValue,
-									   VoteCategory.performance.rawValue])
+		// not like this
 		
+		for index in 0..<categoriesControl.numberOfSegments {
+			categoriesControl.setAction(UIAction(handler: handleSegmentSelected(_:)), forSegmentAt: index)
+			categoriesControl.setTitle(categories[index], forSegmentAt: index)
+			
+		}
 		
-//		voteCategoriesBar.snp.makeConstraints { make in
-//			make.leading.trailing.width.equalToSuperview()
-//			make.top.equalTo(self.view.safeAreaLayoutGuide)
-//			make.height.greaterThanOrEqualTo(50)
-//		}
-		
-		voteCategoriesBar.delegate = self
-		pagesDelegate = voteCategoriesBar
+		categoriesControl.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Font.Name.metropolisThin, size: Font.Size.small)!], for: .normal)
 	}
 	
 	private func setupVotingPagesView() {
-//		let offsetValue = voteCategoriesBar.frame.height
-//		navBarSafeAreaTopPadding = view.safeAreaInsets.top
-		
 		let layout = UICollectionViewFlowLayout()
 		layout.minimumLineSpacing = 0
 		layout.minimumInteritemSpacing = 0
 		layout.scrollDirection = .horizontal
-//		layout.itemSize = CGSize(width: view.frame.width,
-//								 height: view.frame.height - (offsetValue + navBarSafeAreaTopPadding))
 		
+		votingPagesCollectionView.register(for: VoteCategoryPageCell.self)
 		votingPagesCollectionView.setCollectionViewLayout(layout, animated: true)
 		votingPagesCollectionView.showsVerticalScrollIndicator = false
 		votingPagesCollectionView.showsHorizontalScrollIndicator = false
 		votingPagesCollectionView.automaticallyAdjustsScrollIndicatorInsets = false
 		votingPagesCollectionView.isPagingEnabled = true
 		votingPagesCollectionView.isScrollEnabled = true
-//
-//		votingPagesCollectionView.register(VoteCategoryPageCell.nib(), forCellWithReuseIdentifier: VoteCategoryPageCell.identifier)
-		
-//		votingPagesCollectionView = collectionView
-//		self.view.addSubview(votingPagesCollectionView)
-		
-//		votingPagesCollectionView.snp.makeConstraints { make in
-//			make.top.equalTo(self.view.safeAreaLayoutGuide).offset(offsetValue)
-//			make.bottom.trailing.leading.equalToSuperview()
-//		}
 		
 		votingPagesCollectionView.delegate = self
 		votingPagesCollectionView.dataSource = self
-		
 	}
 	
 	
+	@objc private func handleSegmentSelected(_ action: UIAction) {
+		//guard let control = action.sender as! UISegmentedControl else { return }
+		
+		let index = categoriesControl.selectedSegmentIndex
+		let indexPath = IndexPath(item: index, section: 0)
+		
+		votingPagesCollectionView.isPagingEnabled = false
+		votingPagesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+		votingPagesCollectionView.isPagingEnabled = true
+	}
 }
 
 // MARK: - UICollectionViewDelegate
 
 extension MainVoteViewController: UICollectionViewDelegate {
 
-//	func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-//		let item = Int(scrollView.contentOffset.x / view.frame.width)
-//		let indexPath = IndexPath(item: item, section: 0)
-//		//pagesDelegate.didSelectItem(at: item)
-//	}
-	
 	func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 		let x = targetContentOffset.pointee.x
 		let item = Int(x / view.frame.width)
 		
 		// Paging
-		pagesDelegate.didSelectItem(at: item)
+		categoriesControl.selectedSegmentIndex = item
 	}
-	
-	
-//	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//		return .init(width: view.frame.width, height: collectionView.frame.height)
-//	}
-	
+
 }
 
 // MARK: - UICollectionViewDataSource
@@ -171,7 +121,7 @@ extension MainVoteViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteCategoryPageCell.identifier, for: indexPath) as! VoteCategoryPageCell
 		
-		let cellViewModel = viewModel.item(for: indexPath) //pages[indexPath.item]
+		let cellViewModel = viewModel.item(for: indexPath)
 		cell.fill(with: cellViewModel)
 		cell.parent = self
 		
@@ -202,6 +152,40 @@ extension MainVoteViewController: UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+	}
+	
+}
+
+// MARK: - TableViewScrollDirectionDelegate
+
+extension MainVoteViewController: TableViewScrollDirectionDelegate {
+	
+	func handleScroll(in direction: ScrollDirection) {
+		let height = bottomVoteView.frame.height
+		let dy = height
+		
+		let transform = bottomVoteView.transform
+		let translatedTransform: CGAffineTransform
+		
+		print("\(bottomVoteView.frame.minX) \(bottomVoteView.frame.maxX) \(bottomVoteView.frame.minY) \(bottomVoteView.frame.maxY)")
+		
+		let maxY = bottomVoteView.frame.maxY
+		let isHidden = view.frame.maxY < maxY
+		
+		switch direction {
+		case .up:
+			guard isHidden else { return }
+			translatedTransform = transform.translatedBy(x: 0.0, y: -dy)
+		case .down:
+			guard !isHidden else { return }
+			translatedTransform = transform.translatedBy(x: 0.0, y: dy)
+		}
+		
+		
+		
+		UIView.animate(withDuration: 0.5, delay: 0) {
+			self.bottomVoteView.transform = translatedTransform
+		}
 	}
 	
 }

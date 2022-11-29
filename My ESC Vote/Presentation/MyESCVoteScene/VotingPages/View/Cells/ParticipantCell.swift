@@ -30,12 +30,15 @@ class ParticipantCell: UITableViewCell, HavingNib {
 		self.songNameLabel.text = viewModel.song
 		self.artistNameLabel.text = viewModel.artist
 		self.countryNameLabel.text = viewModel.countryName
-		self.countryImageView.image = UIImage(named: viewModel.countryName)
+		self.pointsLabel.text = viewModel.points
+		self.pointsLabel.textColor = viewModel.pointsColor
 		
-		songNameLabel.font = UIFont(name: Font.Name.metropolisBold, size: Font.Size.large)
-		orderLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.extraSmall)
-		artistNameLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.medium)
-		pointsLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.extraSmall)
-		countryNameLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.extraSmall)
+		self.songNameLabel.font = UIFont(name: Font.Name.metropolisBold, size: Font.Size.large)
+		self.orderLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.extraSmall)
+		self.artistNameLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.medium)
+		self.pointsLabel.font = UIFont(name: Font.Name.metropolisBold, size: Font.Size.extraLarge)
+		self.countryNameLabel.font = UIFont(name: Font.Name.metropolisRegular, size: Font.Size.extraSmall)
+		
+		self.countryImageView.image = UIImage(named: viewModel.countryName)
 	}
 }

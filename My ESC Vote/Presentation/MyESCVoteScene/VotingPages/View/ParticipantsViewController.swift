@@ -7,10 +7,22 @@
 
 import UIKit
 
+enum ScrollDirection {
+	case up
+	case down
+}
 
-class ParticipantsViewController: UITableViewController, HavingStoryboard {
+protocol TableViewScrollDirectionDelegate: AnyObject {
+	func handleScroll(in direction: ScrollDirection)
+}
+
+class ParticipantsViewController: UIViewController, HavingStoryboard {
+	
+	@IBOutlet private var tableView: UITableView!
 	
 	weak var proxyParent: MainVoteViewController!
+	weak var scrollDelegate: TableViewScrollDirectionDelegate!
+	
 	var isDragging: Observable<Bool> = Observable(false)
 	
 	private var viewModel: ParticipantsListViewModel!
@@ -23,67 +35,53 @@ class ParticipantsViewController: UITableViewController, HavingStoryboard {
 	
 	func fill(with viewModel: ParticipantsListViewModel) {
 		self.viewModel = viewModel
-		bind(to: self.viewModel)
+		//bind(to: self.viewModel)
 	}
 	
 	func setupTableView() {
 		tableView.register(for: ParticipantCell.self)
 		tableView.dragDelegate = self
+		tableView.dataSource = self
+		tableView.delegate = self
 		tableView.dragInteractionEnabled = true
 		tableView.showsVerticalScrollIndicator = false
-		
-//		tableView.estimatedRowHeight = UITableView.automaticDimension
-//		tableView.rowHeight = UITableView.automaticDimension
-	}
-	
-	
-	private func bind(to viewModel: ParticipantsListViewModel) {
-		viewModel.updateItems.observer(on: self) { [weak self] in self?.updateTableItems($0)}
 	}
 	
 	private func bindProxyParent() {
 		isDragging.observer(on: proxyParent) { [weak self] isDragging in
 			self?.proxyParent.setCollectionScrolling(enabled: !isDragging)
 		}
-	}
-	
-	private func updateTableItems(_ isChanged: Bool) {
-		if !isChanged { return }
 		
-		DispatchQueue.main.async {
-			self.tableView.reloadData()
-		}
+		scrollDelegate = proxyParent
 	}
 	
 	deinit {
-		isDragging.remove(observer: proxyParent)
+		if proxyParent != nil { isDragging.remove(observer: proxyParent) }
 		viewModel.updateItems.remove(observer: self)
 	}
 }
 
-// MARK: - UITableViewControllerDataSource, UITableViewControllerDelegate
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension ParticipantsViewController {
+extension ParticipantsViewController: UITableViewDelegate, UITableViewDataSource {
 	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		var cell = tableView.dequeueReusableCell(withIdentifier: ParticipantCell.identifier, for: indexPath) as? ParticipantCell
 		
 		if cell == nil { cell = ParticipantCell.instanceFromNib() }
 		let participant = viewModel.item(for: indexPath)
 		cell!.fill(with: participant)
 		
+		if indexPath.row == 0 {
+			print("0. \(participant.place.value)")
+		}
+		
 		return cell!
 	}
 	
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.numberOfRows(in: section)
 	}
-	
-	// dunno if needed
-//	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//		return UITableView.automaticDimension
-//	}
-	
 }
 
 // MARK: - UITableViewDragDelegate
@@ -94,18 +92,52 @@ extension ParticipantsViewController: UITableViewDragDelegate {
 		isDragging.value = true
 		
 		let dragItem = UIDragItem(itemProvider: NSItemProvider())
-		dragItem.localObject = viewModel.item(for: indexPath)
+		let row = viewModel.item(for: indexPath)
+//		row.place.value = -1
+		dragItem.localObject = row
+		
 		
 		return [dragItem]
 	}
 	
-	override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		//if sourceIndexPath.row != destinationIndexPath.row {
-			let mover = viewModel.removeItem(at: sourceIndexPath)
-			viewModel.insertItem(mover, at: destinationIndexPath)
-		//}
+	func tableView(_ tableView: UITableView, dragSessionDidEnd session: UIDragSession) {
+		let movedRow = session.items[0]
+		let model = movedRow.localObject as! ParticipantsListItemViewModel
+		print(model.place.value)
 		
-		isDragging.value = false
 	}
-
+	
+	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		let mover = viewModel.removeItem(at: sourceIndexPath)
+		viewModel.insertItem(mover, at: destinationIndexPath)
+			
+		isDragging.value = false
+		updateTable(from: sourceIndexPath, to: destinationIndexPath)
+	}
+	
+	private func updateTable(from sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		viewModel.updateItems.value = true
+		
+		let range: ClosedRange<Int>
+		let fromRow = sourceIndexPath.row
+		let toRow = destinationIndexPath.row
+		
+		range = fromRow <= toRow ? fromRow...toRow : toRow...fromRow
+		
+		DispatchQueue.main.async {
+			for index in range {
+				self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+			}
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, dragPreviewParametersForRowAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+		return nil
+	}
+	
+	func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+		let scrollDirection: ScrollDirection = velocity.y > 0 ? .down : .up
+		
+		scrollDelegate.handleScroll(in: scrollDirection)
+	}
 }

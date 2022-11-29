@@ -25,8 +25,8 @@ final class DefaultVoteCategoriesListViewModel: VoteCategoriesListViewModel {
 	
 	internal var items: [VoteCategoriesListItemViewModel]
 	
-	init(for categories: [VoteCategory]) {
-		items = categories.map({VoteCategoriesListItemViewModel.init(category: $0)})
+	init(for categories: [VoteCategory], in contest: Contest) {
+		items = categories.map({VoteCategoriesListItemViewModel.init(category: $0, contest: contest)})
 	}
 	
 	func item(for indexPath: IndexPath) -> VoteCategoriesListItemViewModel {
