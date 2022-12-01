@@ -13,7 +13,7 @@ struct Participant: Codable {
 	let artist: String
 	let song: String
 	var place: Int
-	var order: Int = 0
+	var order: Int
 	var points: String = ""
 	
 }

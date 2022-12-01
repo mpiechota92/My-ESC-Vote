@@ -71,6 +71,7 @@
 		52ADDB41292E60CC00D6703F /* Metropolis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB24292E60A600D6703F /* Metropolis-Light.ttf */; };
 		52ADDB42292E60CC00D6703F /* Metropolis-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */; };
 		52BA482C2936406A005233D9 /* VoteCategoryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */; };
+		52BA485D29394FFB005233D9 /* UITableView+ReloadItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BA485C29394FFB005233D9 /* UITableView+ReloadItems.swift */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
@@ -169,6 +170,7 @@
 		52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.ttf"; sourceTree = "<group>"; };
 		52ADDB30292E60A700D6703F /* Metropolis-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoteCategoryPageCell.xib; path = ../../../../../../../../../Maciej/.Trash/VoteCategoryPageCell.xib; sourceTree = "<group>"; };
+		52BA485C29394FFB005233D9 /* UITableView+ReloadItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITableView+ReloadItems.swift"; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Extensions/UITableView+ReloadItems.swift"; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			children = (
 				52C9516C2934064A000D7FEE /* UITableView+Register.swift */,
 				52C9516E29340797000D7FEE /* UICollectionView+Register.swift */,
+				52BA485C29394FFB005233D9 /* UITableView+ReloadItems.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				523A8FDC2932A35C005A8071 /* ParticipantsViewController.swift in Sources */,
 				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
+				52BA485D29394FFB005233D9 /* UITableView+ReloadItems.swift in Sources */,
 				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
 				52C81815291566910006CA38 /* AboutInfoView.swift in Sources */,
 				5295AA8A29198EBC00B820FE /* ConstatnsTypealiases.swift in Sources */,

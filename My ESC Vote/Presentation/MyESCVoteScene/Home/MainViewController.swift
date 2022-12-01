@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
 		let contest = Contest(country: CountryName.Armenia, startDate: Date(), endDate: Date(), contestType: .JSEC)
 		let viewModel = DefaultVoteCategoriesListViewModel(for: [.favourite, .vocals, .performance], in: contest)
 		vc.fill(with: viewModel)
+		vc.contest = contest
 		
 		navigationController?.pushViewController(vc, animated: true)
 	}

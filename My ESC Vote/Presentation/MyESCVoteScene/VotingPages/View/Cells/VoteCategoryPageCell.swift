@@ -21,31 +21,32 @@ class VoteCategoryPageCell: UICollectionViewCell, HavingNib {
 					 bundle: nil)
 	}
 	
-	weak var parent: MainVoteViewController? {
+	weak var parent: MainVoteViewController?
+	weak var participantsViewController: ParticipantsViewController! {
 		didSet {
 			setupPageCell()
 		}
 	}
-	
-	var participantsTable: ParticipantsViewController? = nil
 	
 	private var viewModel: VoteCategoriesListItemViewModel!
 	
 	// Not needed?
 	weak var scrollViewDelegate: VoteScrollViewDelegate!
 	
-	private var participantsViewController: ParticipantsViewController!
-	
 	func fill(with viewModel: VoteCategoriesListItemViewModel) {
 		self.viewModel = viewModel
 	}
 	
+	func addParticipantsViewController(_ viewController: ParticipantsViewController) {
+		
+	}
+	
+	func setupWith(childVC viewController: ParticipantsViewController) {
+		
+	}
+	
 	private func setupPageCell() {
-		participantsViewController = ParticipantsViewController.instantiateViewController()
-		participantsViewController.proxyParent = parent
 		participantsViewController.view.frame = contentView.bounds
-		participantsViewController.fill(with: DefaultParticipantsListViewModel(for: viewModel.contest, category: viewModel.category))
-		parent?.addChild(participantsViewController)
 		contentView.addSubview(participantsViewController.view)
 		participantsViewController.didMove(toParent: parent)
 	}

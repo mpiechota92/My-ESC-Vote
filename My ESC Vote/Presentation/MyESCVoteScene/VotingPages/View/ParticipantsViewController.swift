@@ -20,7 +20,7 @@ class ParticipantsViewController: UIViewController, HavingStoryboard {
 	
 	@IBOutlet private var tableView: UITableView!
 	
-	weak var proxyParent: MainVoteViewController!
+	//weak var parent: MainVoteViewController!
 	weak var scrollDelegate: TableViewScrollDirectionDelegate!
 	
 	var isDragging: Observable<Bool> = Observable(false)
@@ -48,15 +48,20 @@ class ParticipantsViewController: UIViewController, HavingStoryboard {
 	}
 	
 	private func bindProxyParent() {
-		isDragging.observer(on: proxyParent) { [weak self] isDragging in
-			self?.proxyParent.setCollectionScrolling(enabled: !isDragging)
+		guard let parent = self.parent as? MainVoteViewController else { return }
+		
+		isDragging.observer(on: parent) { isDragging in
+			parent.setCollectionScrolling(enabled: !isDragging)
 		}
 		
-		scrollDelegate = proxyParent
+		scrollDelegate = parent
 	}
 	
 	deinit {
-		if proxyParent != nil { isDragging.remove(observer: proxyParent) }
+		if let parent = self.parent as? MainVoteViewController {
+			isDragging.remove(observer: parent)
+		}
+		
 		viewModel.updateItems.remove(observer: self)
 	}
 }
@@ -71,10 +76,6 @@ extension ParticipantsViewController: UITableViewDelegate, UITableViewDataSource
 		if cell == nil { cell = ParticipantCell.instanceFromNib() }
 		let participant = viewModel.item(for: indexPath)
 		cell!.fill(with: participant)
-		
-		if indexPath.row == 0 {
-			print("0. \(participant.place.value)")
-		}
 		
 		return cell!
 	}
@@ -93,26 +94,25 @@ extension ParticipantsViewController: UITableViewDragDelegate {
 		
 		let dragItem = UIDragItem(itemProvider: NSItemProvider())
 		let row = viewModel.item(for: indexPath)
-//		row.place.value = -1
 		dragItem.localObject = row
-		
 		
 		return [dragItem]
 	}
 	
+	// Delete?
 	func tableView(_ tableView: UITableView, dragSessionDidEnd session: UIDragSession) {
 		let movedRow = session.items[0]
 		let model = movedRow.localObject as! ParticipantsListItemViewModel
-		print(model.place.value)
-		
 	}
 	
 	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
 		let mover = viewModel.removeItem(at: sourceIndexPath)
 		viewModel.insertItem(mover, at: destinationIndexPath)
-			
+		
+		viewModel.printData()
+		
 		isDragging.value = false
-		updateTable(from: sourceIndexPath, to: destinationIndexPath)
+		tableView.reloadRows(from: sourceIndexPath, to: destinationIndexPath)
 	}
 	
 	private func updateTable(from sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -122,7 +122,7 @@ extension ParticipantsViewController: UITableViewDragDelegate {
 		let fromRow = sourceIndexPath.row
 		let toRow = destinationIndexPath.row
 		
-		range = fromRow <= toRow ? fromRow...toRow : toRow...fromRow
+		range = (fromRow <= toRow) ? (fromRow...toRow) : (toRow...fromRow)
 		
 		DispatchQueue.main.async {
 			for index in range {

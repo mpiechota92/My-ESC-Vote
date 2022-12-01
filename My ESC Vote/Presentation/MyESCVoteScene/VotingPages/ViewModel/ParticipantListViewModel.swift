@@ -17,6 +17,7 @@ protocol ParticipantsListViewModelOutput {
 	func removeItem(at indexPath: IndexPath) -> ParticipantsListItemViewModel
 	var voteCategory: VoteCategory { get }
 	var updateItems: Observable<Bool> { get }
+	func printData()
 }
 
 protocol ParticipantsListViewModel: ParticipantsListViewModelInput, ParticipantsListViewModelOutput {}
@@ -54,6 +55,12 @@ class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 	
 	func numberOfRows(in section: Int) -> Int {
 		return participants.count
+	}
+	
+	func printData() {
+		participants.forEach { participant in
+			print("\(participant.countryName) _ \(participant.place.value)")
+		}
 	}
 	
 	// MARK: - Mock for now

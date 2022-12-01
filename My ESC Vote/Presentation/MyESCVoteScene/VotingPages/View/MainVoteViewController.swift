@@ -16,7 +16,7 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 	@IBOutlet private var categoriesControl: UISegmentedControl!
 	@IBOutlet private var votingPagesCollectionView: UICollectionView!
 	@IBOutlet private var bottomVoteView: UIView!
-	
+
 	private var viewModel: VoteCategoriesListViewModel!
 	
 	private var secondaryBackgroundView: UIView!
@@ -33,6 +33,7 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 		super.viewDidLoad()
 		
 		setupUI()
+		setupData()
 		votingPagesCollectionView.reloadData()
 	}
 	
@@ -83,6 +84,14 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 		votingPagesCollectionView.dataSource = self
 	}
 	
+	private func setupData() {
+		// TODO: Data persistance
+		VoteCategory.allCases.forEach { category in
+			let vc = ParticipantsViewController.instantiateViewController()
+			vc.fill(with: DefaultParticipantsListViewModel(for: contest, category: category))
+			self.addChild(vc)
+		}
+	}
 	
 	@objc private func handleSegmentSelected(_ action: UIAction) {
 		//guard let control = action.sender as! UISegmentedControl else { return }
@@ -121,9 +130,9 @@ extension MainVoteViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteCategoryPageCell.identifier, for: indexPath) as! VoteCategoryPageCell
 		
-		let cellViewModel = viewModel.item(for: indexPath)
-		cell.fill(with: cellViewModel)
-		cell.parent = self
+		guard let childVC = self.children[indexPath.item] as? ParticipantsViewController else { return cell }
+		
+		cell.participantsViewController = childVC
 		
 		return cell
 	}
@@ -167,8 +176,6 @@ extension MainVoteViewController: TableViewScrollDirectionDelegate {
 		let transform = bottomVoteView.transform
 		let translatedTransform: CGAffineTransform
 		
-		print("\(bottomVoteView.frame.minX) \(bottomVoteView.frame.maxX) \(bottomVoteView.frame.minY) \(bottomVoteView.frame.maxY)")
-		
 		let maxY = bottomVoteView.frame.maxY
 		let isHidden = view.frame.maxY < maxY
 		
@@ -180,8 +187,6 @@ extension MainVoteViewController: TableViewScrollDirectionDelegate {
 			guard !isHidden else { return }
 			translatedTransform = transform.translatedBy(x: 0.0, y: dy)
 		}
-		
-		
 		
 		UIView.animate(withDuration: 0.5, delay: 0) {
 			self.bottomVoteView.transform = translatedTransform
