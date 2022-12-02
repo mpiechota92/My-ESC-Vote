@@ -112,7 +112,7 @@ extension ParticipantsViewController: UITableViewDragDelegate {
 		viewModel.printData()
 		
 		isDragging.value = false
-		tableView.reloadRows(from: sourceIndexPath, to: destinationIndexPath)
+		updateTable(from: sourceIndexPath, to: destinationIndexPath)
 	}
 	
 	private func updateTable(from sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {

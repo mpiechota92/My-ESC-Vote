@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertInfoViewController" customModule="My_ESC_Vote" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ky-0A-eh6">
+                    <rect key="frame" x="71.666666666666686" y="353" width="250" height="171"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Am9-gK-StM">
+                            <rect key="frame" x="215" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="cIy-ev-HcF"/>
+                                <constraint firstAttribute="width" constant="35" id="o1D-P0-jMh"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="xmark.circle" catalog="system">
+                                <color key="baseForegroundColor" name="Winter"/>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-xS-Ylz">
+                            <rect key="frame" x="35" y="6.9999999999999982" width="180" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="Winter"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wN-bH-zwU">
+                            <rect key="frame" x="10" y="37.333333333333307" width="230" height="99.333333333333314"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="Winter"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-6d-UYW">
+                            <rect key="frame" x="46" y="136.66666666666669" width="158" height="34.333333333333343"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrB-ru-JOh">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-FA-OXf">
+                                    <rect key="frame" x="82.999999999999986" y="0.0" width="75.000000000000014" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34.333333333333343" id="0KH-Tc-zBt"/>
+                                <constraint firstAttribute="width" constant="158" id="DGZ-ak-g78"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="Light Navy"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ofE-6d-UYW" secondAttribute="bottom" id="2td-td-qBp"/>
+                        <constraint firstAttribute="trailing" secondItem="0wN-bH-zwU" secondAttribute="trailing" constant="10" id="GM9-97-bP5"/>
+                        <constraint firstItem="3hM-xS-Ylz" firstAttribute="top" secondItem="8Ky-0A-eh6" secondAttribute="top" constant="7" id="MOS-6i-1A8"/>
+                        <constraint firstItem="0wN-bH-zwU" firstAttribute="top" secondItem="3hM-xS-Ylz" secondAttribute="bottom" constant="10" id="W7N-VT-2vU"/>
+                        <constraint firstItem="Am9-gK-StM" firstAttribute="leading" secondItem="3hM-xS-Ylz" secondAttribute="trailing" id="WSc-XZ-Egm"/>
+                        <constraint firstItem="3hM-xS-Ylz" firstAttribute="leading" secondItem="8Ky-0A-eh6" secondAttribute="leading" constant="35" id="WjK-Fk-frI"/>
+                        <constraint firstAttribute="trailing" secondItem="Am9-gK-StM" secondAttribute="trailing" id="YRs-Ty-ne3"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="171" id="ZEx-7n-Qhc"/>
+                        <constraint firstItem="ofE-6d-UYW" firstAttribute="top" secondItem="0wN-bH-zwU" secondAttribute="bottom" id="jsi-dp-qaw"/>
+                        <constraint firstAttribute="width" constant="250" id="kIi-7R-Zbm"/>
+                        <constraint firstItem="0wN-bH-zwU" firstAttribute="leading" secondItem="8Ky-0A-eh6" secondAttribute="leading" constant="10" id="kST-gV-Vnh"/>
+                        <constraint firstItem="ofE-6d-UYW" firstAttribute="centerX" secondItem="8Ky-0A-eh6" secondAttribute="centerX" id="nRa-kJ-PSC"/>
+                        <constraint firstItem="Am9-gK-StM" firstAttribute="top" secondItem="8Ky-0A-eh6" secondAttribute="top" id="xSy-tD-62w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8Ky-0A-eh6" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="jOt-9O-AfO"/>
+                <constraint firstItem="8Ky-0A-eh6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lMj-EG-rqv"/>
+            </constraints>
+            <point key="canvasLocation" x="-40.458015267175568" y="-33.098591549295776"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="Light Navy">
+            <color red="0.14499999582767487" green="0.14100000262260437" blue="0.44299998879432678" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

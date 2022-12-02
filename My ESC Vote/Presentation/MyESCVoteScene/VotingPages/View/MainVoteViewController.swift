@@ -13,12 +13,14 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 
 	private let categories = ["Favourite", "Vocals", "Performance"]
 	
+	@IBOutlet private var mainView: UIView!
 	@IBOutlet private var categoriesControl: UISegmentedControl!
 	@IBOutlet private var votingPagesCollectionView: UICollectionView!
 	@IBOutlet private var bottomVoteView: UIView!
-
-	private var viewModel: VoteCategoriesListViewModel!
+	@IBOutlet private var voteButton: UIButton!
 	
+	private var viewModel: VoteCategoriesListViewModel!
+	private var menuButton: MenuButton = MenuButton()
 	private var secondaryBackgroundView: UIView!
 	
 	var contest: Contest!
@@ -51,6 +53,10 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 	private func setupUI() {
 		setupVoteCategoriesBar()
 		setupVotingPagesView()
+		setupMenuButton()
+		
+		voteButton.titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: Font.Size.medium)
+		voteButton.titleLabel?.textAlignment = .center
 	}
 	
 	private func setupVoteCategoriesBar() {
@@ -85,12 +91,16 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 	}
 	
 	private func setupData() {
-		// TODO: Data persistance
 		VoteCategory.allCases.forEach { category in
 			let vc = ParticipantsViewController.instantiateViewController()
 			vc.fill(with: DefaultParticipantsListViewModel(for: contest, category: category))
 			self.addChild(vc)
 		}
+	}
+	
+	private func setupMenuButton() {
+		menuButton.setupButton(for: navigationController, with: UIStoryboard(name: Self.identifier, bundle: nil))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
 	}
 	
 	@objc private func handleSegmentSelected(_ action: UIAction) {
@@ -105,6 +115,28 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 	}
 }
 
+// MARK: - Vote Button
+
+extension MainVoteViewController {
+	
+	@IBAction func didTapVoteButton(_ sender: UIButton) {
+		// Can vote iff logged in
+		guard APIManager.shared().authService.isLoggedIn() else {
+			// show information about it
+			let alertVC = AlertInfoViewController.instantiateViewController()
+			
+			alertVC.setupWith(self,
+							  title: "Information",
+							  text: "Only logged in users can vote in contests. Please log in or register to vote.",
+							  menuButton: menuButton,
+							  leftButtonTitle: "Dismiss")
+			
+			return
+		}
+	}
+	
+}
+
 // MARK: - UICollectionViewDelegate
 
 extension MainVoteViewController: UICollectionViewDelegate {
@@ -115,6 +147,12 @@ extension MainVoteViewController: UICollectionViewDelegate {
 		
 		// Paging
 		categoriesControl.selectedSegmentIndex = item
+		
+		let text = categories[item]
+		let newTitle = "Vote for \(text)"
+		//voteButton.titleLabel?.text = newTitle
+		print(newTitle)
+		voteButton.setTitle(newTitle, for: .normal)
 	}
 
 }
@@ -149,7 +187,11 @@ extension MainVoteViewController: CollectionViewSegmentedControlDelegate {
 	
 	func didSelectItem(_ indexPath: IndexPath) {
 		votingPagesCollectionView.isPagingEnabled = false
+		
+		
 		votingPagesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+		
+		
 		votingPagesCollectionView.isPagingEnabled = true
 	}
 

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Info View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AlertInfoViewController" id="Y6W-OH-hqX" customClass="AlertInfoViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUv-33-Tjy">
+                                <rect key="frame" x="71.666666666666686" y="353" width="250" height="171"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Buj-q7-zqY">
+                                        <rect key="frame" x="215" y="0.0" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="peD-LO-4El"/>
+                                            <constraint firstAttribute="height" constant="35" id="vft-p0-DSl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark.circle" catalog="system">
+                                            <color key="baseForegroundColor" name="Winter"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapDismissButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HeN-sT-2CT"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-TX-1YC">
+                                        <rect key="frame" x="35" y="6.9999999999999982" width="180" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Winter"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-hZ-Nm1">
+                                        <rect key="frame" x="10" y="37.333333333333307" width="230" height="99.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Winter"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I2z-IR-PAa">
+                                        <rect key="frame" x="46" y="136.66666666666669" width="158" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-RO-DWu">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owe-EE-Drh">
+                                                <rect key="frame" x="82.999999999999986" y="0.0" width="75.000000000000014" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="158" id="466-DW-Ijp"/>
+                                            <constraint firstAttribute="height" constant="34.333333333333343" id="AVS-G3-50t"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Light Navy"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="171" id="0HK-W6-CGQ"/>
+                                    <constraint firstItem="I2z-IR-PAa" firstAttribute="top" secondItem="Fpv-hZ-Nm1" secondAttribute="bottom" id="12x-yh-iKZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="3wn-hT-vxm"/>
+                                    <constraint firstItem="TR0-TX-1YC" firstAttribute="top" secondItem="vUv-33-Tjy" secondAttribute="top" constant="7" id="5Vy-wI-hyX"/>
+                                    <constraint firstItem="Fpv-hZ-Nm1" firstAttribute="leading" secondItem="vUv-33-Tjy" secondAttribute="leading" constant="10" id="6UN-UW-xGU"/>
+                                    <constraint firstItem="Buj-q7-zqY" firstAttribute="top" secondItem="vUv-33-Tjy" secondAttribute="top" id="7aT-t5-ycv"/>
+                                    <constraint firstItem="Fpv-hZ-Nm1" firstAttribute="top" secondItem="TR0-TX-1YC" secondAttribute="bottom" constant="10" id="Aab-na-FGm"/>
+                                    <constraint firstAttribute="bottom" secondItem="I2z-IR-PAa" secondAttribute="bottom" id="d07-HA-f4E"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fpv-hZ-Nm1" secondAttribute="trailing" constant="10" id="huk-cM-c81"/>
+                                    <constraint firstItem="I2z-IR-PAa" firstAttribute="centerX" secondItem="vUv-33-Tjy" secondAttribute="centerX" id="sCW-rh-VF6"/>
+                                    <constraint firstItem="TR0-TX-1YC" firstAttribute="leading" secondItem="vUv-33-Tjy" secondAttribute="leading" constant="35" id="uHR-dr-bVA"/>
+                                    <constraint firstItem="Buj-q7-zqY" firstAttribute="leading" secondItem="TR0-TX-1YC" secondAttribute="trailing" id="w9o-Fi-f0T"/>
+                                    <constraint firstAttribute="trailing" secondItem="Buj-q7-zqY" secondAttribute="trailing" id="ziW-JJ-4d7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vUv-33-Tjy" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Clw-hm-v1T"/>
+                            <constraint firstItem="vUv-33-Tjy" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="xcr-5z-yQU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="vUv-33-Tjy" id="X6R-0B-bpv"/>
+                        <outlet property="dismissButton" destination="Buj-q7-zqY" id="Pwi-9J-lbF"/>
+                        <outlet property="leftButton" destination="LEE-RO-DWu" id="SUk-2X-PTL"/>
+                        <outlet property="rightButton" destination="Owe-EE-Drh" id="7I0-se-U5Y"/>
+                        <outlet property="textLabel" destination="Fpv-hZ-Nm1" id="KWG-Cb-4Lv"/>
+                        <outlet property="titleLabel" destination="TR0-TX-1YC" id="yRW-aR-6aC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-49"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="Light Navy">
+            <color red="0.14499999582767487" green="0.14100000262260437" blue="0.44299998879432678" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

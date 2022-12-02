@@ -17,13 +17,9 @@
 		523B7346290ECA7D0070E12A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */; };
 		523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 523B734D290ECBCE0070E12A /* GoogleService-Info.plist */; };
 		523B7354290ECEE40070E12A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7353290ECEE40070E12A /* MainViewController.swift */; };
-		523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7356290ED04F0070E12A /* ContentConstants.swift */; };
 		523B735E290EE1110070E12A /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735D290EE1110070E12A /* DatabaseService.swift */; };
 		523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B735F290EE9B00070E12A /* FirebaseService.swift */; };
 		523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7361290EEA5A0070E12A /* ValidationHelper.swift */; };
-		523B7365291027BF0070E12A /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7364291027BF0070E12A /* DesignConstants.swift */; };
-		523B7367291027ED0070E12A /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7366291027ED0070E12A /* APIConstants.swift */; };
-		523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7368291028330070E12A /* ViewControllerConstants.swift */; };
 		523B736B291028A30070E12A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736A291028A30070E12A /* AuthenticationService.swift */; };
 		523B736D2910293A0070E12A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736C2910293A0070E12A /* APIManager.swift */; };
 		523B736F291072350070E12A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B736E291072350070E12A /* RegisterViewController.swift */; };
@@ -47,6 +43,10 @@
 		5295AA8A29198EBC00B820FE /* ConstatnsTypealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8929198EBC00B820FE /* ConstatnsTypealiases.swift */; };
 		5295AA8C291996D600B820FE /* MainVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8B291996D600B820FE /* MainVoteViewController.swift */; };
 		5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */; };
+		52A1DB1C293A52DE0014D0FE /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB19293A52DE0014D0FE /* DesignConstants.swift */; };
+		52A1DB1D293A52DE0014D0FE /* ContentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB1A293A52DE0014D0FE /* ContentConstants.swift */; };
+		52A1DB1E293A52DE0014D0FE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB1B293A52DE0014D0FE /* APIConstants.swift */; };
+		52A1DB22293A542A0014D0FE /* ViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB21293A542A0014D0FE /* ViewControllerConstants.swift */; };
 		52ADDB16292D7E2200D6703F /* CollectionViewSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */; };
 		52ADDB18292D7FA700D6703F /* SegmentedControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */; };
 		52ADDB1A292D809500D6703F /* CollectionViewSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */; };
@@ -71,16 +71,15 @@
 		52ADDB41292E60CC00D6703F /* Metropolis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB24292E60A600D6703F /* Metropolis-Light.ttf */; };
 		52ADDB42292E60CC00D6703F /* Metropolis-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */; };
 		52BA482C2936406A005233D9 /* VoteCategoryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */; };
-		52BA485D29394FFB005233D9 /* UITableView+ReloadItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BA485C29394FFB005233D9 /* UITableView+ReloadItems.swift */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
 		52C327DE291137D100F9965A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327DD291137D100F9965A /* LabelView.swift */; };
 		52C8180C291465F40006CA38 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180B291465F40006CA38 /* MenuOption.swift */; };
 		52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */; };
-		52C81815291566910006CA38 /* AboutInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81814291566910006CA38 /* AboutInfoView.swift */; };
+		52C81815291566910006CA38 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81814291566910006CA38 /* InfoView.swift */; };
 		52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */; };
-		52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* AboutInfoView.xib */; };
+		52C81819291572AB0006CA38 /* InfoView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* InfoView3.xib */; };
 		52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */; };
 		52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181C291587800006CA38 /* ContestsViewController.swift */; };
 		52C9516A2933A2DD000D7FEE /* HavingNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C951692933A2DD000D7FEE /* HavingNib.swift */; };
@@ -98,6 +97,11 @@
 		52DD7D8E2931022300EDCB5E /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD7D8D2931022300EDCB5E /* AppAppearance.swift */; };
 		52DD7D9B2931526E00EDCB5E /* ParticipantListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD7D9A2931526E00EDCB5E /* ParticipantListItemViewModel.swift */; };
 		52DD7D9E2931581300EDCB5E /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD7D9D2931581300EDCB5E /* Observable.swift */; };
+		52DFD2D1293A6F6F0092140E /* InfoView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D0293A6F6F0092140E /* InfoView2.xib */; };
+		52DFD2D3293A70500092140E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D2293A70500092140E /* InfoView.xib */; };
+		52DFD2D6293A84E50092140E /* AlertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */; };
+		52DFD2D7293A84E50092140E /* AlertInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */; };
+		52DFD2DB293AB2AD0092140E /* AlertInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,18 +126,14 @@
 		523B7347290ECA7D0070E12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523B734D290ECBCE0070E12A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		523B7353290ECEE40070E12A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		523B7356290ED04F0070E12A /* ContentConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentConstants.swift; sourceTree = "<group>"; };
 		523B735D290EE1110070E12A /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/DatabaseService.swift"; sourceTree = "<group>"; };
 		523B735F290EE9B00070E12A /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirebaseService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/FirebaseService.swift"; sourceTree = "<group>"; };
-		523B7361290EEA5A0070E12A /* ValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValidationHelper.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/ValidationHelper.swift"; sourceTree = "<group>"; };
-		523B7364291027BF0070E12A /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/DesignConstants.swift"; sourceTree = "<group>"; };
-		523B7366291027ED0070E12A /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/APIConstants.swift"; sourceTree = "<group>"; };
-		523B7368291028330070E12A /* ViewControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerConstants.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/ViewControllerConstants.swift"; sourceTree = "<group>"; };
+		523B7361290EEA5A0070E12A /* ValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		523B736A291028A30070E12A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/AuthenticationService.swift"; sourceTree = "<group>"; };
 		523B736C2910293A0070E12A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/APIManager.swift"; sourceTree = "<group>"; };
 		523B736E291072350070E12A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		52615577291660FE006988BD /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuButton.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/MenuButton.swift"; sourceTree = "<group>"; };
-		5261557929166884006988BD /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notification+Names.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/Notification+Names.swift"; sourceTree = "<group>"; };
+		5261557929166884006988BD /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Names.swift"; sourceTree = "<group>"; };
 		526155802916B002006988BD /* Contest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 		526155822916B106006988BD /* ContestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/ContestViewModel.swift"; sourceTree = "<group>"; };
 		5261558E2916F8FD006988BD /* HasDocumentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDocumentID.swift; sourceTree = "<group>"; };
@@ -141,16 +141,20 @@
 		5261559729180074006988BD /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		526FDF1D293270AB00B7DEB8 /* VoteCategoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteCategoriesListViewModel.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/ViewModel/VoteCategoriesListViewModel.swift"; sourceTree = "<group>"; };
 		526FDF1F293272F100B7DEB8 /* VoteCategoriesListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteCategoriesListItemViewModel.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/ViewModel/VoteCategoriesListItemViewModel.swift"; sourceTree = "<group>"; };
-		526FDF2129327AC300B7DEB8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingIndicator.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/LoadingIndicator.swift"; sourceTree = "<group>"; };
+		526FDF2129327AC300B7DEB8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		5295AA8729198D3F00B820FE /* VoteMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteMenuCell.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/Cells/VoteMenuCell.swift"; sourceTree = "<group>"; };
-		5295AA8929198EBC00B820FE /* ConstatnsTypealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConstatnsTypealiases.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/ConstatnsTypealiases.swift"; sourceTree = "<group>"; };
+		5295AA8929198EBC00B820FE /* ConstatnsTypealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatnsTypealiases.swift; sourceTree = "<group>"; };
 		5295AA8B291996D600B820FE /* MainVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVoteViewController.swift; sourceTree = "<group>"; };
 		5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCategoryPageCell.swift; sourceTree = "<group>"; };
+		52A1DB19293A52DE0014D0FE /* DesignConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignConstants.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/DesignConstants.swift"; sourceTree = "<group>"; };
+		52A1DB1A293A52DE0014D0FE /* ContentConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentConstants.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/ContentConstants.swift"; sourceTree = "<group>"; };
+		52A1DB1B293A52DE0014D0FE /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/APIConstants.swift"; sourceTree = "<group>"; };
+		52A1DB21293A542A0014D0FE /* ViewControllerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerConstants.swift; sourceTree = "<group>"; };
 		52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewSegmentedControl.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/CollectionViewSegmentedControl.swift"; sourceTree = "<group>"; };
 		52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegmentedControlButton.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/SegmentedControlButton.swift"; sourceTree = "<group>"; };
 		52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionViewSegmentedControl.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/CollectionViewSegmentedControl.xib"; sourceTree = "<group>"; };
 		52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SegmentedControlButton.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/SegmentedControlButton.xib"; sourceTree = "<group>"; };
-		52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+ForEachOtherThan.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/Array+ForEachOtherThan.swift"; sourceTree = "<group>"; };
+		52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ForEachOtherThan.swift"; sourceTree = "<group>"; };
 		52ADDB1F292E60A600D6703F /* Metropolis-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.ttf"; sourceTree = "<group>"; };
 		52ADDB20292E60A600D6703F /* Metropolis-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Medium.ttf"; sourceTree = "<group>"; };
 		52ADDB21292E60A600D6703F /* Metropolis-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -170,17 +174,16 @@
 		52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.ttf"; sourceTree = "<group>"; };
 		52ADDB30292E60A700D6703F /* Metropolis-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoteCategoryPageCell.xib; path = ../../../../../../../../../Maciej/.Trash/VoteCategoryPageCell.xib; sourceTree = "<group>"; };
-		52BA485C29394FFB005233D9 /* UITableView+ReloadItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITableView+ReloadItems.swift"; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Extensions/UITableView+ReloadItems.swift"; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52C327DD291137D100F9965A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		52C8180B291465F40006CA38 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOption.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Menu/MenuOption.swift"; sourceTree = "<group>"; };
-		52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+AddObserversToSubviews.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIViewController+AddObserversToSubviews.swift"; sourceTree = "<group>"; };
-		52C81814291566910006CA38 /* AboutInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutInfoView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.swift"; sourceTree = "<group>"; };
-		52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+InstanceFromNib.swift"; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Extensions/UIView+InstanceFromNib.swift"; sourceTree = "<group>"; };
-		52C81818291572AB0006CA38 /* AboutInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutInfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/AboutInfoView.xib"; sourceTree = "<group>"; };
-		52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashboardTabBarController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Controllers/DashboardTabBarController.swift"; sourceTree = "<group>"; };
+		52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddObserversToSubviews.swift"; sourceTree = "<group>"; };
+		52C81814291566910006CA38 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView.swift"; sourceTree = "<group>"; };
+		52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InstanceFromNib.swift"; sourceTree = "<group>"; };
+		52C81818291572AB0006CA38 /* InfoView3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView3.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView3.xib"; sourceTree = "<group>"; };
+		52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		52C8181C291587800006CA38 /* ContestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
 		52C951692933A2DD000D7FEE /* HavingNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavingNib.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Protocols/HavingNib.swift"; sourceTree = "<group>"; };
 		52C9516C2934064A000D7FEE /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITableView+Register.swift"; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Extensions/UITableView+Register.swift"; sourceTree = "<group>"; };
@@ -197,6 +200,11 @@
 		52DD7D8D2931022300EDCB5E /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppAppearance.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Application/AppAppearance.swift"; sourceTree = "<group>"; };
 		52DD7D9A2931526E00EDCB5E /* ParticipantListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantListItemViewModel.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/ViewModel/ParticipantListItemViewModel.swift"; sourceTree = "<group>"; };
 		52DD7D9D2931581300EDCB5E /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Observable.swift"; sourceTree = "<group>"; };
+		52DFD2D0293A6F6F0092140E /* InfoView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView2.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView2.xib"; sourceTree = "<group>"; };
+		52DFD2D2293A70500092140E /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView.xib"; sourceTree = "<group>"; };
+		52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertInfoViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.swift"; sourceTree = "<group>"; };
+		52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AlertInfoViewController.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.xib"; sourceTree = "<group>"; };
+		52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AlertInfoViewController.storyboard; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.storyboard"; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,8 +327,6 @@
 			children = (
 				5295AA902919989200B820FE /* Authentication */,
 				5295AA8F2919988C00B820FE /* Voting */,
-				52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */,
-				52C8181C291587800006CA38 /* ContestsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -360,9 +366,6 @@
 		523B7355290ED0470070E12A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				523B73632910279C0070E12A /* Constants */,
-				523B7361290EEA5A0070E12A /* ValidationHelper.swift */,
-				5295AA8929198EBC00B820FE /* ConstatnsTypealiases.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -370,10 +373,11 @@
 		523B73632910279C0070E12A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				523B7356290ED04F0070E12A /* ContentConstants.swift */,
-				523B7364291027BF0070E12A /* DesignConstants.swift */,
-				523B7366291027ED0070E12A /* APIConstants.swift */,
-				523B7368291028330070E12A /* ViewControllerConstants.swift */,
+				52A1DB1B293A52DE0014D0FE /* APIConstants.swift */,
+				52A1DB1A293A52DE0014D0FE /* ContentConstants.swift */,
+				52A1DB19293A52DE0014D0FE /* DesignConstants.swift */,
+				52A1DB21293A542A0014D0FE /* ViewControllerConstants.swift */,
+				5295AA8929198EBC00B820FE /* ConstatnsTypealiases.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -411,8 +415,6 @@
 		5295AA902919989200B820FE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				523B736E291072350070E12A /* RegisterViewController.swift */,
-				521541272913206D00E19B6F /* LoginViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -440,13 +442,15 @@
 			isa = PBXGroup;
 			children = (
 				52C327DD291137D100F9965A /* LabelView.swift */,
-				52C81814291566910006CA38 /* AboutInfoView.swift */,
-				52C81818291572AB0006CA38 /* AboutInfoView.xib */,
+				52C81814291566910006CA38 /* InfoView.swift */,
+				52DFD2D2293A70500092140E /* InfoView.xib */,
+				52C81818291572AB0006CA38 /* InfoView3.xib */,
 				52615577291660FE006988BD /* MenuButton.swift */,
 				52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */,
 				52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */,
 				52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */,
 				52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */,
+				52DFD2D0293A6F6F0092140E /* InfoView2.xib */,
 			);
 			path = "View Elements";
 			sourceTree = "<group>";
@@ -469,10 +473,6 @@
 		52C8181129150D1B0006CA38 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */,
-				52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */,
-				5261557929166884006988BD /* Notification+Names.swift */,
-				52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -482,7 +482,10 @@
 			children = (
 				52C9516C2934064A000D7FEE /* UITableView+Register.swift */,
 				52C9516E29340797000D7FEE /* UICollectionView+Register.swift */,
-				52BA485C29394FFB005233D9 /* UITableView+ReloadItems.swift */,
+				52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */,
+				52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */,
+				5261557929166884006988BD /* Notification+Names.swift */,
+				52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -538,6 +541,8 @@
 			children = (
 				523B7353290ECEE40070E12A /* MainViewController.swift */,
 				523B733F290ECA7C0070E12A /* Main.storyboard */,
+				52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */,
+				52C8181C291587800006CA38 /* ContestsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -552,6 +557,8 @@
 		52DD7D92293103FD00EDCB5E /* UserAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				523B736E291072350070E12A /* RegisterViewController.swift */,
+				521541272913206D00E19B6F /* LoginViewController.swift */,
 			);
 			path = UserAuthentication;
 			sourceTree = "<group>";
@@ -627,10 +634,15 @@
 		52DD7D9C2931580400EDCB5E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				523B73632910279C0070E12A /* Constants */,
 				52C9516B2933AA68000D7FEE /* Extensions */,
 				52D02ECB2933946D000D696A /* Protocols */,
 				52DD7D9D2931581300EDCB5E /* Observable.swift */,
 				526FDF2129327AC300B7DEB8 /* LoadingIndicator.swift */,
+				523B7361290EEA5A0070E12A /* ValidationHelper.swift */,
+				52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */,
+				52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */,
+				52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -753,16 +765,20 @@
 				52ADDB1A292D809500D6703F /* CollectionViewSegmentedControl.xib in Resources */,
 				52ADDB3A292E60CC00D6703F /* Metropolis-RegularItalic.ttf in Resources */,
 				52ADDB1C292D824E00D6703F /* SegmentedControlButton.xib in Resources */,
-				52C81819291572AB0006CA38 /* AboutInfoView.xib in Resources */,
+				52DFD2D7293A84E50092140E /* AlertInfoViewController.xib in Resources */,
+				52C81819291572AB0006CA38 /* InfoView3.xib in Resources */,
 				52ADDB3B292E60CC00D6703F /* Metropolis-Medium.ttf in Resources */,
 				52ADDB36292E60CC00D6703F /* Metropolis-BlackItalic.ttf in Resources */,
 				52D02ECA293392C7000D696A /* ParticipantsViewController.storyboard in Resources */,
 				52ADDB32292E60CC00D6703F /* Metropolis-LightItalic.ttf in Resources */,
+				52DFD2DB293AB2AD0092140E /* AlertInfoViewController.storyboard in Resources */,
 				52ADDB3D292E60CC00D6703F /* Metropolis-ExtraLight.ttf in Resources */,
 				52ADDB38292E60CC00D6703F /* Metropolis-ThinItalic.ttf in Resources */,
 				52ADDB33292E60CC00D6703F /* Metropolis-Regular.ttf in Resources */,
+				52DFD2D3293A70500092140E /* InfoView.xib in Resources */,
 				52ADDB35292E60CC00D6703F /* Metropolis-SemiBoldItalic.ttf in Resources */,
 				52CE1746291E673000F93E28 /* ContestTableViewCell.xib in Resources */,
+				52DFD2D1293A6F6F0092140E /* InfoView2.xib in Resources */,
 				52ADDB3C292E60CC00D6703F /* Metropolis-ExtraBoldItalic.ttf in Resources */,
 				52CE174C291EECC500F93E28 /* ParticipantCell.xib in Resources */,
 				52ADDB3F292E60CC00D6703F /* Metropolis-ExtraBold.ttf in Resources */,
@@ -836,13 +852,13 @@
 				52C9516D2934064A000D7FEE /* UITableView+Register.swift in Sources */,
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
-				523B7369291028330070E12A /* ViewControllerConstants.swift in Sources */,
 				52ADDB18292D7FA700D6703F /* SegmentedControlButton.swift in Sources */,
 				52CE1751291EF00C00F93E28 /* ParticipantListViewModel.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				526FDF20293272F100B7DEB8 /* VoteCategoriesListItemViewModel.swift in Sources */,
 				52DD7D9E2931581300EDCB5E /* Observable.swift in Sources */,
+				52A1DB22293A542A0014D0FE /* ViewControllerConstants.swift in Sources */,
 				52C8180C291465F40006CA38 /* MenuOption.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
 				5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */,
@@ -856,26 +872,26 @@
 				523A8FDC2932A35C005A8071 /* ParticipantsViewController.swift in Sources */,
 				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
-				52BA485D29394FFB005233D9 /* UITableView+ReloadItems.swift in Sources */,
-				523B7367291027ED0070E12A /* APIConstants.swift in Sources */,
-				52C81815291566910006CA38 /* AboutInfoView.swift in Sources */,
+				52C81815291566910006CA38 /* InfoView.swift in Sources */,
 				5295AA8A29198EBC00B820FE /* ConstatnsTypealiases.swift in Sources */,
 				52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */,
 				526FDF1E293270AB00B7DEB8 /* VoteCategoriesListViewModel.swift in Sources */,
 				526FDF2229327AC300B7DEB8 /* LoadingIndicator.swift in Sources */,
-				523B7365291027BF0070E12A /* DesignConstants.swift in Sources */,
 				5295AA8C291996D600B820FE /* MainVoteViewController.swift in Sources */,
 				52C9516A2933A2DD000D7FEE /* HavingNib.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
 				52CE1743291C43F000F93E28 /* ContestTableViewCell.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
+				52A1DB1E293A52DE0014D0FE /* APIConstants.swift in Sources */,
 				52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */,
 				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
+				52DFD2D6293A84E50092140E /* AlertInfoViewController.swift in Sources */,
+				52A1DB1D293A52DE0014D0FE /* ContentConstants.swift in Sources */,
 				5261558F2916F8FD006988BD /* HasDocumentID.swift in Sources */,
+				52A1DB1C293A52DE0014D0FE /* DesignConstants.swift in Sources */,
 				52DD7D9B2931526E00EDCB5E /* ParticipantListItemViewModel.swift in Sources */,
 				52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */,
-				523B7357290ED04F0070E12A /* ContentConstants.swift in Sources */,
 				52C327DE291137D100F9965A /* LabelView.swift in Sources */,
 				52615578291660FE006988BD /* MenuButton.swift in Sources */,
 				52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */,

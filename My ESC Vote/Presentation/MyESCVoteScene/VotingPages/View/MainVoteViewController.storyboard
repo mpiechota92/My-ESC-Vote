@@ -85,21 +85,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Cy-BF-E4G">
                                 <rect key="frame" x="0.0" y="766" width="393" height="86"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N3-TS-C4I">
-                                        <rect key="frame" x="146.66666666666666" y="9" width="100" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="3cj-q9-1x9"/>
-                                            <constraint firstAttribute="width" constant="100" id="CwB-3Y-QlH"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eas-st-fXS">
+                                        <rect key="frame" x="117.66666666666669" y="9" width="158" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Vote"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Vote for Favourite"/>
+                                        <connections>
+                                            <action selector="didTapVoteButton:" destination="bDz-0b-6AA" eventType="touchUpInside" id="zvi-Su-0n1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Light Navy"/>
                                 <constraints>
-                                    <constraint firstItem="7N3-TS-C4I" firstAttribute="centerX" secondItem="9Cy-BF-E4G" secondAttribute="centerX" id="1Qo-t7-pFB"/>
-                                    <constraint firstItem="7N3-TS-C4I" firstAttribute="top" secondItem="9Cy-BF-E4G" secondAttribute="top" constant="9" id="2JK-zY-ezX"/>
                                     <constraint firstAttribute="height" constant="86" id="D6E-PE-lB0"/>
+                                    <constraint firstItem="eas-st-fXS" firstAttribute="centerX" secondItem="9Cy-BF-E4G" secondAttribute="centerX" id="cIC-h1-GL7"/>
+                                    <constraint firstItem="eas-st-fXS" firstAttribute="top" secondItem="9Cy-BF-E4G" secondAttribute="top" constant="9" id="efg-1s-ivN"/>
+                                    <constraint firstAttribute="bottom" secondItem="eas-st-fXS" secondAttribute="bottom" constant="42" id="rCA-Gw-aCl"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -120,6 +120,8 @@
                     <connections>
                         <outlet property="bottomVoteView" destination="9Cy-BF-E4G" id="QHC-fW-VZV"/>
                         <outlet property="categoriesControl" destination="L1K-eu-pi2" id="05H-mc-yWG"/>
+                        <outlet property="mainView" destination="wIG-9K-bnn" id="fMf-Id-19I"/>
+                        <outlet property="voteButton" destination="eas-st-fXS" id="4Vx-qu-6xs"/>
                         <outlet property="votingPagesCollectionView" destination="Scr-gw-cXy" id="Yxz-wa-w0Y"/>
                     </connections>
                 </viewController>

@@ -17,7 +17,9 @@ final class AppAppearance {
 	}
 	
 	static private func navigationBarAppearance() {
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.Primary.accentColor]
+		UINavigationBar.appearance().titleTextAttributes = [
+			NSAttributedString.Key.foregroundColor: Color.Primary.accentColor
+		]
 	}
 	
 	static private func tabBarAppearance() {

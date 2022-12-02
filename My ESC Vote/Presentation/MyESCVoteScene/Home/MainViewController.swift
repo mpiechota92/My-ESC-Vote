@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, HavingStoryboard {
 	
 	private var menuButton: MenuButton = MenuButton()
 	

@@ -20,7 +20,7 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
 		
 		let storyboard = UIStoryboard(name: Constants.UI.Storyboard.main, bundle: nil)
 		
-		guard let homeVC = storyboard.instantiateViewController(withIdentifier: Constants.UI.ViewController.ID.main) as? MainViewController else {
+		guard let homeVC = storyboard.instantiateViewController(withIdentifier: MainViewController.identifier) as? MainViewController else {
 			fatalError("Could not instantiate MainViewController")
 		}
 		
