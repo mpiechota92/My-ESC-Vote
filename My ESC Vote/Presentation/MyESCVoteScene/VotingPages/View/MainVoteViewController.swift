@@ -131,8 +131,17 @@ extension MainVoteViewController {
 							  menuButton: menuButton,
 							  leftButtonTitle: "Dismiss")
 			
+			alertVC.show()
 			return
 		}
+		
+		// TODO: check if the user has already voted in that category
+		
+		// Vote for specific category
+		//
+		
+		
+		
 	}
 	
 }

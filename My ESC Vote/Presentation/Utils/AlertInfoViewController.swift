@@ -85,7 +85,7 @@ class AlertInfoViewController: UIViewController, HavingStoryboard {
 				   title: String, text: String,
 				   menuButton: MenuButton? = nil,
 				   leftButtonTitle: String? = nil, leftAction: Selector? = nil,
-				   rightButtonTitle: String? = nil, rightAction: Selector? = nil) -> AlertInfoViewController {
+				   rightButtonTitle: String? = nil, rightAction: Selector? = nil) {
 		
 		viewController.addChild(self)
 		self.view.frame = viewController.view.bounds
@@ -116,12 +116,9 @@ class AlertInfoViewController: UIViewController, HavingStoryboard {
 			self.rightButton.addTarget(self, action: rightAction, for: .touchUpInside)
 		}
 		
-		show()
-		
-		return self
 	}
 	
-	private func show() {
+	func show() {
 		let initialTransform = contentView.transform
 		contentView.transform = .identity.scaledBy(x: 0, y: 0)
 		

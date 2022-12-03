@@ -47,10 +47,10 @@
 		52A1DB1D293A52DE0014D0FE /* ContentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB1A293A52DE0014D0FE /* ContentConstants.swift */; };
 		52A1DB1E293A52DE0014D0FE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB1B293A52DE0014D0FE /* APIConstants.swift */; };
 		52A1DB22293A542A0014D0FE /* ViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1DB21293A542A0014D0FE /* ViewControllerConstants.swift */; };
-		52ADDB16292D7E2200D6703F /* CollectionViewSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */; };
-		52ADDB18292D7FA700D6703F /* SegmentedControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */; };
-		52ADDB1A292D809500D6703F /* CollectionViewSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */; };
-		52ADDB1C292D824E00D6703F /* SegmentedControlButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */; };
+		52AA9711293B814A00F019F2 /* VoteCategoryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AA9710293B814A00F019F2 /* VoteCategoryPageCell.xib */; };
+		52AA9713293B9B8000F019F2 /* StaticParticipantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9712293B9B8000F019F2 /* StaticParticipantsData.swift */; };
+		52AA9715293B9B9800F019F2 /* JESC2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9714293B9B9800F019F2 /* JESC2022.swift */; };
+		52AA9718293B9E1500F019F2 /* ESC2023.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9717293B9E1500F019F2 /* ESC2023.swift */; };
 		52ADDB1E292D8AF500D6703F /* Array+ForEachOtherThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */; };
 		52ADDB31292E60CC00D6703F /* Metropolis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB2E292E60A700D6703F /* Metropolis-Bold.ttf */; };
 		52ADDB32292E60CC00D6703F /* Metropolis-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB1F292E60A600D6703F /* Metropolis-LightItalic.ttf */; };
@@ -70,16 +70,13 @@
 		52ADDB40292E60CC00D6703F /* Metropolis-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB23292E60A600D6703F /* Metropolis-MediumItalic.ttf */; };
 		52ADDB41292E60CC00D6703F /* Metropolis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB24292E60A600D6703F /* Metropolis-Light.ttf */; };
 		52ADDB42292E60CC00D6703F /* Metropolis-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */; };
-		52BA482C2936406A005233D9 /* VoteCategoryPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */; };
 		52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CB29108BFB00F9965A /* RegistrationForm.swift */; };
 		52C327CF291093E300F9965A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327CE291093E300F9965A /* RegisterViewModel.swift */; };
 		52C327D22910A28600F9965A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52C327D42910A28600F9965A /* Localizable.strings */; };
 		52C327DE291137D100F9965A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C327DD291137D100F9965A /* LabelView.swift */; };
-		52C8180C291465F40006CA38 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8180B291465F40006CA38 /* MenuOption.swift */; };
 		52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */; };
 		52C81815291566910006CA38 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81814291566910006CA38 /* InfoView.swift */; };
 		52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */; };
-		52C81819291572AB0006CA38 /* InfoView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C81818291572AB0006CA38 /* InfoView3.xib */; };
 		52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */; };
 		52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8181C291587800006CA38 /* ContestsViewController.swift */; };
 		52C9516A2933A2DD000D7FEE /* HavingNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C951692933A2DD000D7FEE /* HavingNib.swift */; };
@@ -97,7 +94,6 @@
 		52DD7D8E2931022300EDCB5E /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD7D8D2931022300EDCB5E /* AppAppearance.swift */; };
 		52DD7D9B2931526E00EDCB5E /* ParticipantListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD7D9A2931526E00EDCB5E /* ParticipantListItemViewModel.swift */; };
 		52DD7D9E2931581300EDCB5E /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD7D9D2931581300EDCB5E /* Observable.swift */; };
-		52DFD2D1293A6F6F0092140E /* InfoView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D0293A6F6F0092140E /* InfoView2.xib */; };
 		52DFD2D3293A70500092140E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D2293A70500092140E /* InfoView.xib */; };
 		52DFD2D6293A84E50092140E /* AlertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */; };
 		52DFD2D7293A84E50092140E /* AlertInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */; };
@@ -150,10 +146,10 @@
 		52A1DB1A293A52DE0014D0FE /* ContentConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentConstants.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/ContentConstants.swift"; sourceTree = "<group>"; };
 		52A1DB1B293A52DE0014D0FE /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Utils/Constants/APIConstants.swift"; sourceTree = "<group>"; };
 		52A1DB21293A542A0014D0FE /* ViewControllerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerConstants.swift; sourceTree = "<group>"; };
-		52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewSegmentedControl.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/CollectionViewSegmentedControl.swift"; sourceTree = "<group>"; };
-		52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegmentedControlButton.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/SegmentedControlButton.swift"; sourceTree = "<group>"; };
-		52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionViewSegmentedControl.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/CollectionViewSegmentedControl.xib"; sourceTree = "<group>"; };
-		52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SegmentedControlButton.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/SegmentedControlButton.xib"; sourceTree = "<group>"; };
+		52AA9710293B814A00F019F2 /* VoteCategoryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoteCategoryPageCell.xib; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/View/Cells/VoteCategoryPageCell.xib"; sourceTree = "<group>"; };
+		52AA9712293B9B8000F019F2 /* StaticParticipantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StaticParticipantsData.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Data/StaticParticipantsData.swift"; sourceTree = "<group>"; };
+		52AA9714293B9B9800F019F2 /* JESC2022.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JESC2022.swift; sourceTree = "<group>"; };
+		52AA9717293B9E1500F019F2 /* ESC2023.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESC2023.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Data/Contests/ESC2023.swift"; sourceTree = "<group>"; };
 		52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ForEachOtherThan.swift"; sourceTree = "<group>"; };
 		52ADDB1F292E60A600D6703F /* Metropolis-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.ttf"; sourceTree = "<group>"; };
 		52ADDB20292E60A600D6703F /* Metropolis-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Medium.ttf"; sourceTree = "<group>"; };
@@ -173,16 +169,13 @@
 		52ADDB2E292E60A700D6703F /* Metropolis-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Bold.ttf"; sourceTree = "<group>"; };
 		52ADDB2F292E60A700D6703F /* Metropolis-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.ttf"; sourceTree = "<group>"; };
 		52ADDB30292E60A700D6703F /* Metropolis-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoteCategoryPageCell.xib; path = ../../../../../../../../../Maciej/.Trash/VoteCategoryPageCell.xib; sourceTree = "<group>"; };
 		52C327CB29108BFB00F9965A /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		52C327CE291093E300F9965A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/ViewModels/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		52C327D32910A28600F9965A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52C327DD291137D100F9965A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
-		52C8180B291465F40006CA38 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuOption.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Models/Menu/MenuOption.swift"; sourceTree = "<group>"; };
 		52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddObserversToSubviews.swift"; sourceTree = "<group>"; };
 		52C81814291566910006CA38 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView.swift"; sourceTree = "<group>"; };
 		52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InstanceFromNib.swift"; sourceTree = "<group>"; };
-		52C81818291572AB0006CA38 /* InfoView3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView3.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView3.xib"; sourceTree = "<group>"; };
 		52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		52C8181C291587800006CA38 /* ContestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
 		52C951692933A2DD000D7FEE /* HavingNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavingNib.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Protocols/HavingNib.swift"; sourceTree = "<group>"; };
@@ -200,7 +193,6 @@
 		52DD7D8D2931022300EDCB5E /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppAppearance.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Application/AppAppearance.swift"; sourceTree = "<group>"; };
 		52DD7D9A2931526E00EDCB5E /* ParticipantListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantListItemViewModel.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/ViewModel/ParticipantListItemViewModel.swift"; sourceTree = "<group>"; };
 		52DD7D9D2931581300EDCB5E /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Observable.swift"; sourceTree = "<group>"; };
-		52DFD2D0293A6F6F0092140E /* InfoView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView2.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView2.xib"; sourceTree = "<group>"; };
 		52DFD2D2293A70500092140E /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView.xib"; sourceTree = "<group>"; };
 		52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertInfoViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.swift"; sourceTree = "<group>"; };
 		52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AlertInfoViewController.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.xib"; sourceTree = "<group>"; };
@@ -307,12 +299,9 @@
 				52DD7D8B293100E800EDCB5E /* Presentation */,
 				52C8181129150D1B0006CA38 /* Extensions */,
 				521541232911A2E900E19B6F /* Src */,
-				523B7355290ED0470070E12A /* Utils */,
 				523B7352290ECE000070E12A /* Services */,
-				523B7351290ECDFB0070E12A /* Models */,
 				52C327CD29108C6500F9965A /* ViewModels */,
 				523B7350290ECDF30070E12A /* Views */,
-				523B734F290ECDEC0070E12A /* Controllers */,
 				523B7342290ECA7D0070E12A /* Assets.xcassets */,
 				523B7344290ECA7D0070E12A /* LaunchScreen.storyboard */,
 				523B734D290ECBCE0070E12A /* GoogleService-Info.plist */,
@@ -322,15 +311,6 @@
 			path = "My ESC Vote";
 			sourceTree = "<group>";
 		};
-		523B734F290ECDEC0070E12A /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5295AA902919989200B820FE /* Authentication */,
-				5295AA8F2919988C00B820FE /* Voting */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		523B7350290ECDF30070E12A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,17 +318,6 @@
 				52C327E2291139C600F9965A /* View Elements */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		523B7351290ECDFB0070E12A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				52CE174D291EEF9800F93E28 /* Voting */,
-				5261557F2916AFE0006988BD /* Contest Information */,
-				52C8180A291465E50006CA38 /* Registration */,
-				52C81809291465DE0006CA38 /* Menu */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		523B7352290ECE000070E12A /* Services */ = {
@@ -363,13 +332,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		523B7355290ED0470070E12A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		523B73632910279C0070E12A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,13 +342,6 @@
 				5295AA8929198EBC00B820FE /* ConstatnsTypealiases.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		5261557F2916AFE0006988BD /* Contest Information */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Contest Information";
 			sourceTree = "<group>";
 		};
 		526155902916F942006988BD /* Protocols */ = {
@@ -405,18 +360,13 @@
 			path = "My ESC Vote Tests";
 			sourceTree = "<group>";
 		};
-		5295AA8F2919988C00B820FE /* Voting */ = {
+		52AA9716293B9E0400F019F2 /* Contests */ = {
 			isa = PBXGroup;
 			children = (
+				52AA9714293B9B9800F019F2 /* JESC2022.swift */,
+				52AA9717293B9E1500F019F2 /* ESC2023.swift */,
 			);
-			path = Voting;
-			sourceTree = "<group>";
-		};
-		5295AA902919989200B820FE /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Authentication;
+			path = Contests;
 			sourceTree = "<group>";
 		};
 		52C327CD29108C6500F9965A /* ViewModels */ = {
@@ -444,35 +394,16 @@
 				52C327DD291137D100F9965A /* LabelView.swift */,
 				52C81814291566910006CA38 /* InfoView.swift */,
 				52DFD2D2293A70500092140E /* InfoView.xib */,
-				52C81818291572AB0006CA38 /* InfoView3.xib */,
 				52615577291660FE006988BD /* MenuButton.swift */,
-				52ADDB15292D7E2200D6703F /* CollectionViewSegmentedControl.swift */,
-				52ADDB19292D809500D6703F /* CollectionViewSegmentedControl.xib */,
-				52ADDB17292D7FA700D6703F /* SegmentedControlButton.swift */,
-				52ADDB1B292D824E00D6703F /* SegmentedControlButton.xib */,
-				52DFD2D0293A6F6F0092140E /* InfoView2.xib */,
 			);
 			path = "View Elements";
-			sourceTree = "<group>";
-		};
-		52C81809291465DE0006CA38 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				52C8180B291465F40006CA38 /* MenuOption.swift */,
-			);
-			path = Menu;
-			sourceTree = "<group>";
-		};
-		52C8180A291465E50006CA38 /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Registration;
 			sourceTree = "<group>";
 		};
 		52C8181129150D1B0006CA38 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5261557929166884006988BD /* Notification+Names.swift */,
+				52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,17 +415,8 @@
 				52C9516E29340797000D7FEE /* UICollectionView+Register.swift */,
 				52C8181229150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift */,
 				52C81816291572390006CA38 /* UIView+InstanceFromNib.swift */,
-				5261557929166884006988BD /* Notification+Names.swift */,
-				52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		52CE174D291EEF9800F93E28 /* Voting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Voting;
 			sourceTree = "<group>";
 		};
 		52D02ECB2933946D000D696A /* Protocols */ = {
@@ -599,7 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				5295AA8D2919985100B820FE /* VoteCategoryPageCell.swift */,
-				52BA482B2936406A005233D9 /* VoteCategoryPageCell.xib */,
+				52AA9710293B814A00F019F2 /* VoteCategoryPageCell.xib */,
 				52CE1749291EECC500F93E28 /* ParticipantCell.swift */,
 				52CE174A291EECC500F93E28 /* ParticipantCell.xib */,
 			);
@@ -617,6 +539,8 @@
 		52DD7D98293109A800EDCB5E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				52AA9716293B9E0400F019F2 /* Contests */,
+				52AA9712293B9B8000F019F2 /* StaticParticipantsData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -754,7 +678,6 @@
 			files = (
 				52ADDB3E292E60CC00D6703F /* Metropolis-BoldItalic.ttf in Resources */,
 				52ADDB39292E60CC00D6703F /* Metropolis-Black.ttf in Resources */,
-				52BA482C2936406A005233D9 /* VoteCategoryPageCell.xib in Resources */,
 				52C327D22910A28600F9965A /* Localizable.strings in Resources */,
 				52ADDB41292E60CC00D6703F /* Metropolis-Light.ttf in Resources */,
 				52ADDB34292E60CC00D6703F /* Metropolis-SemiBold.ttf in Resources */,
@@ -762,11 +685,8 @@
 				523B7343290ECA7D0070E12A /* Assets.xcassets in Resources */,
 				52ADDB42292E60CC00D6703F /* Metropolis-Thin.ttf in Resources */,
 				52ADDB40292E60CC00D6703F /* Metropolis-MediumItalic.ttf in Resources */,
-				52ADDB1A292D809500D6703F /* CollectionViewSegmentedControl.xib in Resources */,
 				52ADDB3A292E60CC00D6703F /* Metropolis-RegularItalic.ttf in Resources */,
-				52ADDB1C292D824E00D6703F /* SegmentedControlButton.xib in Resources */,
 				52DFD2D7293A84E50092140E /* AlertInfoViewController.xib in Resources */,
-				52C81819291572AB0006CA38 /* InfoView3.xib in Resources */,
 				52ADDB3B292E60CC00D6703F /* Metropolis-Medium.ttf in Resources */,
 				52ADDB36292E60CC00D6703F /* Metropolis-BlackItalic.ttf in Resources */,
 				52D02ECA293392C7000D696A /* ParticipantsViewController.storyboard in Resources */,
@@ -778,10 +698,10 @@
 				52DFD2D3293A70500092140E /* InfoView.xib in Resources */,
 				52ADDB35292E60CC00D6703F /* Metropolis-SemiBoldItalic.ttf in Resources */,
 				52CE1746291E673000F93E28 /* ContestTableViewCell.xib in Resources */,
-				52DFD2D1293A6F6F0092140E /* InfoView2.xib in Resources */,
 				52ADDB3C292E60CC00D6703F /* Metropolis-ExtraBoldItalic.ttf in Resources */,
 				52CE174C291EECC500F93E28 /* ParticipantCell.xib in Resources */,
 				52ADDB3F292E60CC00D6703F /* Metropolis-ExtraBold.ttf in Resources */,
+				52AA9711293B814A00F019F2 /* VoteCategoryPageCell.xib in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
 				52ADDB37292E60CC00D6703F /* Metropolis-ExtraLightItalic.ttf in Resources */,
 				52D02ECF29339E6E000D696A /* MainVoteViewController.storyboard in Resources */,
@@ -852,21 +772,19 @@
 				52C9516D2934064A000D7FEE /* UITableView+Register.swift in Sources */,
 				523B7354290ECEE40070E12A /* MainViewController.swift in Sources */,
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
-				52ADDB18292D7FA700D6703F /* SegmentedControlButton.swift in Sources */,
 				52CE1751291EF00C00F93E28 /* ParticipantListViewModel.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				526FDF20293272F100B7DEB8 /* VoteCategoriesListItemViewModel.swift in Sources */,
 				52DD7D9E2931581300EDCB5E /* Observable.swift in Sources */,
 				52A1DB22293A542A0014D0FE /* ViewControllerConstants.swift in Sources */,
-				52C8180C291465F40006CA38 /* MenuOption.swift in Sources */,
+				52AA9713293B9B8000F019F2 /* StaticParticipantsData.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
 				5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */,
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				52C9516F29340797000D7FEE /* UICollectionView+Register.swift in Sources */,
 				52CE174B291EECC500F93E28 /* ParticipantCell.swift in Sources */,
 				5261557A29166884006988BD /* Notification+Names.swift in Sources */,
-				52ADDB16292D7E2200D6703F /* CollectionViewSegmentedControl.swift in Sources */,
 				5295AA8829198D3F00B820FE /* VoteMenuCell.swift in Sources */,
 				52D02ECD29339545000D696A /* HavingStoryboard.swift in Sources */,
 				523A8FDC2932A35C005A8071 /* ParticipantsViewController.swift in Sources */,
@@ -884,6 +802,7 @@
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
 				52A1DB1E293A52DE0014D0FE /* APIConstants.swift in Sources */,
+				52AA9715293B9B9800F019F2 /* JESC2022.swift in Sources */,
 				52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */,
 				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
 				52DFD2D6293A84E50092140E /* AlertInfoViewController.swift in Sources */,
@@ -895,6 +814,7 @@
 				52C327DE291137D100F9965A /* LabelView.swift in Sources */,
 				52615578291660FE006988BD /* MenuButton.swift in Sources */,
 				52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */,
+				52AA9718293B9E1500F019F2 /* ESC2023.swift in Sources */,
 				526155832916B106006988BD /* ContestViewModel.swift in Sources */,
 				52DD7D8E2931022300EDCB5E /* AppAppearance.swift in Sources */,
 			);
