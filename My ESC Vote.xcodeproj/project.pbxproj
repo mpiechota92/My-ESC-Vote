@@ -51,6 +51,11 @@
 		52AA9713293B9B8000F019F2 /* StaticParticipantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9712293B9B8000F019F2 /* StaticParticipantsData.swift */; };
 		52AA9715293B9B9800F019F2 /* JESC2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9714293B9B9800F019F2 /* JESC2022.swift */; };
 		52AA9718293B9E1500F019F2 /* ESC2023.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9717293B9E1500F019F2 /* ESC2023.swift */; };
+		52AA971B293B9F1A00F019F2 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA971A293B9F1A00F019F2 /* RegisterViewController.storyboard */; };
+		52AA971D293B9F2500F019F2 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA971C293B9F2500F019F2 /* LoginViewController.storyboard */; };
+		52AA971F293BA1DB00F019F2 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA971E293BA1DB00F019F2 /* Dismissable.swift */; };
+		52AA9722293BFC1900F019F2 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA9721293BFC1900F019F2 /* CountdownTimer.swift */; };
+		52AA9724293BFC3F00F019F2 /* CountdownTimer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AA9723293BFC3F00F019F2 /* CountdownTimer.xib */; };
 		52ADDB1E292D8AF500D6703F /* Array+ForEachOtherThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */; };
 		52ADDB31292E60CC00D6703F /* Metropolis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB2E292E60A700D6703F /* Metropolis-Bold.ttf */; };
 		52ADDB32292E60CC00D6703F /* Metropolis-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52ADDB1F292E60A600D6703F /* Metropolis-LightItalic.ttf */; };
@@ -150,6 +155,11 @@
 		52AA9712293B9B8000F019F2 /* StaticParticipantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StaticParticipantsData.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Data/StaticParticipantsData.swift"; sourceTree = "<group>"; };
 		52AA9714293B9B9800F019F2 /* JESC2022.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JESC2022.swift; sourceTree = "<group>"; };
 		52AA9717293B9E1500F019F2 /* ESC2023.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESC2023.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Data/Contests/ESC2023.swift"; sourceTree = "<group>"; };
+		52AA971A293B9F1A00F019F2 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RegisterViewController.storyboard; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/AuthenticationScene/RegisterViewController.storyboard"; sourceTree = "<group>"; };
+		52AA971C293B9F2500F019F2 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LoginViewController.storyboard; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/AuthenticationScene/LoginViewController.storyboard"; sourceTree = "<group>"; };
+		52AA971E293BA1DB00F019F2 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dismissable.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Protocols/Dismissable.swift"; sourceTree = "<group>"; };
+		52AA9721293BFC1900F019F2 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountdownTimer.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Views/CountdownTimer.swift"; sourceTree = "<group>"; };
+		52AA9723293BFC3F00F019F2 /* CountdownTimer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CountdownTimer.xib; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Views/CountdownTimer.xib"; sourceTree = "<group>"; };
 		52ADDB1D292D8AF500D6703F /* Array+ForEachOtherThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ForEachOtherThan.swift"; sourceTree = "<group>"; };
 		52ADDB1F292E60A600D6703F /* Metropolis-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.ttf"; sourceTree = "<group>"; };
 		52ADDB20292E60A600D6703F /* Metropolis-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Medium.ttf"; sourceTree = "<group>"; };
@@ -194,9 +204,9 @@
 		52DD7D9A2931526E00EDCB5E /* ParticipantListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantListItemViewModel.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/ViewModel/ParticipantListItemViewModel.swift"; sourceTree = "<group>"; };
 		52DD7D9D2931581300EDCB5E /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/Observable.swift"; sourceTree = "<group>"; };
 		52DFD2D2293A70500092140E /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoView.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Views/View Elements/InfoView.xib"; sourceTree = "<group>"; };
-		52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertInfoViewController.swift; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.swift"; sourceTree = "<group>"; };
-		52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AlertInfoViewController.xib; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.xib"; sourceTree = "<group>"; };
-		52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AlertInfoViewController.storyboard; path = "../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/Utils/AlertInfoViewController.storyboard"; sourceTree = "<group>"; };
+		52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfoViewController.swift; sourceTree = "<group>"; };
+		52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertInfoViewController.xib; sourceTree = "<group>"; };
+		52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertInfoViewController.storyboard; sourceTree = "<group>"; };
 		54B292AB1A001336D1D81857 /* Pods-My ESC Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.debug.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.debug.xcconfig"; sourceTree = "<group>"; };
 		C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ESC_Vote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E159C06529FF6CCADC33D48A /* Pods-My ESC Vote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ESC Vote.release.xcconfig"; path = "Target Support Files/Pods-My ESC Vote/Pods-My ESC Vote.release.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +379,30 @@
 			path = Contests;
 			sourceTree = "<group>";
 		};
+		52AA9719293B9EE800F019F2 /* AuthenticationScene */ = {
+			isa = PBXGroup;
+			children = (
+				523B736E291072350070E12A /* RegisterViewController.swift */,
+				52AA971A293B9F1A00F019F2 /* RegisterViewController.storyboard */,
+				521541272913206D00E19B6F /* LoginViewController.swift */,
+				52AA971C293B9F2500F019F2 /* LoginViewController.storyboard */,
+			);
+			path = AuthenticationScene;
+			sourceTree = "<group>";
+		};
+		52AA9720293BFBF600F019F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				526FDF2129327AC300B7DEB8 /* LoadingIndicator.swift */,
+				52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */,
+				52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */,
+				52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */,
+				52AA9721293BFC1900F019F2 /* CountdownTimer.swift */,
+				52AA9723293BFC3F00F019F2 /* CountdownTimer.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		52C327CD29108C6500F9965A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +458,7 @@
 			children = (
 				52D02ECC29339545000D696A /* HavingStoryboard.swift */,
 				52C951692933A2DD000D7FEE /* HavingNib.swift */,
+				52AA971E293BA1DB00F019F2 /* Dismissable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -432,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				52DD7D9C2931580400EDCB5E /* Utils */,
+				52AA9719293B9EE800F019F2 /* AuthenticationScene */,
 				52DD7D8F293102B000EDCB5E /* MyESCVoteScene */,
 			);
 			path = Presentation;
@@ -479,8 +515,6 @@
 		52DD7D92293103FD00EDCB5E /* UserAuthentication */ = {
 			isa = PBXGroup;
 			children = (
-				523B736E291072350070E12A /* RegisterViewController.swift */,
-				521541272913206D00E19B6F /* LoginViewController.swift */,
 			);
 			path = UserAuthentication;
 			sourceTree = "<group>";
@@ -558,15 +592,12 @@
 		52DD7D9C2931580400EDCB5E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				52AA9720293BFBF600F019F2 /* Views */,
 				523B73632910279C0070E12A /* Constants */,
 				52C9516B2933AA68000D7FEE /* Extensions */,
 				52D02ECB2933946D000D696A /* Protocols */,
 				52DD7D9D2931581300EDCB5E /* Observable.swift */,
-				526FDF2129327AC300B7DEB8 /* LoadingIndicator.swift */,
 				523B7361290EEA5A0070E12A /* ValidationHelper.swift */,
-				52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */,
-				52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */,
-				52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -694,8 +725,10 @@
 				52DFD2DB293AB2AD0092140E /* AlertInfoViewController.storyboard in Resources */,
 				52ADDB3D292E60CC00D6703F /* Metropolis-ExtraLight.ttf in Resources */,
 				52ADDB38292E60CC00D6703F /* Metropolis-ThinItalic.ttf in Resources */,
+				52AA971D293B9F2500F019F2 /* LoginViewController.storyboard in Resources */,
 				52ADDB33292E60CC00D6703F /* Metropolis-Regular.ttf in Resources */,
 				52DFD2D3293A70500092140E /* InfoView.xib in Resources */,
+				52AA971B293B9F1A00F019F2 /* RegisterViewController.storyboard in Resources */,
 				52ADDB35292E60CC00D6703F /* Metropolis-SemiBoldItalic.ttf in Resources */,
 				52CE1746291E673000F93E28 /* ContestTableViewCell.xib in Resources */,
 				52ADDB3C292E60CC00D6703F /* Metropolis-ExtraBoldItalic.ttf in Resources */,
@@ -707,6 +740,7 @@
 				52D02ECF29339E6E000D696A /* MainVoteViewController.storyboard in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
 				52ADDB31292E60CC00D6703F /* Metropolis-Bold.ttf in Resources */,
+				52AA9724293BFC3F00F019F2 /* CountdownTimer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +808,7 @@
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
 				52CE1751291EF00C00F93E28 /* ParticipantListViewModel.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
+				52AA971F293BA1DB00F019F2 /* Dismissable.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
 				526FDF20293272F100B7DEB8 /* VoteCategoriesListItemViewModel.swift in Sources */,
 				52DD7D9E2931581300EDCB5E /* Observable.swift in Sources */,
@@ -805,6 +840,7 @@
 				52AA9715293B9B9800F019F2 /* JESC2022.swift in Sources */,
 				52C81817291572390006CA38 /* UIView+InstanceFromNib.swift in Sources */,
 				521541282913206D00E19B6F /* LoginViewController.swift in Sources */,
+				52AA9722293BFC1900F019F2 /* CountdownTimer.swift in Sources */,
 				52DFD2D6293A84E50092140E /* AlertInfoViewController.swift in Sources */,
 				52A1DB1D293A52DE0014D0FE /* ContentConstants.swift in Sources */,
 				5261558F2916F8FD006988BD /* HasDocumentID.swift in Sources */,

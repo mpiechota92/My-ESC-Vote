@@ -149,7 +149,7 @@ class AlertInfoViewController: UIViewController, HavingStoryboard {
 	}
 
 	
-	@IBAction func didTapDismissButton(_ sender: Any) {
+	@IBAction func didTapDismissButtonx(_ sender: Any) {
 		dismiss()
 	}
 	

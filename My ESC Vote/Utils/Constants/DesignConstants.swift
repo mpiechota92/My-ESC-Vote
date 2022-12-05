@@ -87,11 +87,18 @@ extension Constants {
 			}
 			
 			enum Size {
+				/** 12.0 */
 				static let extraSmall = 12.0
+				/** 15.0 */
 				static let small = 15.0
+				/** 17.0 */
 				static let medium = 17.0
+				/** 23.0 */
 				static let large = 23.0
+				/** 27.0 */
 				static let extraLarge = 27.0
+				/** 42.0 */
+				static let extraExtraLarge = 42.0
 				
 				static let header = 22.0
 				static let subheader = 13.0

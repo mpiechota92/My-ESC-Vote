@@ -23,8 +23,8 @@ extension HavingNib {
 	
 	static func instantiateFromNib() -> Self {
 		let name = self.nibName
-		
-		guard let instance = Bundle(for: Self.self).loadNibNamed(name, owner: nil)?[0] as? Self else {
+
+		guard let instance = self.nib.instantiate(withOwner: nil).first as? Self else {
 			fatalError("Cannot instantiate \(Self.self) from nib with name \(name)")
 		}
 		

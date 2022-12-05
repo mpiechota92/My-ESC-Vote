@@ -9,14 +9,24 @@ import UIKit
 
 class MainViewController: UIViewController, HavingStoryboard {
 	
+	@IBOutlet private weak var image: UIImageView!
+	@IBOutlet private weak var timer: CountdownTimer!
+
 	private var menuButton: MenuButton = MenuButton()
 	
 	private let segueID = "xyz"
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		//self.timer = CountdownTimer.instantiateFromNib()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		setupUI()
+		menuButton.parent = self
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -24,9 +34,23 @@ class MainViewController: UIViewController, HavingStoryboard {
 		
 	}
 	
-	private func setupUI() {
+	func setupUI() {
+		let blurEffect = UIBlurEffect(style: .dark)
+		let blurEffectView = UIVisualEffectView(effect: blurEffect)
+		blurEffectView.frame = image.bounds
+		blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+		blurEffectView.alpha = 0.5
+		image.addSubview(blurEffectView)
+		
 		menuButton.setupButton(for: navigationController, with: storyboard)
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
+		//try? self.timer.setupTimer(with: "11-12-2022 15:00:00")
+		
+		try? timer.setupTimer(with: "11-12-2022 15:00:00")
+//		timer.timer = Timer(timeInterval: 1, repeats: true, block: { timer in
+//			let timeInSeconds = self.timer.timeInSeconds - 1
+//			self.timer.timeInSeconds = Observable(timeInSeconds)
+//		})
 	}
 	
 	@IBAction func didTapVoteButton(_ sender: Any) {
@@ -38,5 +62,6 @@ class MainViewController: UIViewController, HavingStoryboard {
 		
 		navigationController?.pushViewController(vc, animated: true)
 	}
+	
 	
 }

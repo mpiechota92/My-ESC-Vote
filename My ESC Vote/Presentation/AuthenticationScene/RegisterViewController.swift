@@ -7,39 +7,32 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, HavingStoryboard {
 	
 	private var registrationViewModel = RegistrationFormViewModel()
 	
-	@IBOutlet weak var stackView: UIStackView!
-	@IBOutlet weak var nameTextField: UITextField!
-	@IBOutlet weak var emailTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
-	@IBOutlet weak var confirmPasswordTextField: UITextField!
-	
-	@IBOutlet weak var errorLabelView: LabelView!
+	@IBOutlet private weak var nameTextField: UITextField!
+	@IBOutlet private weak var emailTextField: UITextField!
+	@IBOutlet private weak var passwordTextField: UITextField!
+	@IBOutlet private weak var confirmPasswordTextField: UITextField!
+	@IBOutlet private weak var dismissButton: UIButton!
 	
 	private var errorLabels = [UILabel?]()
 	
 	@IBOutlet weak var registerButton: UIButton!
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
-		tabBarController?.tabBar.isHidden = true
-	}
+	weak var creator: DismissableDelegate!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		registerObserversForTextFields()
-		
+		//setupDismissableView()
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-		
-		tabBarController?.tabBar.isHidden = false
+		dismissableDelegate.willDismiss()
 	}
 	
 	// Text fields must not be empty for register button to be enabled.
@@ -77,7 +70,7 @@ class RegisterViewController: UIViewController {
 			password: password,
 			confirmPassword: confirmPassword) { [weak self] error in
 				if let error = error as? LocalizedError {
-					self?.setTextForLabel(from: error)
+					//self?.setTextForLabel(from: error)
 				} else {
 					self?.navigationController?.popToRootViewController(animated: true)
 				}
@@ -85,12 +78,37 @@ class RegisterViewController: UIViewController {
 		
 	}
 	
-	private func setTextForLabel(from error: LocalizedError) {
-		guard let errorLabelView = errorLabelView else { return }
+//	private func setTextForLabel(from error: LocalizedError) {
+//		guard let errorLabelView = errorLabelView else { return }
+//		
+//		errorLabelView.labelType = .error
+//		errorLabelView.mainLabel.text = error.errorDescription
+//		errorLabelView.isHidden = false
+//	}
+	
+}
+
+// MARK: - Dismissable
+
+extension RegisterViewController: Dismissable {
+	
+	var xButton: UIButton {
+		return dismissButton
+	}
+	
+	var dismissableViewController: UIViewController {
+		return self
+	}
+	
+	var dismissableDelegate: DismissableDelegate {
+		get {
+			return self.creator
+		}
 		
-		errorLabelView.labelType = .error
-		errorLabelView.mainLabel.text = error.errorDescription
-		errorLabelView.isHidden = false
+		set {
+			self.creator = newValue
+		}
 	}
 	
 }
+

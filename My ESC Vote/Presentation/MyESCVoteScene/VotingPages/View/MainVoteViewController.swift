@@ -54,9 +54,7 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 		setupVoteCategoriesBar()
 		setupVotingPagesView()
 		setupMenuButton()
-		
-		voteButton.titleLabel?.font = UIFont(name: Font.Name.metropolisThin, size: Font.Size.medium)
-		voteButton.titleLabel?.textAlignment = .center
+		setupVoteButton()
 	}
 	
 	private func setupVoteCategoriesBar() {
@@ -99,8 +97,14 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 	}
 	
 	private func setupMenuButton() {
+		menuButton.parent = self
 		menuButton.setupButton(for: navigationController, with: UIStoryboard(name: Self.identifier, bundle: nil))
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
+	}
+	
+	private func setupVoteButton() {
+		setVoteButtonTitle(categories[0])
+		voteButton.titleLabel?.textAlignment = .center
 	}
 	
 	@objc private func handleSegmentSelected(_ action: UIAction) {
@@ -109,9 +113,20 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 		let index = categoriesControl.selectedSegmentIndex
 		let indexPath = IndexPath(item: index, section: 0)
 		
+		setVoteButtonTitle(categories[index])
+		
 		votingPagesCollectionView.isPagingEnabled = false
 		votingPagesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
 		votingPagesCollectionView.isPagingEnabled = true
+	}
+	
+	private func setVoteButtonTitle(_ categoryTitle: String) {
+		let newTitle = "Vote for \(categoryTitle)"
+		voteButton.setAttributedTitle(
+			NSAttributedString(string: newTitle,
+							   attributes: [NSAttributedString.Key.font:
+												UIFont(name: Font.Name.metropolisThin,
+													   size: Font.Size.medium)!]), for: .normal)
 	}
 }
 
@@ -157,11 +172,8 @@ extension MainVoteViewController: UICollectionViewDelegate {
 		// Paging
 		categoriesControl.selectedSegmentIndex = item
 		
-		let text = categories[item]
-		let newTitle = "Vote for \(text)"
-		//voteButton.titleLabel?.text = newTitle
-		print(newTitle)
-		voteButton.setTitle(newTitle, for: .normal)
+		let categoryTitle = categories[item]
+		setVoteButtonTitle(categoryTitle)
 	}
 
 }
@@ -192,19 +204,19 @@ extension MainVoteViewController: UICollectionViewDataSource {
 
 // MARK: - CollectionViewSegmentedControlDelegate
 
-extension MainVoteViewController: CollectionViewSegmentedControlDelegate {
-	
-	func didSelectItem(_ indexPath: IndexPath) {
-		votingPagesCollectionView.isPagingEnabled = false
-		
-		
-		votingPagesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-		
-		
-		votingPagesCollectionView.isPagingEnabled = true
-	}
-
-}
+//extension MainVoteViewController: CollectionViewSegmentedControlDelegate {
+//
+//	func didSelectItem(_ indexPath: IndexPath) {
+//		votingPagesCollectionView.isPagingEnabled = false
+//
+//
+//		votingPagesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+//
+//
+//		votingPagesCollectionView.isPagingEnabled = true
+//	}
+//
+//}
 
 // MARK: - UICollectionViewDelegateFlowLayout
 

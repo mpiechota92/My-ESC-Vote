@@ -21,7 +21,7 @@
                                 <rect key="frame" x="71.666666666666686" y="353" width="250" height="171"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Buj-q7-zqY">
-                                        <rect key="frame" x="215" y="0.0" width="35" height="35"/>
+                                        <rect key="frame" x="210" y="5" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="peD-LO-4El"/>
                                             <constraint firstAttribute="height" constant="35" id="vft-p0-DSl"/>
@@ -31,11 +31,11 @@
                                             <color key="baseForegroundColor" name="Winter"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapDismissButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HeN-sT-2CT"/>
+                                            <action selector="didTapDismissButtonx:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wzw-fi-IgD"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-TX-1YC">
-                                        <rect key="frame" x="35" y="6.9999999999999982" width="180" height="20.333333333333329"/>
+                                        <rect key="frame" x="35" y="6.9999999999999982" width="175" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="Winter"/>
                                         <nil key="highlightedColor"/>
@@ -72,15 +72,15 @@
                                     <constraint firstItem="I2z-IR-PAa" firstAttribute="top" secondItem="Fpv-hZ-Nm1" secondAttribute="bottom" id="12x-yh-iKZ"/>
                                     <constraint firstAttribute="width" constant="250" id="3wn-hT-vxm"/>
                                     <constraint firstItem="TR0-TX-1YC" firstAttribute="top" secondItem="vUv-33-Tjy" secondAttribute="top" constant="7" id="5Vy-wI-hyX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Buj-q7-zqY" secondAttribute="trailing" constant="5" id="5fo-qr-Pt4"/>
                                     <constraint firstItem="Fpv-hZ-Nm1" firstAttribute="leading" secondItem="vUv-33-Tjy" secondAttribute="leading" constant="10" id="6UN-UW-xGU"/>
-                                    <constraint firstItem="Buj-q7-zqY" firstAttribute="top" secondItem="vUv-33-Tjy" secondAttribute="top" id="7aT-t5-ycv"/>
                                     <constraint firstItem="Fpv-hZ-Nm1" firstAttribute="top" secondItem="TR0-TX-1YC" secondAttribute="bottom" constant="10" id="Aab-na-FGm"/>
                                     <constraint firstAttribute="bottom" secondItem="I2z-IR-PAa" secondAttribute="bottom" id="d07-HA-f4E"/>
                                     <constraint firstAttribute="trailing" secondItem="Fpv-hZ-Nm1" secondAttribute="trailing" constant="10" id="huk-cM-c81"/>
                                     <constraint firstItem="I2z-IR-PAa" firstAttribute="centerX" secondItem="vUv-33-Tjy" secondAttribute="centerX" id="sCW-rh-VF6"/>
                                     <constraint firstItem="TR0-TX-1YC" firstAttribute="leading" secondItem="vUv-33-Tjy" secondAttribute="leading" constant="35" id="uHR-dr-bVA"/>
                                     <constraint firstItem="Buj-q7-zqY" firstAttribute="leading" secondItem="TR0-TX-1YC" secondAttribute="trailing" id="w9o-Fi-f0T"/>
-                                    <constraint firstAttribute="trailing" secondItem="Buj-q7-zqY" secondAttribute="trailing" id="ziW-JJ-4d7"/>
+                                    <constraint firstItem="Buj-q7-zqY" firstAttribute="top" secondItem="vUv-33-Tjy" secondAttribute="top" constant="5" id="xIR-aF-BVP"/>
                                 </constraints>
                             </view>
                         </subviews>

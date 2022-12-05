@@ -9,6 +9,12 @@ import UIKit
 
 class MenuButton: UIButton {
 	
+	
+	private weak var registrationViewController: Dismissable!
+	private weak var loginViewController: Dismissable!
+	
+	weak var parent: UIViewController!
+	
 	weak private var navigationController: UINavigationController?
 	
 	weak private var storyboard: UIStoryboard?
@@ -57,19 +63,17 @@ class MenuButton: UIButton {
 	}
 	
 	@objc private func handleRegisterMenu(_ action: UIAction) {
-		guard let registerVC = storyboard?.instantiateViewController(withIdentifier: Constants.UI.ViewController.ID.register) as? RegisterViewController else {
-			return
-		}
-		
-		navigationController?.pushViewController(registerVC, animated: true)
+		let registrationVC = RegisterViewController.instantiateViewController()
+		registrationVC.dismissableDelegate = self
+		registrationVC.setupDismissableView(parent)
+		registrationVC.showView()
 	}
 	
 	@objc private func handleLoginMenu(_ action: UIAction) {
-		guard let loginVC = storyboard?.instantiateViewController(withIdentifier: Constants.UI.ViewController.ID.login) as? LoginViewController else {
-			return
-		}
-		
-		navigationController?.pushViewController(loginVC, animated: true)
+		let loginVC = LoginViewController.instantiateViewController()
+		loginVC.dismissableDelegate = self
+		loginVC.setupDismissableView(parent)
+		loginVC.showView()
 	}
 	
 	@objc private func handleLogoutMenu(_ action: UIAction) {
@@ -88,6 +92,40 @@ class MenuButton: UIButton {
 	
 	@objc private func handleAboutInfoMenu(_ action: UIAction) {
 		
+	}
+	
+}
+
+// MARK: - Dismissable Views
+
+extension MenuButton {
+	
+	func setupMenuButton() {
+		setupLogin()
+	}
+	
+	private func setupRegistrationView() {
+		self.registrationViewController = RegisterViewController.instantiateViewController()
+		self.registrationViewController.setupDismissableView(parent)
+		
+	}
+	
+	private func setupLogin() {
+		self.loginViewController = LoginViewController.instantiateViewController()
+		self.loginViewController.setupDismissableView(parent)
+	}
+}
+
+// MARK: - DismissableDelegate
+
+extension MenuButton: DismissableDelegate {
+	
+	func willAppear() {
+		self.isEnabled = false
+	}
+	
+	func willDismiss() {
+		self.isEnabled = true
 	}
 	
 }

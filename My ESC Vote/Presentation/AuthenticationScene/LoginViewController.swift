@@ -7,20 +7,16 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, HavingStoryboard {
 	
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
-	
+	@IBOutlet weak var dismissButton: UIButton!
 	@IBOutlet weak var loginButton: UIButton!
 	
 	@IBOutlet weak var errorLabelView: LabelView!
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
-		tabBarController?.tabBar.isHidden = true
-	}
+	weak var creator: DismissableDelegate!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -30,8 +26,7 @@ class LoginViewController: UIViewController {
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-		
-		tabBarController?.tabBar.isHidden = false
+		dismissableDelegate.willDismiss()
 	}
 	
 	// Text fields must not be empty for login button to be enabled.
@@ -87,3 +82,30 @@ class LoginViewController: UIViewController {
 		errorLabelView.isHidden = false
 	}
 }
+
+// MARK: - Dismissable
+
+extension LoginViewController: Dismissable {
+	
+	var xButton: UIButton {
+		return dismissButton
+	}
+	
+	var dismissableViewController: UIViewController {
+		return self
+	}
+	
+	var dismissableDelegate: DismissableDelegate {
+		get {
+			return self.creator
+		}
+		
+		set {
+			self.creator = newValue
+		}
+	}
+	
+}
+
+
+
