@@ -54,6 +54,9 @@
                                                         <color key="tintColor" name="AccentColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="Login"/>
+                                                        <connections>
+                                                            <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jG8-8R-uCU"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clu-lx-HlM">
                                                         <rect key="frame" x="250" y="0.0" width="0.0" height="34"/>
@@ -103,6 +106,9 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="GYo-wT-Ki7" id="S7C-ri-cBh"/>
+                        <outlet property="emailTextField" destination="RZy-wr-Ful" id="YjN-vl-wu5"/>
+                        <outlet property="loginButton" destination="Vnw-Fg-JJp" id="DNg-1y-dmQ"/>
+                        <outlet property="passwordTextField" destination="XVK-fE-3Mj" id="Wkp-8C-csB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,7 +119,7 @@
     <resources>
         <image name="xmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Light Navy">
             <color red="0.14499999582767487" green="0.14100000262260437" blue="0.44299998879432678" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>

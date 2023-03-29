@@ -15,19 +15,28 @@ protocol ParticipantsListViewModelOutput {
 	func item(for indexPath: IndexPath) -> ParticipantsListItemViewModel
 	func numberOfRows(in section: Int) -> Int
 	func removeItem(at indexPath: IndexPath) -> ParticipantsListItemViewModel
-	var voteCategory: VoteCategory { get }
 	var updateItems: Observable<Bool> { get }
 	func printData()
+	func getPoints() -> [String: Int]
+	
+	var voteCategory: VoteCategory? { get set }
+	var participants: [ParticipantsListItemViewModel] { get set }
 }
 
 protocol ParticipantsListViewModel: ParticipantsListViewModelInput, ParticipantsListViewModelOutput {}
 
 class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 	
-	private var participants: [ParticipantsListItemViewModel] = []
+	var participants: [ParticipantsListItemViewModel] = []
+	var updateItems: Observable<Bool> = Observable(true)
+	var voteCategory: VoteCategory?
 	
-	let updateItems: Observable<Bool> = Observable(true)
-	var voteCategory: VoteCategory
+	init() {
+		#if DEBUG
+		mockData()
+		bindParticipants()
+		#endif
+	}
 	
 	init(for contest: Contest, category: VoteCategory) {
 		self.voteCategory = category
@@ -63,6 +72,17 @@ class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 		}
 	}
 	
+	func getPoints() -> [String : Int] {
+		var vote: [String: Int] = [:]
+		
+		for participant in participants {
+			let points = participant.points
+			vote[participant.countryName] = points == "" ? 0 : Int(points)
+		}
+		
+		return vote
+	}
+	
 	// MARK: - Mock for now
 	
 	func mockData() {
@@ -89,7 +109,6 @@ class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 	}
 	
 	private func bindParticipants() {
-		
 		self.participants.forEach { participantViewModel in
 			updateItems.observer(on: participantViewModel) { [weak self] updated in
 				
@@ -106,10 +125,8 @@ class DefaultParticipantsListViewModel: ParticipantsListViewModel {
 						participantViewModel.place.value = index
 					}
 				}
-				
 			}
 		}
-		
 	}
 	
 	deinit {

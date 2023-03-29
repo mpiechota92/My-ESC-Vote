@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol HavingStoryboard: NSObjectProtocol {
+public protocol HavingStoryboard: AnyObject {
 	associatedtype T
 	static var fileName: String { get }
 	static var identifier: String { get }
@@ -17,10 +17,10 @@ protocol HavingStoryboard: NSObjectProtocol {
 
 extension HavingStoryboard {
 	
-	static var fileName: String { return String(describing: Self.self) }
-	static var identifier: String { return String(describing: Self.self) }
+	static public var fileName: String { return String(describing: Self.self) }
+	static public var identifier: String { return String(describing: Self.self) }
 	
-	static func instantiateViewController(_ bundle: Bundle? = nil) -> Self {
+	static public func instantiateViewController(_ bundle: Bundle? = nil) -> Self {
 		let fileName = self.fileName
 		let identifier = self.identifier
 		let storyBoard = UIStoryboard(name: fileName, bundle: bundle)

@@ -200,6 +200,71 @@
             </objects>
             <point key="canvasLocation" x="857" y="681"/>
         </scene>
+        <!--Contestants View Controller-->
+        <scene sceneID="5R3-zG-UqI">
+            <objects>
+                <viewController storyboardIdentifier="ContestantsViewController" id="rwm-nj-L4P" customClass="ContestantsViewController" customModule="My_ESC_Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxL-pU-hUS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDE-24-7V0">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                                <subviews>
+                                    <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-ru-OQp">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="662"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContestTableViewCell" id="rTT-2S-WR2" customClass="ContestantCell" customModule="My_ESC_Vote" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rTT-2S-WR2" id="2NP-tA-zvL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" name="Navy"/>
+                                <constraints>
+                                    <constraint firstItem="3Xi-ru-OQp" firstAttribute="leading" secondItem="lDE-24-7V0" secondAttribute="leading" id="BNd-Pq-2kq"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Xi-ru-OQp" secondAttribute="trailing" id="MdA-CX-6te"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mQk-zh-aMW"/>
+                        <color key="backgroundColor" name="Dark Navy"/>
+                        <constraints>
+                            <constraint firstItem="mQk-zh-aMW" firstAttribute="bottom" secondItem="3Xi-ru-OQp" secondAttribute="bottom" constant="8" id="Sam-ty-HQu"/>
+                            <constraint firstItem="3Xi-ru-OQp" firstAttribute="top" secondItem="mQk-zh-aMW" secondAttribute="top" id="Taz-eH-cks"/>
+                            <constraint firstItem="lDE-24-7V0" firstAttribute="leading" secondItem="mQk-zh-aMW" secondAttribute="leading" id="Udt-ge-shP"/>
+                            <constraint firstItem="lDE-24-7V0" firstAttribute="trailing" secondItem="mQk-zh-aMW" secondAttribute="trailing" id="f5G-TJ-zjh"/>
+                            <constraint firstAttribute="bottom" secondItem="lDE-24-7V0" secondAttribute="bottom" id="qKc-qE-egf"/>
+                            <constraint firstItem="lDE-24-7V0" firstAttribute="top" secondItem="mQk-zh-aMW" secondAttribute="top" id="wgL-wH-hpl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iKA-oP-W1f">
+                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" id="ChQ-2N-RuA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="WX3-Px-pBU" customClass="MenuButton" customModule="My_ESC_Vote" customModuleProvider="target">
+                                <rect key="frame" x="326" y="5" width="48" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contestantsTableView" destination="3Xi-ru-OQp" id="zcv-AN-S8X"/>
+                        <outlet property="menuButton" destination="WX3-Px-pBU" id="Nfx-ap-keC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7M-fS-8KO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.9230769230767" y="679.62085308056874"/>
+        </scene>
     </scenes>
     <resources>
         <image name="JESC2022" width="640" height="289.5"/>

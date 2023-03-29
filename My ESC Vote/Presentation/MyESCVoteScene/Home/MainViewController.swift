@@ -45,18 +45,19 @@ class MainViewController: UIViewController, HavingStoryboard {
 		menuButton.setupButton(for: navigationController, with: storyboard)
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
 		//try? self.timer.setupTimer(with: "11-12-2022 15:00:00")
-		
-		try? timer.setupTimer(with: "11-12-2022 15:00:00")
-//		timer.timer = Timer(timeInterval: 1, repeats: true, block: { timer in
-//			let timeInSeconds = self.timer.timeInSeconds - 1
-//			self.timer.timeInSeconds = Observable(timeInSeconds)
-//		})
+
+		try? timer.setupTimer(with: "09-05-2023 20:00:00")
 	}
 	
 	@IBAction func didTapVoteButton(_ sender: Any) {
 		let vc = MainVoteViewController.instantiateViewController()
-		let contest = Contest(country: CountryName.Armenia, startDate: Date(), endDate: Date(), contestType: .JSEC)
-		let viewModel = DefaultVoteCategoriesListViewModel(for: [.favourite, .vocals, .performance], in: contest)
+		let contest = Contest(title: "ESC 2023 SEMI 1", startDate: Date(), country: CountryName.UnitedKingdom, contestType: .ESCS1)
+		//let contest = Contest(country: CountryName.Armenia, startDate: Date(), contestType: .JSEC)
+		//let viewModel = DefaultVoteCategoriesListViewModel(for: [.favourite, .vocals, .performance], in: contest)
+		let params = VoteCategoriesListViewModelParams(categories: [.favourite, .vocals, .performance], contest: contest)
+		
+		let viewModel: VoteCategoriesListViewModel = DependencyResolver.get(with: params)
+		
 		vc.fill(with: viewModel)
 		vc.contest = contest
 		

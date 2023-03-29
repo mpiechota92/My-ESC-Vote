@@ -10,8 +10,4 @@ import FirebaseCore
 import FirebaseAuth
 
 struct FirebaseService {
-	
-	
-	
-	
 }

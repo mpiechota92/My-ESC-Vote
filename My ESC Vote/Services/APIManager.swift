@@ -27,9 +27,11 @@ class APIManager {
 	
 	internal lazy var dbService = DatabaseService(with: firestoreDB)
 	internal lazy var authService = AuthenticationService()
+	internal lazy var votingService: VotingServiceProtocol = VotingService()
+	internal lazy var imageService: ImageServiceProtocol = ImageService()
 	
 	// MARK: Accessor
-	
+	static let shr: APIManager = .init()
 	static func shared() -> APIManager {
 		return sharedAPIManager
 	}

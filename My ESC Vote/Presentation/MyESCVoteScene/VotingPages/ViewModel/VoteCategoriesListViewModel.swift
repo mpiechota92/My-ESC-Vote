@@ -17,17 +17,26 @@ protocol VoteCategoriesListViewModelOutput {
 	func numberOfItems(in section: Int) -> Int
 }
 
-protocol VoteCategoriesListViewModel: VoteCategoriesListViewModelInput,
-										VoteCategoriesListViewModelOutput {}
+protocol VoteCategoriesListViewModel: VoteCategoriesListViewModelInput, VoteCategoriesListViewModelOutput {}
 
+struct VoteCategoriesListViewModelParams {
+	var categories: [VoteCategory]
+	var contest: Contest
+}
 
 final class DefaultVoteCategoriesListViewModel: VoteCategoriesListViewModel {
 	
-	internal var items: [VoteCategoriesListItemViewModel]
+	internal var items: [VoteCategoriesListItemViewModel] = []
 	
-	init(for categories: [VoteCategory], in contest: Contest) {
-		items = categories.map({VoteCategoriesListItemViewModel.init(category: $0, contest: contest)})
-	}
+	init() {}
+	
+//	init(with params: VoteCategoriesListViewModelParams) {
+//		items = params.categories.map({VoteCategoriesListItemViewModel.init(category: $0, contest: params.contest)})
+//	}
+//
+//	init(for categories: [VoteCategory], in contest: Contest) {
+//		items = categories.map({VoteCategoriesListItemViewModel.init(category: $0, contest: contest)})
+//	}
 	
 	func item(for indexPath: IndexPath) -> VoteCategoriesListItemViewModel {
 		return items[indexPath.item]
@@ -35,5 +44,9 @@ final class DefaultVoteCategoriesListViewModel: VoteCategoriesListViewModel {
 	
 	func numberOfItems(in section: Int) -> Int {
 		return items.count
+	}
+	
+	func setup(with params: VoteCategoriesListViewModelParams) {
+		items = params.categories.map({VoteCategoriesListItemViewModel.init(category: $0, contest: params.contest)})
 	}
 }

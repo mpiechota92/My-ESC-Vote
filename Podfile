@@ -6,5 +6,6 @@ target 'My ESC Vote' do
   use_frameworks!
 
   pod 'SnapKit'
+  pod "PromiseKit", "~> 6.8"
 
 end

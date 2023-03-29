@@ -7,21 +7,23 @@
 
 import UIKit
 import SnapKit
-
+import PromiseKit
 
 class MainVoteViewController: UIViewController, HavingStoryboard {
 
 	private let categories = ["Favourite", "Vocals", "Performance"]
 	
-	@IBOutlet private var mainView: UIView!
-	@IBOutlet private var categoriesControl: UISegmentedControl!
-	@IBOutlet private var votingPagesCollectionView: UICollectionView!
-	@IBOutlet private var bottomVoteView: UIView!
-	@IBOutlet private var voteButton: UIButton!
+	@IBOutlet weak var mainView: UIView!
+	@IBOutlet weak var categoriesControl: UISegmentedControl!
+	@IBOutlet weak var votingPagesCollectionView: UICollectionView!
+	@IBOutlet weak var bottomVoteView: UIView!
+	@IBOutlet weak var voteButton: UIButton!
 	
 	private var viewModel: VoteCategoriesListViewModel!
 	private var menuButton: MenuButton = MenuButton()
 	private var secondaryBackgroundView: UIView!
+	
+	private var voteLists: [VoteCategory: ParticipantsListViewModel] = [:]
 	
 	var contest: Contest!
 	
@@ -91,7 +93,9 @@ class MainVoteViewController: UIViewController, HavingStoryboard {
 	private func setupData() {
 		VoteCategory.allCases.forEach { category in
 			let vc = ParticipantsViewController.instantiateViewController()
-			vc.fill(with: DefaultParticipantsListViewModel(for: contest, category: category))
+			let viewModel = DefaultParticipantsListViewModel(for: contest, category: category)
+			vc.fill(with: viewModel)
+			self.voteLists[category] = viewModel
 			self.addChild(vc)
 		}
 	}
@@ -150,15 +154,48 @@ extension MainVoteViewController {
 			return
 		}
 		
-		// TODO: check if the user has already voted in that category
+		let email = APIManager.shared().authService.currentUserEmail()
+		let votingService = APIManager.shared().votingService
+		let index = categoriesControl.selectedSegmentIndex
+		print(categories)
+		let category = categories[categoriesControl.selectedSegmentIndex]
+		let points = getPoints(for: category)
+		let vote = Vote(email: email, _voteCategory: category, _points: points)
 		
-		// Vote for specific category
-		//
-		
-		
-		
+		votingService.vote(for: contest, with: vote)
+			.done { [weak self] status in
+				switch status {
+				case .succesfful:
+					self?.showAlert(title: "Voted!", text: "Thank you for casting your vote!")
+				case .alreadyVoted:
+					self?.showAlert(title: "Already voted!", text: "You have already cast your vote in this category.")
+				case .failure:
+					self?.showAlert(title: "Error!", text: "Something went wrong. If the error persits, please contact the app admin.")
+				default:
+					self?.showAlert(title: "Something went wrong.", text: "Hmm... Strange.")
+				}
+			}.catch { [weak self] error in
+				self?.showAlert(title: "Error!", text: "\(error)")
+			}
 	}
 	
+	private func showAlert(title: String, text: String) {
+		let alertVC = AlertInfoViewController.instantiateViewController()
+		alertVC.setupWith(self,
+						  title: title,
+						  text: text,
+						  leftButtonTitle: "Dismiss")
+		
+		alertVC.show()
+	}
+	
+	private func getPoints(for voteCategory: String) -> [String: Int] {
+		guard let voteCategory = VoteCategory(rawValue: voteCategory),
+			  let viewModel = voteLists[voteCategory] else { return [:] }
+		
+		let points = viewModel.getPoints()
+		return points
+	}
 }
 
 // MARK: - UICollectionViewDelegate

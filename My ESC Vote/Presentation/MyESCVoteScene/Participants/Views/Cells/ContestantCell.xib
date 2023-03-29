@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="CountryVoteCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" rowHeight="85" id="s8J-5a-D44" customClass="ParticipantCell" customModule="My_ESC_Vote" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8J-5a-D44" id="0lp-ED-wbZ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-VV-sLZ">
+                        <rect key="frame" x="8" y="22" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="24u-zJ-Q69"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="SmL-Bh-P9i"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="gtb-GH-W75"/>
+                            <constraint firstAttribute="width" constant="55" id="wIP-yW-5Vj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5Z-dw-5yn">
+                        <rect key="frame" x="71" y="24" width="237" height="27.666666666666671"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistNameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-GB-KZv">
+                        <rect key="frame" x="71" y="55.666666666666664" width="237" height="20.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCX-R7-vAs">
+                        <rect key="frame" x="12" y="4" width="107" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="Winter"/>
+                <constraints>
+                    <constraint firstItem="hIn-VV-sLZ" firstAttribute="leading" secondItem="0lp-ED-wbZ" secondAttribute="leading" constant="8" id="3bg-Zi-o8n"/>
+                    <constraint firstItem="mCX-R7-vAs" firstAttribute="top" secondItem="0lp-ED-wbZ" secondAttribute="top" constant="4" id="Awe-eJ-33f"/>
+                    <constraint firstItem="hIn-VV-sLZ" firstAttribute="top" secondItem="mCX-R7-vAs" secondAttribute="bottom" constant="4" id="KJ9-4G-aHD"/>
+                    <constraint firstItem="YTo-GB-KZv" firstAttribute="leading" secondItem="hIn-VV-sLZ" secondAttribute="trailing" constant="8" id="MXy-mQ-JeF"/>
+                    <constraint firstAttribute="trailing" secondItem="YTo-GB-KZv" secondAttribute="trailing" constant="12" id="P4z-DU-ix6"/>
+                    <constraint firstAttribute="bottom" secondItem="hIn-VV-sLZ" secondAttribute="bottom" constant="8" id="SkG-xO-fTK"/>
+                    <constraint firstItem="k5Z-dw-5yn" firstAttribute="top" secondItem="0lp-ED-wbZ" secondAttribute="top" constant="24" id="T5B-nb-EWO"/>
+                    <constraint firstItem="mCX-R7-vAs" firstAttribute="leading" secondItem="0lp-ED-wbZ" secondAttribute="leading" constant="12" id="VmQ-fC-FiU"/>
+                    <constraint firstItem="YTo-GB-KZv" firstAttribute="width" secondItem="k5Z-dw-5yn" secondAttribute="width" id="ZRY-iE-QuD"/>
+                    <constraint firstItem="k5Z-dw-5yn" firstAttribute="leading" secondItem="hIn-VV-sLZ" secondAttribute="trailing" constant="8" id="ZmT-hR-QPQ"/>
+                    <constraint firstItem="YTo-GB-KZv" firstAttribute="top" secondItem="k5Z-dw-5yn" secondAttribute="bottom" constant="4" id="uV6-c1-hQ6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistNameLabel" destination="YTo-GB-KZv" id="umV-lk-f7h"/>
+                <outlet property="countryImageView" destination="hIn-VV-sLZ" id="3hA-ZH-Oz9"/>
+                <outlet property="countryNameLabel" destination="mCX-R7-vAs" id="SA6-bc-9gk"/>
+                <outlet property="songNameLabel" destination="k5Z-dw-5yn" id="ncW-cj-a8l"/>
+            </connections>
+            <point key="canvasLocation" x="22.900763358778626" y="-34.859154929577464"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Winter">
+            <color red="0.97647058823529409" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

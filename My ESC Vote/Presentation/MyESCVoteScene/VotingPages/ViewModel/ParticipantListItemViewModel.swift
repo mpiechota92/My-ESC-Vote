@@ -15,8 +15,8 @@ class ParticipantsListItemViewModel {
 	var place: Observable<Int>
 	
 	init(participant: Participant) {
-		self.countryName = participant.countryName
-		self.artist = participant.artist
+		self.countryName = participant.countryName.rawValue
+		self.artist = participant.artist ?? ""
 		self.song = participant.song
 		self.order = participant.order < 10 ? "0\(participant.order)" : "\(participant.order)"
 		self.place = Observable(participant.place)

@@ -8,12 +8,13 @@
 import Foundation
 import FirebaseCore
 import FirebaseFirestore
+import PromiseKit
 
 enum DatabaseError: String, Error {
-	
 	case nameTooLong = "Name cannot exceed 16 characters"
 	case addDocumentFailure = "Error adding document to the database"
-	
+	case noDocumentId = "No Document ID"
+	case getDocumentFailure = "Get document failure"
 }
 
 extension DatabaseError: LocalizedError {
@@ -24,6 +25,10 @@ extension DatabaseError: LocalizedError {
 			return DatabaseError.nameTooLong.rawValue
 		case .addDocumentFailure:
 			return DatabaseError.addDocumentFailure.rawValue
+		case .noDocumentId:
+			return DatabaseError.noDocumentId.rawValue
+		default:
+			return ""
 		}
 	}
 	
@@ -35,7 +40,7 @@ class DatabaseService {
 	
 	// MARK: - Vars & Lets
 	
-	private var database: Firestore!
+	private(set) var database: Firestore!
 	
 	// MARK: - Init
 	
@@ -43,7 +48,7 @@ class DatabaseService {
 		self.database = database
 	}
 	
-	// MARK: Public funcs
+	// MARK: - Public funcs
 	
 	internal func setUserName(_ name: String, for email: String, completion: ((_ error: DatabaseError?) -> ())? = nil) throws {
 		guard name.count < 16 else {
@@ -71,6 +76,7 @@ class DatabaseService {
 				}
 			}
 		
+		// it will never throw an error
 		if let error = databaseError {
 			throw error
 		}
@@ -81,19 +87,15 @@ class DatabaseService {
 		var data: [T] = []
 		
 		database.collection(collection).getDocuments { querySnapshot, error in
-
-			guard error == nil else {
-				fatalError()
-			}
+			guard error == nil else { fatalError() }
 			
 			if let querySnapshot = querySnapshot {
-
 				for document in querySnapshot.documents {
 					do {
 						let record = try document.data(as: T.self)
 						data.append(record)
 					} catch {
-						print(error.localizedDescription)
+						print(error)
 					}
 				}
 				
@@ -102,10 +104,33 @@ class DatabaseService {
 		}
 	}
 	
+	internal func fetchAllData<T: Codable>(from collection: String, as type: T.Type) -> Promise<[T]?> {
+		return Promise { seal in
+			var data: [T] = []
+			database.collection(collection).getDocuments { querySnapshot, error in
+				guard error == nil else { seal.reject(error!) }
+				
+				if let querySnapshot = querySnapshot {
+					for document in querySnapshot.documents {
+						do {
+							let record = try document.data(as: T.self)
+							data.append(record)
+						} catch {
+							seal.reject(error)
+						}
+					}
+					
+					seal.fulfill(data)
+					return
+				}
+				
+				seal.fulfill(nil)
+			}
+		}
+	}
+	
 	internal func fetchData<T: Codable>(for documentID: String, from collection: String) -> T? {
-		
 		var record: T?
-		
 		let docRef = database.collection(collection).document(documentID)
 		
 		docRef.getDocument(as: T.self) { result in
@@ -118,12 +143,60 @@ class DatabaseService {
 		}
 		
 		return record
-		
+	}
+	
+	internal func fetchEarliestContest(completion: @escaping (Contest?) -> ()) {
+		fetchAllData(from: "Contests", as: Contest.self) { records in
+			let contest = records.max{ $0.startDate < $1.startDate }
+			completion(contest)
+		}
+	}
+	
+	internal func fetchData<T: Codable>(as: T.Type, for documentID: String, path: String) -> Promise<T> {
+		return Promise { seal in
+			database.document("\(path)/\(documentID)").getDocument(as: T.self) { result in
+				switch result {
+				case .success(let record):
+					seal.fulfill(record)
+				case .failure(let error):
+					seal.reject(error)
+				}
+			}
+		}
 	}
 	
 	internal func saveData<T: Encodable>(_ data: T, to collection: String) throws where T : HasDocumentID {
 		guard let id = data.getID() else { return }
 		
 		try database.collection(collection).document(id).setData(from: data)
+	}
+	
+	internal func saveData<T: Encodable>(_ data: T, to path: String) -> Promise<Bool> where T: HasDocumentID {
+		return Promise { seal in
+			guard let id = data.getID() else { return seal.reject(DatabaseError.noDocumentId) }
+
+			do {
+				try database.collection(path).document(id).setData(from: data)
+				seal.fulfill(true)
+			} catch {
+				seal.reject(error)
+			}
+		}
+	}
+	
+	internal func exists(_ docRef: DocumentReference) -> Promise<Bool> {
+		return Promise { seal in
+			docRef.getDocument { snapshot, error in
+				if let error = error {
+					seal.reject(error)
+				}
+				
+				if snapshot?.exists ?? false {
+					seal.fulfill(true)
+				}
+				
+				seal.fulfill(false)
+			}
+		}
 	}
 }
