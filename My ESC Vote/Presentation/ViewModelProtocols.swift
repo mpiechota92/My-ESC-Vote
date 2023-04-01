@@ -6,15 +6,9 @@
 //
 
 import Foundation
+
 protocol CategoryProtocol: Codable, CaseIterable {
 	var simpleDescription: String { get }
-	static var allCases: [String] { get }
-}
-
-extension CategoryProtocol {
-	static var allCases: [String] {
-		self.allCases.map({ $0.simpleDescription })
-	}
 }
 
 protocol ListViewModelProtocol: AnyObject {

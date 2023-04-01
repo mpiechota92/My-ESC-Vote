@@ -56,7 +56,7 @@ class MainViewController: UIViewController, HavingStoryboard {
 		//let viewModel = DefaultVoteCategoriesListViewModel(for: [.favourite, .vocals, .performance], in: contest)
 		let params = VoteCategoriesListViewModelParams(categories: [.favourite, .vocals, .performance], contest: contest)
 		
-		let viewModel: VoteCategoriesListViewModel = DependencyResolver.get(with: params)
+		let viewModel: VoteCategoriesListViewModel = DependencyResolver.shared.resolve()
 		
 		vc.fill(with: viewModel)
 		vc.contest = contest

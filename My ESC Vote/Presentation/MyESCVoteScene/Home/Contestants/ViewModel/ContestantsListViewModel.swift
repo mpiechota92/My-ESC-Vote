@@ -27,6 +27,14 @@ struct ContestantsListViewModelParams {
 class BaseContestantsListViewModel: ContestantsListViewModel {
 	private var contestants: [ContestantListItemViewModel] = []
 	
+	init() {
+		
+	}
+	
+	init(for contest: ContestCategory) {
+		// aquire the data from Firebase for specific content
+	}
+	
 	func item(for indexPath: IndexPath) -> ContestantListItemViewModel {
 		return contestants[indexPath.row]
 	}

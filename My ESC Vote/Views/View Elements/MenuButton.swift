@@ -59,7 +59,6 @@ class MenuButton: UIButton {
 		NotificationCenter.default.addObserver(forName: .onLoginStatusChangeNotification, object: nil, queue: .main) { notification in
 			self.isLoggedin = APIManager.shared().authService.isLoggedIn()
 		}
-		
 	}
 	
 	@objc private func handleRegisterMenu(_ action: UIAction) {

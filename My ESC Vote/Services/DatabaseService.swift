@@ -108,7 +108,7 @@ class DatabaseService {
 		return Promise { seal in
 			var data: [T] = []
 			database.collection(collection).getDocuments { querySnapshot, error in
-				guard error == nil else { seal.reject(error!) }
+				guard error == nil else { return seal.reject(error!) }
 				
 				if let querySnapshot = querySnapshot {
 					for document in querySnapshot.documents {

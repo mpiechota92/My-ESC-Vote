@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		432B03C0685FE508254BF449 /* Pods_My_ESC_Vote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BCA311335F0E333FC85EC /* Pods_My_ESC_Vote.framework */; };
 		521541282913206D00E19B6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521541272913206D00E19B6F /* LoginViewController.swift */; };
+		52255C6E29D87D0800817E18 /* ContestantsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52255C6929D87D0800817E18 /* ContestantsPageView.swift */; };
+		52255C7029D87D0800817E18 /* ContestantsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52255C6B29D87D0800817E18 /* ContestantsViewController.storyboard */; };
+		52255C7129D87D0800817E18 /* ContestantsPageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52255C6C29D87D0800817E18 /* ContestantsPageView.storyboard */; };
+		52255C7229D87D0800817E18 /* ContestantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52255C6D29D87D0800817E18 /* ContestantsViewController.swift */; };
+		52255C7A29D87D4F00817E18 /* ContestantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52255C7829D87D4E00817E18 /* ContestantCell.xib */; };
+		52255C7B29D87D4F00817E18 /* ContestantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52255C7929D87D4E00817E18 /* ContestantCell.swift */; };
+		52255C7D29D87D5C00817E18 /* ContestantsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52255C7C29D87D5C00817E18 /* ContestantsListViewModel.swift */; };
 		523A8FDC2932A35C005A8071 /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A8FDB2932A35C005A8071 /* ParticipantsViewController.swift */; };
 		523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B7339290ECA7C0070E12A /* AppDelegate.swift */; };
 		523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B733B290ECA7C0070E12A /* SceneDelegate.swift */; };
@@ -105,11 +112,7 @@
 		52DFD2D6293A84E50092140E /* AlertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */; };
 		52DFD2D7293A84E50092140E /* AlertInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */; };
 		52DFD2DB293AB2AD0092140E /* AlertInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */; };
-		52E801BE29C9039D00495E59 /* ContestantsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E801BD29C9039D00495E59 /* ContestantsListViewModel.swift */; };
-		52E801C229C906A400495E59 /* ContestantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E801C129C906A400495E59 /* ContestantCell.swift */; };
-		52E801C429C9074F00495E59 /* ContestantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E801C329C9074F00495E59 /* ContestantCell.xib */; };
 		52E801C629C9132300495E59 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E801C529C9132300495E59 /* ImageService.swift */; };
-		52E801C829C924C200495E59 /* ContestantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E801C729C924C200495E59 /* ContestantsViewController.swift */; };
 		52E801CC29CA44C200495E59 /* BasePagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E801CB29CA44C200495E59 /* BasePagedViewController.swift */; };
 		52E801CE29CA44EE00495E59 /* BasePagedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E801CD29CA44EE00495E59 /* BasePagedViewController.storyboard */; };
 		52E801D129CA468600495E59 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E801D029CA468600495E59 /* ViewModelProtocols.swift */; };
@@ -134,6 +137,13 @@
 
 /* Begin PBXFileReference section */
 		521541272913206D00E19B6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52255C6929D87D0800817E18 /* ContestantsPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContestantsPageView.swift; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Home/Contestants/Views/ContestantsPageView.swift"; sourceTree = "<group>"; };
+		52255C6B29D87D0800817E18 /* ContestantsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ContestantsViewController.storyboard; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Home/Contestants/Views/ContestantsViewController.storyboard"; sourceTree = "<group>"; };
+		52255C6C29D87D0800817E18 /* ContestantsPageView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ContestantsPageView.storyboard; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Home/Contestants/Views/ContestantsPageView.storyboard"; sourceTree = "<group>"; };
+		52255C6D29D87D0800817E18 /* ContestantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContestantsViewController.swift; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Home/Contestants/Views/ContestantsViewController.swift"; sourceTree = "<group>"; };
+		52255C7829D87D4E00817E18 /* ContestantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContestantCell.xib; sourceTree = "<group>"; };
+		52255C7929D87D4E00817E18 /* ContestantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestantCell.swift; sourceTree = "<group>"; };
+		52255C7C29D87D5C00817E18 /* ContestantsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContestantsListViewModel.swift; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Home/Contestants/ViewModel/ContestantsListViewModel.swift"; sourceTree = "<group>"; };
 		523A8FDB2932A35C005A8071 /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantsViewController.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/VotingPages/View/ParticipantsViewController.swift"; sourceTree = "<group>"; };
 		523B7336290ECA7C0070E12A /* My ESC Vote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My ESC Vote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523B7339290ECA7C0070E12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -226,11 +236,7 @@
 		52DFD2D4293A84E50092140E /* AlertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfoViewController.swift; sourceTree = "<group>"; };
 		52DFD2D5293A84E50092140E /* AlertInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertInfoViewController.xib; sourceTree = "<group>"; };
 		52DFD2DA293AB2AD0092140E /* AlertInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertInfoViewController.storyboard; sourceTree = "<group>"; };
-		52E801BD29C9039D00495E59 /* ContestantsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestantsListViewModel.swift; path = "../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Participants/ViewModel/ContestantsListViewModel.swift"; sourceTree = "<group>"; };
-		52E801C129C906A400495E59 /* ContestantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestantCell.swift; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Participants/Views/Cells/ContestantCell.swift"; sourceTree = "<group>"; };
-		52E801C329C9074F00495E59 /* ContestantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContestantCell.xib; path = "../../../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Participants/Views/Cells/ContestantCell.xib"; sourceTree = "<group>"; };
 		52E801C529C9132300495E59 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageService.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Services/ImageService.swift"; sourceTree = "<group>"; };
-		52E801C729C924C200495E59 /* ContestantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContestantsViewController.swift; path = "../../../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/MyESCVoteScene/Home/ContestantsViewController.swift"; sourceTree = "<group>"; };
 		52E801CB29CA44C200495E59 /* BasePagedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasePagedViewController.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/BasePagedViewController.swift"; sourceTree = "<group>"; };
 		52E801CD29CA44EE00495E59 /* BasePagedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = BasePagedViewController.storyboard; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/BasePagedViewController.storyboard"; sourceTree = "<group>"; };
 		52E801D029CA468600495E59 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModelProtocols.swift; path = "../../../../../Maciej/Developer/My ESC Vote/My ESC Vote/Presentation/ViewModelProtocols.swift"; sourceTree = "<group>"; };
@@ -312,6 +318,24 @@
 				52ADDB28292E60A600D6703F /* Metropolis-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52255C6829D87CCB00817E18 /* Contestants */ = {
+			isa = PBXGroup;
+			children = (
+				52E801BF29C9066A00495E59 /* Views */,
+				52E801BC29C9038C00495E59 /* ViewModel */,
+			);
+			path = Contestants;
+			sourceTree = "<group>";
+		};
+		52255C7329D87D2500817E18 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				52255C7929D87D4E00817E18 /* ContestantCell.swift */,
+				52255C7829D87D4E00817E18 /* ContestantCell.xib */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		523B732D290ECA7C0070E12A = {
@@ -503,9 +527,8 @@
 		52DD7D8B293100E800EDCB5E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				52E801C929CA449900495E59 /* Common */,
-				52DD7D9C2931580400EDCB5E /* Utils */,
 				52AA9719293B9EE800F019F2 /* AuthenticationScene */,
+				52E801C929CA449900495E59 /* Common */,
 				52DD7D8F293102B000EDCB5E /* MyESCVoteScene */,
 			);
 			path = Presentation;
@@ -536,11 +559,11 @@
 		52DD7D90293102C100EDCB5E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				52255C6829D87CCB00817E18 /* Contestants */,
 				523B7353290ECEE40070E12A /* MainViewController.swift */,
 				523B733F290ECA7C0070E12A /* Main.storyboard */,
 				52C8181A291580BA0006CA38 /* DashboardTabBarController.swift */,
 				52C8181C291587800006CA38 /* ContestsViewController.swift */,
-				52E801C729C924C200495E59 /* ContestantsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -647,8 +670,6 @@
 		52E801BB29C9008600495E59 /* Participants */ = {
 			isa = PBXGroup;
 			children = (
-				52E801BF29C9066A00495E59 /* Views */,
-				52E801BC29C9038C00495E59 /* ViewModel */,
 			);
 			path = Participants;
 			sourceTree = "<group>";
@@ -656,7 +677,7 @@
 		52E801BC29C9038C00495E59 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				52E801BD29C9039D00495E59 /* ContestantsListViewModel.swift */,
+				52255C7C29D87D5C00817E18 /* ContestantsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -664,23 +685,19 @@
 		52E801BF29C9066A00495E59 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52E801C029C9067000495E59 /* Cells */,
+				52255C7329D87D2500817E18 /* New Group */,
+				52255C6C29D87D0800817E18 /* ContestantsPageView.storyboard */,
+				52255C6929D87D0800817E18 /* ContestantsPageView.swift */,
+				52255C6B29D87D0800817E18 /* ContestantsViewController.storyboard */,
+				52255C6D29D87D0800817E18 /* ContestantsViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		52E801C029C9067000495E59 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				52E801C129C906A400495E59 /* ContestantCell.swift */,
-				52E801C329C9074F00495E59 /* ContestantCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		52E801C929CA449900495E59 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				52DD7D9C2931580400EDCB5E /* Utils */,
 				52E801CA29CA44A400495E59 /* Views */,
 			);
 			name = Common;
@@ -860,10 +877,12 @@
 				52CE174C291EECC500F93E28 /* ParticipantCell.xib in Resources */,
 				52ADDB3F292E60CC00D6703F /* Metropolis-ExtraBold.ttf in Resources */,
 				52AA9711293B814A00F019F2 /* VoteCategoryPageCell.xib in Resources */,
+				52255C7029D87D0800817E18 /* ContestantsViewController.storyboard in Resources */,
+				52255C7A29D87D4F00817E18 /* ContestantCell.xib in Resources */,
 				523B7341290ECA7C0070E12A /* Main.storyboard in Resources */,
-				52E801C429C9074F00495E59 /* ContestantCell.xib in Resources */,
 				52ADDB37292E60CC00D6703F /* Metropolis-ExtraLightItalic.ttf in Resources */,
 				52D02ECF29339E6E000D696A /* MainVoteViewController.storyboard in Resources */,
+				52255C7129D87D0800817E18 /* ContestantsPageView.storyboard in Resources */,
 				523B734E290ECBCE0070E12A /* GoogleService-Info.plist in Resources */,
 				52ADDB31292E60CC00D6703F /* Metropolis-Bold.ttf in Resources */,
 				52AA9724293BFC3F00F019F2 /* CountdownTimer.xib in Resources */,
@@ -935,6 +954,7 @@
 				523B735E290EE1110070E12A /* DatabaseService.swift in Sources */,
 				52E801D529CBAA6B00495E59 /* ViewModelFactory.swift in Sources */,
 				52CE1751291EF00C00F93E28 /* ParticipantListViewModel.swift in Sources */,
+				52255C7229D87D0800817E18 /* ContestantsViewController.swift in Sources */,
 				523B733A290ECA7C0070E12A /* AppDelegate.swift in Sources */,
 				52AA971F293BA1DB00F019F2 /* Dismissable.swift in Sources */,
 				523B736B291028A30070E12A /* AuthenticationService.swift in Sources */,
@@ -945,7 +965,6 @@
 				52A1DB22293A542A0014D0FE /* ViewControllerConstants.swift in Sources */,
 				52AA9713293B9B8000F019F2 /* StaticParticipantsData.swift in Sources */,
 				523B733C290ECA7C0070E12A /* SceneDelegate.swift in Sources */,
-				52E801BE29C9039D00495E59 /* ContestantsListViewModel.swift in Sources */,
 				5295AA8E2919985100B820FE /* VoteCategoryPageCell.swift in Sources */,
 				52C327CC29108BFB00F9965A /* RegistrationForm.swift in Sources */,
 				52C9516F29340797000D7FEE /* UICollectionView+Register.swift in Sources */,
@@ -957,6 +976,7 @@
 				52C8181B291580BA0006CA38 /* DashboardTabBarController.swift in Sources */,
 				523B7360290EE9B00070E12A /* FirebaseService.swift in Sources */,
 				52C81815291566910006CA38 /* InfoView.swift in Sources */,
+				52255C7B29D87D4F00817E18 /* ContestantCell.swift in Sources */,
 				5295AA8A29198EBC00B820FE /* ConstatnsTypealiases.swift in Sources */,
 				52E801E129D4BFC200495E59 /* BasePageCell.swift in Sources */,
 				52C8181D291587800006CA38 /* ContestsViewController.swift in Sources */,
@@ -967,9 +987,10 @@
 				52E801D329CA4FAB00495E59 /* BasePageView.swift in Sources */,
 				5246D9C529B684E0002727D1 /* Vote.swift in Sources */,
 				523B7362290EEA5A0070E12A /* ValidationHelper.swift in Sources */,
+				52255C7D29D87D5C00817E18 /* ContestantsListViewModel.swift in Sources */,
 				52CE1743291C43F000F93E28 /* ContestTableViewCell.swift in Sources */,
 				523B736F291072350070E12A /* RegisterViewController.swift in Sources */,
-				52E801C229C906A400495E59 /* ContestantCell.swift in Sources */,
+				52255C6E29D87D0800817E18 /* ContestantsPageView.swift in Sources */,
 				523B736D2910293A0070E12A /* APIManager.swift in Sources */,
 				5246D9C329B6809C002727D1 /* VotingService.swift in Sources */,
 				52A1DB1E293A52DE0014D0FE /* APIConstants.swift in Sources */,
@@ -989,7 +1010,6 @@
 				52615578291660FE006988BD /* MenuButton.swift in Sources */,
 				52C8181329150D7F0006CA38 /* UIViewController+AddObserversToSubviews.swift in Sources */,
 				52AA9718293B9E1500F019F2 /* ESC2023.swift in Sources */,
-				52E801C829C924C200495E59 /* ContestantsViewController.swift in Sources */,
 				526155832916B106006988BD /* ContestViewModel.swift in Sources */,
 				52E801DC29CE31D200495E59 /* DependencyResolver+Registry.swift in Sources */,
 				52DD7D8E2931022300EDCB5E /* AppAppearance.swift in Sources */,

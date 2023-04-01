@@ -24,8 +24,8 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
 			fatalError("Could not instantiate MainViewController")
 		}
 		
-		guard let contestsVC = storyboard.instantiateViewController(withIdentifier: Constants.UI.ViewController.ID.contests) as? ContestsViewController else {
-			fatalError("Could not instantiate VotingViewController")
+		guard let contestsVC = ContestantsViewController.instantiateViewController() as? ContestantsViewController else {
+			fatalError("Could not instantiate ContestantsViewController")
 		}
 		
 		let homeVCNav = UINavigationController(rootViewController: homeVC)
@@ -33,7 +33,7 @@ class DashboardTabBarController: UITabBarController, UITabBarControllerDelegate 
 		homeVCNav.tabBarItem = homeIcon
 		
 		let contestsVCNav = UINavigationController(rootViewController: contestsVC)
-		let contestsIcon = UITabBarItem(title: "Contests", image: UIImage(systemName: Icon.contests), selectedImage: UIImage(systemName: Icon.contestsSelected))
+		let contestsIcon = UITabBarItem(title: "Contestants", image: UIImage(systemName: Icon.contests), selectedImage: UIImage(systemName: Icon.contestsSelected))\
 		contestsVCNav.tabBarItem = contestsIcon
 		
 		let controllers = [homeVCNav, contestsVCNav]
